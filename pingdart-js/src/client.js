@@ -1,2 +1,40 @@
-// Encrypted by PingDart
-eval(Buffer.from('aW1wb3J0IHsgY3JlYXRlQ2xpZW50IH0gZnJvbSAiLi91dGlscy9yZXF1ZXN0LmpzIjsKaW1wb3J0IERhdGFiYXNlU2VydmljZSBmcm9tICIuL3NlcnZpY2VzL2RhdGFiYXNlLnNlcnZpY2UuanMiOwppbXBvcnQgV2hhdHNBcHBTZXJ2aWNlIGZyb20gIi4vc2VydmljZXMvd2hhdHNhcHAuc2VydmljZS5qcyI7CmltcG9ydCBTbXNTZXJ2aWNlIGZyb20gIi4vc2VydmljZXMvc21zLnNlcnZpY2UuanMiOwppbXBvcnQgQWlTZXJ2aWNlIGZyb20gIi4vc2VydmljZXMvYWkuc2VydmljZS5qcyI7CmltcG9ydCBDYWxsc1NlcnZpY2UgZnJvbSAiLi9zZXJ2aWNlcy9jYWxscy5zZXJ2aWNlLmpzIjsKaW1wb3J0IFN0b3JhZ2VTZXJ2aWNlIGZyb20gIi4vc2VydmljZXMvc3RvcmFnZS5zZXJ2aWNlLmpzIjsKCmNsYXNzIFBpbmdEYXJ0U0RLIHsKICAgIGNvbnN0cnVjdG9yKHsKICAgICAgICBhcGlLZXksCiAgICAgICAgZGF0YWJhc2VJZCwKICAgICAgICBiYXNlVVJMID0gImh0dHBzOi8vY2xvdWRhcGkucGluZ2RhcnQuY29tL2FwaSIsCiAgICAgICAgcmVhbHRpbWVCYXNlVVJMCiAgICB9KSB7CiAgICAgICAgaWYgKCFhcGlLZXkpIHsKICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKCJQaW5nRGFydCBTREs6IEFQSSBLZXkgaXMgcmVxdWlyZWQiKTsKICAgICAgICB9CgogICAgICAgIHRoaXMuYmFzZVVSTCA9IGJhc2VVUkw7CiAgICAgICAgLy8gQXV0by1kZXJpdmUgcmVhbHRpbWVCYXNlVVJMIGlmIG5vdCBwcm92aWRlZCAoYXNzdW1lIHN0cnVjdHVyZSBkb21haW4uY29tL2FwaS9yZWFsdGltZS8pCiAgICAgICAgdGhpcy5yZWFsdGltZUJhc2VVUkwgPSByZWFsdGltZUJhc2VVUkwgfHwgYCR7YmFzZVVSTC5yZXBsYWNlKC9cL2FwaVwvPyQvLCAnJyl9L2FwaS9yZWFsdGltZS9gOwoKICAgICAgICB0aGlzLmh0dHAgPSBjcmVhdGVDbGllbnQoeyBhcGlLZXksIGJhc2VVUkw6IHRoaXMuYmFzZVVSTCB9KTsKICAgICAgICB0aGlzLnJlYWx0aW1lSHR0cCA9IGNyZWF0ZUNsaWVudCh7IGFwaUtleSwgYmFzZVVSTDogdGhpcy5yZWFsdGltZUJhc2VVUkwgfSk7CgogICAgICAgIC8vIFNlcnZpY2VzIENvbmZpZ3VyYXRpb24gT2JqZWN0CiAgICAgICAgY29uc3QgY29uZmlnID0geyBhcGlLZXksIGJhc2VVUkw6IHRoaXMuYmFzZVVSTCwgZGF0YWJhc2VJZCwgcmVhbHRpbWVCYXNlVVJMOiB0aGlzLnJlYWx0aW1lQmFzZVVSTCB9OwoKICAgICAgICB0aGlzLmRhdGFiYXNlID0gbmV3IERhdGFiYXNlU2VydmljZSh0aGlzLnJlYWx0aW1lSHR0cCwgY29uZmlnKTsKICAgICAgICB0aGlzLndoYXRzYXBwID0gbmV3IFdoYXRzQXBwU2VydmljZSh0aGlzLmh0dHAsIGNvbmZpZyk7CiAgICAgICAgdGhpcy5zbXMgPSBuZXcgU21zU2VydmljZSh0aGlzLmh0dHAsIGNvbmZpZyk7CiAgICAgICAgdGhpcy5lbWFpbCA9IG5ldyBFbWFpbFNlcnZpY2UodGhpcy5odHRwLCBjb25maWcpOwogICAgICAgIHRoaXMuYWkgPSBuZXcgQWlTZXJ2aWNlKHRoaXMuaHR0cCwgY29uZmlnKTsKICAgICAgICB0aGlzLmNhbGxzID0gbmV3IENhbGxzU2VydmljZSh0aGlzLmh0dHAsIGNvbmZpZyk7CiAgICAgICAgdGhpcy5zdG9yYWdlID0gbmV3IFN0b3JhZ2VTZXJ2aWNlKHRoaXMuaHR0cCwgY29uZmlnKTsKICAgIH0KfQoKZXhwb3J0IGRlZmF1bHQgUGluZ0RhcnRTREs7Cg==', 'base64').toString('utf-8'));
+import { createClient } from "./utils/request.js";
+import DatabaseService from "./services/database.service.js";
+import WhatsAppService from "./services/whatsapp.service.js";
+import SmsService from "./services/sms.service.js";
+import AiService from "./services/ai.service.js";
+import CallsService from "./services/calls.service.js";
+import StorageService from "./services/storage.service.js";
+
+class PingDartSDK {
+    constructor({
+        apiKey,
+        databaseId,
+        baseURL = "https://cloudapi.pingdart.com/api",
+        realtimeBaseURL
+    }) {
+        if (!apiKey) {
+            throw new Error("PingDart SDK: API Key is required");
+        }
+
+        this.baseURL = baseURL;
+        // Auto-derive realtimeBaseURL if not provided (assume structure domain.com/api/realtime/)
+        this.realtimeBaseURL = realtimeBaseURL || `${baseURL.replace(/\/api\/?$/, '')}/api/realtime/`;
+
+        this.http = createClient({ apiKey, baseURL: this.baseURL });
+        this.realtimeHttp = createClient({ apiKey, baseURL: this.realtimeBaseURL });
+
+        // Services Configuration Object
+        const config = { apiKey, baseURL: this.baseURL, databaseId, realtimeBaseURL: this.realtimeBaseURL };
+
+        this.database = new DatabaseService(this.realtimeHttp, config);
+        this.whatsapp = new WhatsAppService(this.http, config);
+        this.sms = new SmsService(this.http, config);
+        this.email = new EmailService(this.http, config);
+        this.ai = new AiService(this.http, config);
+        this.calls = new CallsService(this.http, config);
+        this.storage = new StorageService(this.http, config);
+    }
+}
+
+export default PingDartSDK;

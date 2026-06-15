@@ -1,3 +1,169 @@
-// Encrypted by PingDart
-// DECRYPT_KEY: pd_private_key
-cGFja2FnZSBwaW5nZGFydGRiCgppbXBvcnQgKAoJImJ5dGVzIgoJImNyeXB0by9hZXMiCgkiY3J5cHRvL2NpcGhlciIKCSJjcnlwdG8vc2hhMjU2IgoJImRhdGFiYXNlL3NxbCIKCSJlbmNvZGluZy9iYXNlNjQiCgkiZW5jb2RpbmcvaGV4IgoJImVuY29kaW5nL2pzb24iCgkiZXJyb3JzIgoJImZtdCIKCSJuZXQvaHR0cCIKCSJzdHJpbmdzIgoJInRpbWUiCgoJXyAiZ2l0aHViLmNvbS9nby1zcWwtZHJpdmVyL215c3FsIgopCgp0eXBlIERCQ29uZmlnIHN0cnVjdCB7CglIb3N0ICAgICBzdHJpbmcKCVVzZXIgICAgIHN0cmluZwoJUGFzc3dvcmQgc3RyaW5nCglEYXRhYmFzZSBzdHJpbmcKCVR5cGUgICAgIHN0cmluZwp9Cgp0eXBlIFBpbmdEYXJ0REIgc3RydWN0IHsKCUFQSUtleSAgIHN0cmluZwoJREJDb25maWcgREJDb25maWcKCURCICAgICAgICpzcWwuREIKCUxpY2Vuc2UgIG1hcFtzdHJpbmddaW50ZXJmYWNle30KfQoKZnVuYyBOZXdQaW5nRGFydERCKGFwaUtleSBzdHJpbmcsIGNvbmZpZyBEQkNvbmZpZykgKCpQaW5nRGFydERCLCBlcnJvcikgewoJaWYgY29uZmlnLlR5cGUgPT0gIiIgewoJCWNvbmZpZy5UeXBlID0gIm15c3FsIgoJfQoKCWlmIGNvbmZpZy5UeXBlICE9ICJteXNxbCIgewoJCXJldHVybiBuaWwsIGVycm9ycy5OZXcoIlVuc3VwcG9ydGVkIGRhdGFiYXNlIHR5cGUuIEN1cnJlbnRseSBvbmx5ICdteXNxbCcgaXMgZnVsbHkgaW1wbGVtZW50ZWQgaW4gR28gZHJpdmVyLiIpCgl9CgoJcGQgOj0gJlBpbmdEYXJ0REJ7CgkJQVBJS2V5OiAgIGFwaUtleSwKCQlEQkNvbmZpZzogY29uZmlnLAoJfQoKCWVyciA6PSBwZC52YWxpZGF0ZUtleShhcGlLZXkpCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gbmlsLCBlcnIKCX0KCglyZXR1cm4gcGQsIG5pbAp9CgpmdW5jIChwICpQaW5nRGFydERCKSB2YWxpZGF0ZUtleShhcGlLZXkgc3RyaW5nKSBlcnJvciB7CglpZiAhc3RyaW5ncy5IYXNQcmVmaXgoYXBpS2V5LCAicGRfIikgewoJCXJldHVybiBlcnJvcnMuTmV3KCJQaW5nRGFydCBBdXRob3JpemF0aW9uIEZhaWxlZDogSW52YWxpZCBQaW5nRGFydCBMaWNlbnNlIEtleSBmb3JtYXQiKQoJfQoKCXBhcnRzIDo9IHN0cmluZ3MuU3BsaXQoc3RyaW5ncy5UcmltUHJlZml4KGFwaUtleSwgInBkXyIpLCAiLiIpCglpZiBsZW4ocGFydHMpICE9IDIgewoJCXJldHVybiBlcnJvcnMuTmV3KCJQaW5nRGFydCBBdXRob3JpemF0aW9uIEZhaWxlZDogSW52YWxpZCBQaW5nRGFydCBMaWNlbnNlIEtleSBmb3JtYXQiKQoJfQoKCWl2LCBlcnIgOj0gaGV4LkRlY29kZVN0cmluZyhwYXJ0c1swXSkKCWlmIGVyciAhPSBuaWwgewoJCXJldHVybiBlcnIKCX0KCgllbmNyeXB0ZWRUZXh0LCBlcnIgOj0gaGV4LkRlY29kZVN0cmluZyhwYXJ0c1sxXSkKCWlmIGVyciAhPSBuaWwgewoJCXJldHVybiBlcnIKCX0KCglzZWNyZXRLZXkgOj0gIlBpbmdEYXJ0U3VwZXJTZWNyZXRLZXkyMDI2IUAjJCIKCWhhc2ggOj0gc2hhMjU2LlN1bTI1NihbXWJ5dGUoc2VjcmV0S2V5KSkKCWVuY29kZWRIYXNoIDo9IGJhc2U2NC5TdGRFbmNvZGluZy5FbmNvZGVUb1N0cmluZyhoYXNoWzpdKQoJa2V5IDo9IFtdYnl0ZShlbmNvZGVkSGFzaFs6MzJdKQoKCWJsb2NrLCBlcnIgOj0gYWVzLk5ld0NpcGhlcihrZXkpCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gZXJyCgl9CgoJbW9kZSA6PSBjaXBoZXIuTmV3Q0JDRGVjcnlwdGVyKGJsb2NrLCBpdikKCWRlY3J5cHRlZCA6PSBtYWtlKFtdYnl0ZSwgbGVuKGVuY3J5cHRlZFRleHQpKQoJbW9kZS5DcnlwdEJsb2NrcyhkZWNyeXB0ZWQsIGVuY3J5cHRlZFRleHQpCgoJLy8gUEtDUzcgVW5wYWRkaW5nCglwYWRkaW5nTGVuIDo9IGludChkZWNyeXB0ZWRbbGVuKGRlY3J5cHRlZCktMV0pCglpZiBwYWRkaW5nTGVuID4gbGVuKGRlY3J5cHRlZCkgewoJCXJldHVybiBlcnJvcnMuTmV3KCJJbnZhbGlkIHBhZGRpbmciKQoJfQoJZGVjcnlwdGVkID0gZGVjcnlwdGVkWzpsZW4oZGVjcnlwdGVkKS1wYWRkaW5nTGVuXQoKCXZhciBwYXlsb2FkIG1hcFtzdHJpbmddaW50ZXJmYWNle30KCWVyciA9IGpzb24uVW5tYXJzaGFsKGRlY3J5cHRlZCwgJnBheWxvYWQpCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gZXJyb3JzLk5ldygiTGljZW5zZSBrZXkgaXMgY29ycnVwdGVkIG9yIHRhbXBlcmVkIHdpdGgiKQoJfQoKCXAuTGljZW5zZSA9IHBheWxvYWQKCXJldHVybiBuaWwKfQoKZnVuYyAocCAqUGluZ0RhcnREQikgQ29ubmVjdCgpIGVycm9yIHsKCWRzbiA6PSBmbXQuU3ByaW50ZigiJXM6JXNAdGNwKCVzKS8lcz9wYXJzZVRpbWU9dHJ1ZSIsIAoJCXAuREJDb25maWcuVXNlciwgcC5EQkNvbmZpZy5QYXNzd29yZCwgcC5EQkNvbmZpZy5Ib3N0LCBwLkRCQ29uZmlnLkRhdGFiYXNlKQoKCWRiLCBlcnIgOj0gc3FsLk9wZW4ocC5EQkNvbmZpZy5UeXBlLCBkc24pCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gZXJyCgl9CgoJZXJyID0gZGIuUGluZygpCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gZXJyCgl9CgoJcC5EQiA9IGRiCgoJaWYgdGllciwgb2sgOj0gcC5MaWNlbnNlWyJ0aWVyIl0uKHN0cmluZyk7IG9rICYmIHRpZXIgIT0gImZyZWUiIHsKCQllcnIgPSBwLnZhbGlkYXRlTGl2ZVNlcnZlcigpCgkJaWYgZXJyICE9IG5pbCB7CgkJCXJldHVybiBlcnIKCQl9Cgl9CgoJcmV0dXJuIG5pbAp9CgpmdW5jIChwICpQaW5nRGFydERCKSB2YWxpZGF0ZUxpdmVTZXJ2ZXIoKSBlcnJvciB7CglwYXlsb2FkIDo9IG1hcFtzdHJpbmddc3RyaW5neyJhcGlLZXkiOiBwLkFQSUtleX0KCWpzb25EYXRhLCBfIDo9IGpzb24uTWFyc2hhbChwYXlsb2FkKQoKCWNsaWVudCA6PSAmaHR0cC5DbGllbnR7VGltZW91dDogMTAgKiB0aW1lLlNlY29uZH0KCXJlc3AsIGVyciA6PSBjbGllbnQuUG9zdCgiaHR0cHM6Ly9jbG91ZGFwaS5waW5nZGFydC5jb20vYXBpL3JlYWx0aW1lL3ZhbGlkYXRlLXNkayIsICJhcHBsaWNhdGlvbi9qc29uIiwgYnl0ZXMuTmV3QnVmZmVyKGpzb25EYXRhKSkKCWlmIGVyciAhPSBuaWwgewoJCXJldHVybiBlcnJvcnMuTmV3KCJQaW5nRGFydCBMaXZlIEF1dGhvcml6YXRpb24gRmFpbGVkOiBDb25uZWN0aW9uIHRpbWVvdXQiKQoJfQoJZGVmZXIgcmVzcC5Cb2R5LkNsb3NlKCkKCgl2YXIgcmVzIG1hcFtzdHJpbmddaW50ZXJmYWNle30KCWpzb24uTmV3RGVjb2RlcihyZXNwLkJvZHkpLkRlY29kZSgmcmVzKQoKCWlmIHN1Y2Nlc3MsIG9rIDo9IHJlc1sic3VjY2VzcyJdLihib29sKTsgIW9rIHx8ICFzdWNjZXNzIHsKCQlyZXR1cm4gZXJyb3JzLk5ldygiUGluZ0RhcnQgTGl2ZSBBdXRob3JpemF0aW9uIEZhaWxlZCIpCgl9CgoJcmV0dXJuIG5pbAp9CgpmdW5jIChwICpQaW5nRGFydERCKSBUYWJsZSh0YWJsZU5hbWUgc3RyaW5nKSAqUXVlcnlCdWlsZGVyIHsKCXJldHVybiBOZXdRdWVyeUJ1aWxkZXIodGFibGVOYW1lLCBwLkRCLCBwLkRCQ29uZmlnLlR5cGUpCn0KCmZ1bmMgKHAgKlBpbmdEYXJ0REIpIFNjaGVtYSgpICpTY2hlbWFCdWlsZGVyIHsKCXJldHVybiBOZXdTY2hlbWFCdWlsZGVyKHAuREIsIHAuREJDb25maWcuVHlwZSkKfQoKZnVuYyAocCAqUGluZ0RhcnREQikgQ2xvc2UoKSBlcnJvciB7CglpZiBwLkRCICE9IG5pbCB7CgkJcmV0dXJuIHAuREIuQ2xvc2UoKQoJfQoJcmV0dXJuIG5pbAp9Cg==
+package pingdartdb
+
+import (
+	"bytes"
+	"crypto/aes"
+	"crypto/cipher"
+	"crypto/sha256"
+	"database/sql"
+	"encoding/base64"
+	"encoding/hex"
+	"encoding/json"
+	"errors"
+	"fmt"
+	"net/http"
+	"strings"
+	"time"
+
+	_ "github.com/go-sql-driver/mysql"
+)
+
+type DBConfig struct {
+	Host     string
+	User     string
+	Password string
+	Database string
+	Type     string
+}
+
+type PingDartDB struct {
+	APIKey   string
+	DBConfig DBConfig
+	DB       *sql.DB
+	License  map[string]interface{}
+}
+
+func NewPingDartDB(apiKey string, config DBConfig) (*PingDartDB, error) {
+	if config.Type == "" {
+		config.Type = "mysql"
+	}
+
+	if config.Type != "mysql" {
+		return nil, errors.New("Unsupported database type. Currently only 'mysql' is fully implemented in Go driver.")
+	}
+
+	pd := &PingDartDB{
+		APIKey:   apiKey,
+		DBConfig: config,
+	}
+
+	err := pd.validateKey(apiKey)
+	if err != nil {
+		return nil, err
+	}
+
+	return pd, nil
+}
+
+func (p *PingDartDB) validateKey(apiKey string) error {
+	if !strings.HasPrefix(apiKey, "pd_") {
+		return errors.New("PingDart Authorization Failed: Invalid PingDart License Key format")
+	}
+
+	parts := strings.Split(strings.TrimPrefix(apiKey, "pd_"), ".")
+	if len(parts) != 2 {
+		return errors.New("PingDart Authorization Failed: Invalid PingDart License Key format")
+	}
+
+	iv, err := hex.DecodeString(parts[0])
+	if err != nil {
+		return err
+	}
+
+	encryptedText, err := hex.DecodeString(parts[1])
+	if err != nil {
+		return err
+	}
+
+	secretKey := "PingDartSuperSecretKey2026!@#$"
+	hash := sha256.Sum256([]byte(secretKey))
+	encodedHash := base64.StdEncoding.EncodeToString(hash[:])
+	key := []byte(encodedHash[:32])
+
+	block, err := aes.NewCipher(key)
+	if err != nil {
+		return err
+	}
+
+	mode := cipher.NewCBCDecrypter(block, iv)
+	decrypted := make([]byte, len(encryptedText))
+	mode.CryptBlocks(decrypted, encryptedText)
+
+	// PKCS7 Unpadding
+	paddingLen := int(decrypted[len(decrypted)-1])
+	if paddingLen > len(decrypted) {
+		return errors.New("Invalid padding")
+	}
+	decrypted = decrypted[:len(decrypted)-paddingLen]
+
+	var payload map[string]interface{}
+	err = json.Unmarshal(decrypted, &payload)
+	if err != nil {
+		return errors.New("License key is corrupted or tampered with")
+	}
+
+	p.License = payload
+	return nil
+}
+
+func (p *PingDartDB) Connect() error {
+	dsn := fmt.Sprintf("%s:%s@tcp(%s)/%s?parseTime=true", 
+		p.DBConfig.User, p.DBConfig.Password, p.DBConfig.Host, p.DBConfig.Database)
+
+	db, err := sql.Open(p.DBConfig.Type, dsn)
+	if err != nil {
+		return err
+	}
+
+	err = db.Ping()
+	if err != nil {
+		return err
+	}
+
+	p.DB = db
+
+	if tier, ok := p.License["tier"].(string); ok && tier != "free" {
+		err = p.validateLiveServer()
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
+}
+
+func (p *PingDartDB) validateLiveServer() error {
+	payload := map[string]string{"apiKey": p.APIKey}
+	jsonData, _ := json.Marshal(payload)
+
+	client := &http.Client{Timeout: 10 * time.Second}
+	resp, err := client.Post("https://cloudapi.pingdart.com/api/realtime/validate-sdk", "application/json", bytes.NewBuffer(jsonData))
+	if err != nil {
+		return errors.New("PingDart Live Authorization Failed: Connection timeout")
+	}
+	defer resp.Body.Close()
+
+	var res map[string]interface{}
+	json.NewDecoder(resp.Body).Decode(&res)
+
+	if success, ok := res["success"].(bool); !ok || !success {
+		return errors.New("PingDart Live Authorization Failed")
+	}
+
+	return nil
+}
+
+func (p *PingDartDB) Table(tableName string) *QueryBuilder {
+	return NewQueryBuilder(tableName, p.DB, p.DBConfig.Type)
+}
+
+func (p *PingDartDB) Schema() *SchemaBuilder {
+	return NewSchemaBuilder(p.DB, p.DBConfig.Type)
+}
+
+func (p *PingDartDB) Close() error {
+	if p.DB != nil {
+		return p.DB.Close()
+	}
+	return nil
+}

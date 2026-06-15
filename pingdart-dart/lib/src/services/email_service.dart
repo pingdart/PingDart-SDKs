@@ -1,3 +1,27 @@
-// Encrypted by PingDart
-// DECRYPT_KEY: pd_private_key
-aW1wb3J0ICdwYWNrYWdlOmh0dHAvaHR0cC5kYXJ0JyBhcyBodHRwOwppbXBvcnQgJ2RhcnQ6Y29udmVydCc7CgpjbGFzcyBFbWFpbFNlcnZpY2UgewogIGZpbmFsIGh0dHAuQ2xpZW50IGNsaWVudDsKICBmaW5hbCBTdHJpbmcgYXBpS2V5OwogIGZpbmFsIFN0cmluZyBiYXNlVXJsOwoKICBFbWFpbFNlcnZpY2Uoe3JlcXVpcmVkIHRoaXMuY2xpZW50LCByZXF1aXJlZCB0aGlzLmFwaUtleSwgcmVxdWlyZWQgdGhpcy5iYXNlVXJsfSk7CgogIEZ1dHVyZTxkeW5hbWljPiBzZW5kRW1haWwoU3RyaW5nIGVtYWlsLCBTdHJpbmcgc3ViamVjdCwgU3RyaW5nIHRleHQsIHtNYXA8U3RyaW5nLCBkeW5hbWljPj8gc210cENvbmZpZ30pIGFzeW5jIHsKICAgIGZpbmFsIHJlc3BvbnNlID0gYXdhaXQgY2xpZW50LnBvc3QoCiAgICAgIFVyaS5wYXJzZSgnJHtiYXNlVXJsfWVtYWlsL3NlbmQtZW1haWwnKSwKICAgICAgaGVhZGVyczogewogICAgICAgICd4LWFwaS1rZXknOiBhcGlLZXksCiAgICAgICAgJ0NvbnRlbnQtVHlwZSc6ICdhcHBsaWNhdGlvbi9qc29uJywKICAgICAgfSwKICAgICAgYm9keToganNvbkVuY29kZSh7CiAgICAgICAgJ2VtYWlsJzogZW1haWwsCiAgICAgICAgJ3N1YmplY3QnOiBzdWJqZWN0LAogICAgICAgICd0ZXh0JzogdGV4dCwKICAgICAgICBpZiAoc210cENvbmZpZyAhPSBudWxsKSAnc210cENvbmZpZyc6IHNtdHBDb25maWcsCiAgICAgIH0pLAogICAgKTsKICAgIHJldHVybiBqc29uRGVjb2RlKHJlc3BvbnNlLmJvZHkpOwogIH0KfQo=
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+
+class EmailService {
+  final http.Client client;
+  final String apiKey;
+  final String baseUrl;
+
+  EmailService({required this.client, required this.apiKey, required this.baseUrl});
+
+  Future<dynamic> sendEmail(String email, String subject, String text, {Map<String, dynamic>? smtpConfig}) async {
+    final response = await client.post(
+      Uri.parse('${baseUrl}email/send-email'),
+      headers: {
+        'x-api-key': apiKey,
+        'Content-Type': 'application/json',
+      },
+      body: jsonEncode({
+        'email': email,
+        'subject': subject,
+        'text': text,
+        if (smtpConfig != null) 'smtpConfig': smtpConfig,
+      }),
+    );
+    return jsonDecode(response.body);
+  }
+}

@@ -1,3 +1,65 @@
-// Encrypted by PingDart
-// DECRYPT_KEY: pd_private_key
-cGFja2FnZSBzZXJ2aWNlcwoKaW1wb3J0ICgKCSJieXRlcyIKCSJlbmNvZGluZy9qc29uIgoJImZtdCIKCSJuZXQvaHR0cCIKKQoKdHlwZSBDYWxsc1NlcnZpY2Ugc3RydWN0IHsKCWh0dHAgICAgKmh0dHAuQ2xpZW50CglhcGlLZXkgIHN0cmluZwoJYmFzZVVSTCBzdHJpbmcKfQoKZnVuYyBOZXdDYWxsc1NlcnZpY2UoY2xpZW50ICpodHRwLkNsaWVudCwgYXBpS2V5LCBiYXNlVVJMIHN0cmluZykgKkNhbGxzU2VydmljZSB7CglyZXR1cm4gJkNhbGxzU2VydmljZXsKCQlodHRwOiAgICBjbGllbnQsCgkJYXBpS2V5OiAgYXBpS2V5LAoJCWJhc2VVUkw6IGJhc2VVUkwsCgl9Cn0KCmZ1bmMgKHMgKkNhbGxzU2VydmljZSkgTGlzdEFwcHMoKSAoaW50ZXJmYWNle30sIGVycm9yKSB7CglyZXEsIGVyciA6PSBodHRwLk5ld1JlcXVlc3QoIkdFVCIsIHMuYmFzZVVSTCsiL3YxL2NhbGxzL2FwcHMiLCBuaWwpCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gbmlsLCBlcnIKCX0KCglyZXEuSGVhZGVyLlNldCgieC1hcGkta2V5Iiwgcy5hcGlLZXkpCglyZXEuSGVhZGVyLlNldCgiWC1TREstU291cmNlIiwgIlBpbmdEYXJ0LUdvLVNESyIpCgoJcmVzcCwgZXJyIDo9IHMuaHR0cC5EbyhyZXEpCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gbmlsLCBlcnIKCX0KCWRlZmVyIHJlc3AuQm9keS5DbG9zZSgpCgoJdmFyIHJlc3VsdCBpbnRlcmZhY2V7fQoJanNvbi5OZXdEZWNvZGVyKHJlc3AuQm9keSkuRGVjb2RlKCZyZXN1bHQpCglyZXR1cm4gcmVzdWx0LCBuaWwKfQoKZnVuYyAocyAqQ2FsbHNTZXJ2aWNlKSBDcmVhdGVBcHAobmFtZSwgYXBwVHlwZSBzdHJpbmcpIChpbnRlcmZhY2V7fSwgZXJyb3IpIHsKCWRhdGEgOj0gbWFwW3N0cmluZ11zdHJpbmd7Im5hbWUiOiBuYW1lLCAidHlwZSI6IGFwcFR5cGV9Cglqc29uRGF0YSwgXyA6PSBqc29uLk1hcnNoYWwoZGF0YSkKCglyZXEsIGVyciA6PSBodHRwLk5ld1JlcXVlc3QoIlBPU1QiLCBzLmJhc2VVUkwrIi92MS9jYWxscy9hcHBzIiwgYnl0ZXMuTmV3QnVmZmVyKGpzb25EYXRhKSkKCWlmIGVyciAhPSBuaWwgewoJCXJldHVybiBuaWwsIGVycgoJfQoKCXJlcS5IZWFkZXIuU2V0KCJ4LWFwaS1rZXkiLCBzLmFwaUtleSkKCXJlcS5IZWFkZXIuU2V0KCJDb250ZW50LVR5cGUiLCAiYXBwbGljYXRpb24vanNvbiIpCgoJcmVzcCwgZXJyIDo9IHMuaHR0cC5EbyhyZXEpCglpZiBlcnIgIT0gbmlsIHsKCQlyZXR1cm4gbmlsLCBlcnIKCX0KCWRlZmVyIHJlc3AuQm9keS5DbG9zZSgpCgoJdmFyIHJlc3VsdCBpbnRlcmZhY2V7fQoJanNvbi5OZXdEZWNvZGVyKHJlc3AuQm9keSkuRGVjb2RlKCZyZXN1bHQpCglyZXR1cm4gcmVzdWx0LCBuaWwKfQo=
+package services
+
+import (
+	"bytes"
+	"encoding/json"
+	"fmt"
+	"net/http"
+)
+
+type CallsService struct {
+	http    *http.Client
+	apiKey  string
+	baseURL string
+}
+
+func NewCallsService(client *http.Client, apiKey, baseURL string) *CallsService {
+	return &CallsService{
+		http:    client,
+		apiKey:  apiKey,
+		baseURL: baseURL,
+	}
+}
+
+func (s *CallsService) ListApps() (interface{}, error) {
+	req, err := http.NewRequest("GET", s.baseURL+"/v1/calls/apps", nil)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Set("x-api-key", s.apiKey)
+	req.Header.Set("X-SDK-Source", "PingDart-Go-SDK")
+
+	resp, err := s.http.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+
+	var result interface{}
+	json.NewDecoder(resp.Body).Decode(&result)
+	return result, nil
+}
+
+func (s *CallsService) CreateApp(name, appType string) (interface{}, error) {
+	data := map[string]string{"name": name, "type": appType}
+	jsonData, _ := json.Marshal(data)
+
+	req, err := http.NewRequest("POST", s.baseURL+"/v1/calls/apps", bytes.NewBuffer(jsonData))
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Set("x-api-key", s.apiKey)
+	req.Header.Set("Content-Type", "application/json")
+
+	resp, err := s.http.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+
+	var result interface{}
+	json.NewDecoder(resp.Body).Decode(&result)
+	return result, nil
+}

@@ -1,2 +1,69 @@
-// Encrypted by PingDart
-eval(Buffer.from('Y2xhc3MgU2NoZW1hQnVpbGRlciB7CiAgICBjb25zdHJ1Y3RvcihzZXF1ZWxpemUsIGRiVHlwZSkgewogICAgICAgIHRoaXMuc2VxdWVsaXplID0gc2VxdWVsaXplOwogICAgICAgIHRoaXMuZGJUeXBlID0gZGJUeXBlOwogICAgICAgIHRoaXMucSA9IHRoaXMuZGJUeXBlID09PSAncG9zdGdyZXMnID8gJyInIDogJ2AnOwogICAgfQoKICAgIC8qKgogICAgICogQ3JlYXRlIGEgdGFibGUgZHluYW1pY2FsbHkKICAgICAqIEBwYXJhbSB7c3RyaW5nfSB0YWJsZU5hbWUgCiAgICAgKiBAcGFyYW0ge0FycmF5fSBjb2x1bW5zIC0gZS5nLiBbeyBuYW1lOiAnaWQnLCB0eXBlOiAnU0VSSUFMIFBSSU1BUlkgS0VZJyB9XQogICAgICovCiAgICBhc3luYyBjcmVhdGVUYWJsZSh0YWJsZU5hbWUsIGNvbHVtbnMgPSBbXSkgewogICAgICAgIGxldCBxdWVyeTsKICAgICAgICAKICAgICAgICBpZiAoY29sdW1ucyAmJiBjb2x1bW5zLmxlbmd0aCA+IDApIHsKICAgICAgICAgICAgY29uc3QgY29sdW1uc1N0cmluZyA9IGNvbHVtbnMubWFwKGNvbCA9PiBgJHt0aGlzLnF9JHtjb2wubmFtZX0ke3RoaXMucX0gJHtjb2wudHlwZX1gKS5qb2luKCcsICcpOwogICAgICAgICAgICBxdWVyeSA9IGBDUkVBVEUgVEFCTEUgSUYgTk9UIEVYSVNUUyAke3RoaXMucX0ke3RhYmxlTmFtZX0ke3RoaXMucX0gKCR7Y29sdW1uc1N0cmluZ30pYDsKICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAvLyBEZWZhdWx0IHN0cnVjdHVyZSBpZiBubyBjb2x1bW5zIHNwZWNpZmllZAogICAgICAgICAgICBxdWVyeSA9IGBDUkVBVEUgVEFCTEUgSUYgTk9UIEVYSVNUUyAke3RoaXMucX0ke3RhYmxlTmFtZX0ke3RoaXMucX0gKAogICAgICAgICAgICAgICAgaWQgJHt0aGlzLmRiVHlwZSA9PT0gJ3Bvc3RncmVzJyA/ICdTRVJJQUwgUFJJTUFSWSBLRVknIDogJ0lOVCBBVVRPX0lOQ1JFTUVOVCBQUklNQVJZIEtFWSd9LAogICAgICAgICAgICAgICAgY3JlYXRlZF9hdCBUSU1FU1RBTVAgREVGQVVMVCBDVVJSRU5UX1RJTUVTVEFNUCwKICAgICAgICAgICAgICAgIHVwZGF0ZWRfYXQgVElNRVNUQU1QIERFRkFVTFQgQ1VSUkVOVF9USU1FU1RBTVAgJHt0aGlzLmRiVHlwZSA9PT0gJ215c3FsJyA/ICdPTiBVUERBVEUgQ1VSUkVOVF9USU1FU1RBTVAnIDogJyd9CiAgICAgICAgICAgIClgOwogICAgICAgIH0KCiAgICAgICAgYXdhaXQgdGhpcy5zZXF1ZWxpemUucXVlcnkocXVlcnkpOwogICAgICAgIHJldHVybiB7IHN1Y2Nlc3M6IHRydWUsIG1lc3NhZ2U6IGBUYWJsZSAke3RhYmxlTmFtZX0gY3JlYXRlZCBzdWNjZXNzZnVsbHkuYCB9OwogICAgfQoKICAgIC8qKgogICAgICogRHJvcCBhIHRhYmxlCiAgICAgKiBAcGFyYW0ge3N0cmluZ30gdGFibGVOYW1lIAogICAgICovCiAgICBhc3luYyBkcm9wVGFibGUodGFibGVOYW1lKSB7CiAgICAgICAgY29uc3QgcXVlcnkgPSBgRFJPUCBUQUJMRSBJRiBFWElTVFMgJHt0aGlzLnF9JHt0YWJsZU5hbWV9JHt0aGlzLnF9YDsKICAgICAgICBhd2FpdCB0aGlzLnNlcXVlbGl6ZS5xdWVyeShxdWVyeSk7CiAgICAgICAgcmV0dXJuIHsgc3VjY2VzczogdHJ1ZSwgbWVzc2FnZTogYFRhYmxlICR7dGFibGVOYW1lfSBkcm9wcGVkIHN1Y2Nlc3NmdWxseS5gIH07CiAgICB9CgogICAgLyoqCiAgICAgKiBHZXQgY29sdW1ucyBvZiBhIHRhYmxlCiAgICAgKiBAcGFyYW0ge3N0cmluZ30gdGFibGVOYW1lIAogICAgICovCiAgICBhc3luYyBnZXRDb2x1bW5zKHRhYmxlTmFtZSkgewogICAgICAgIGxldCBxdWVyeTsKICAgICAgICBpZiAodGhpcy5kYlR5cGUgPT09ICdteXNxbCcpIHsKICAgICAgICAgICAgcXVlcnkgPSBgU0hPVyBDT0xVTU5TIEZST00gXGAke3RhYmxlTmFtZX1cYGA7CiAgICAgICAgfSBlbHNlIGlmICh0aGlzLmRiVHlwZSA9PT0gJ3Bvc3RncmVzJykgewogICAgICAgICAgICBxdWVyeSA9IGAKICAgICAgICAgICAgICAgIFNFTEVDVCBjb2x1bW5fbmFtZSBhcyAiRmllbGQiLCBkYXRhX3R5cGUgYXMgIlR5cGUiCiAgICAgICAgICAgICAgICBGUk9NIGluZm9ybWF0aW9uX3NjaGVtYS5jb2x1bW5zIAogICAgICAgICAgICAgICAgV0hFUkUgdGFibGVfbmFtZSA9ICcke3RhYmxlTmFtZX0nCiAgICAgICAgICAgIGA7CiAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBVbnN1cHBvcnRlZCBEQiB0eXBlIGZvciBnZXRDb2x1bW5zOiAke3RoaXMuZGJUeXBlfWApOwogICAgICAgIH0KCiAgICAgICAgY29uc3QgcmVzdWx0cyA9IGF3YWl0IHRoaXMuc2VxdWVsaXplLnF1ZXJ5KHF1ZXJ5LCB7CiAgICAgICAgICAgIHR5cGU6IHRoaXMuc2VxdWVsaXplLlF1ZXJ5VHlwZXMuU0VMRUNULAogICAgICAgICAgICByYXc6IHRydWUKICAgICAgICB9KTsKCiAgICAgICAgcmV0dXJuIHJlc3VsdHM7CiAgICB9Cn0KCm1vZHVsZS5leHBvcnRzID0gU2NoZW1hQnVpbGRlcjsK', 'base64').toString('utf-8'));
+class SchemaBuilder {
+    constructor(sequelize, dbType) {
+        this.sequelize = sequelize;
+        this.dbType = dbType;
+        this.q = this.dbType === 'postgres' ? '"' : '`';
+    }
+
+    /**
+     * Create a table dynamically
+     * @param {string} tableName 
+     * @param {Array} columns - e.g. [{ name: 'id', type: 'SERIAL PRIMARY KEY' }]
+     */
+    async createTable(tableName, columns = []) {
+        let query;
+        
+        if (columns && columns.length > 0) {
+            const columnsString = columns.map(col => `${this.q}${col.name}${this.q} ${col.type}`).join(', ');
+            query = `CREATE TABLE IF NOT EXISTS ${this.q}${tableName}${this.q} (${columnsString})`;
+        } else {
+            // Default structure if no columns specified
+            query = `CREATE TABLE IF NOT EXISTS ${this.q}${tableName}${this.q} (
+                id ${this.dbType === 'postgres' ? 'SERIAL PRIMARY KEY' : 'INT AUTO_INCREMENT PRIMARY KEY'},
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ${this.dbType === 'mysql' ? 'ON UPDATE CURRENT_TIMESTAMP' : ''}
+            )`;
+        }
+
+        await this.sequelize.query(query);
+        return { success: true, message: `Table ${tableName} created successfully.` };
+    }
+
+    /**
+     * Drop a table
+     * @param {string} tableName 
+     */
+    async dropTable(tableName) {
+        const query = `DROP TABLE IF EXISTS ${this.q}${tableName}${this.q}`;
+        await this.sequelize.query(query);
+        return { success: true, message: `Table ${tableName} dropped successfully.` };
+    }
+
+    /**
+     * Get columns of a table
+     * @param {string} tableName 
+     */
+    async getColumns(tableName) {
+        let query;
+        if (this.dbType === 'mysql') {
+            query = `SHOW COLUMNS FROM \`${tableName}\``;
+        } else if (this.dbType === 'postgres') {
+            query = `
+                SELECT column_name as "Field", data_type as "Type"
+                FROM information_schema.columns 
+                WHERE table_name = '${tableName}'
+            `;
+        } else {
+            throw new Error(`Unsupported DB type for getColumns: ${this.dbType}`);
+        }
+
+        const results = await this.sequelize.query(query, {
+            type: this.sequelize.QueryTypes.SELECT,
+            raw: true
+        });
+
+        return results;
+    }
+}
+
+module.exports = SchemaBuilder;

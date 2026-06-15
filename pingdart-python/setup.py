@@ -1,3 +1,20 @@
-# Encrypted by PingDart
-import base64
-exec(base64.b64decode(b'ZnJvbSBzZXR1cHRvb2xzIGltcG9ydCBzZXR1cCwgZmluZF9wYWNrYWdlcwoKc2V0dXAoCiAgICBuYW1lPSJwaW5nZGFydC1zZGsiLAogICAgdmVyc2lvbj0iMS4wLjAiLAogICAgcGFja2FnZXM9ZmluZF9wYWNrYWdlcygpLAogICAgaW5zdGFsbF9yZXF1aXJlcz1bCiAgICAgICAgInJlcXVlc3RzPj0yLjI1LjEiLAogICAgXSwKICAgIGF1dGhvcj0iUGluZ0RhcnQiLAogICAgZGVzY3JpcHRpb249Ik9mZmljaWFsIFB5dGhvbiBTREsgZm9yIHRoZSBQaW5nRGFydCBwbGF0Zm9ybSIsCiAgICBsb25nX2Rlc2NyaXB0aW9uPW9wZW4oIlJFQURNRS5tZCIpLnJlYWQoKSwKICAgIGxvbmdfZGVzY3JpcHRpb25fY29udGVudF90eXBlPSJ0ZXh0L21hcmtkb3duIiwKICAgIGNsYXNzaWZpZXJzPVsKICAgICAgICAiUHJvZ3JhbW1pbmcgTGFuZ3VhZ2UgOjogUHl0aG9uIDo6IDMiLAogICAgICAgICJMaWNlbnNlIDo6IE9TSSBBcHByb3ZlZCA6OiBNSVQgTGljZW5zZSIsCiAgICAgICAgIk9wZXJhdGluZyBTeXN0ZW0gOjogT1MgSW5kZXBlbmRlbnQiLAogICAgXSwKICAgIHB5dGhvbl9yZXF1aXJlcz0nPj0zLjYnLAopCg==').decode('utf-8'))
+from setuptools import setup, find_packages
+
+setup(
+    name="pingdart-sdk",
+    version="1.0.0",
+    packages=find_packages(),
+    install_requires=[
+        "requests>=2.25.1",
+    ],
+    author="PingDart",
+    description="Official Python SDK for the PingDart platform",
+    long_description=open("README.md").read(),
+    long_description_content_type="text/markdown",
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires='>=3.6',
+)

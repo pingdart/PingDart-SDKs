@@ -1,2 +1,77 @@
-// Encrypted by PingDart
-eval(Buffer.from('Y2xhc3MgV2hhdHNBcHBTZXJ2aWNlIHsKICAgIGNvbnN0cnVjdG9yKGh0dHAsIGNvbmZpZykgewogICAgICAgIHRoaXMuaHR0cCA9IGh0dHA7CiAgICAgICAgdGhpcy5iYXNlVVJMID0gY29uZmlnPy5iYXNlVVJMIHx8ICdodHRwczovL2Nsb3VkYXBpLnBpbmdkYXJ0LmNvbS9hcGknOwogICAgICAgIHRoaXMuYXBpS2V5ID0gY29uZmlnPy5hcGlLZXk7CiAgICB9CgogICAgYXN5bmMgaW5pdGlhbGl6ZShjbGllbnRJZCwgcGhvbmVOdW1iZXIpIHsKICAgICAgICBjb25zdCByZXMgPSBhd2FpdCB0aGlzLmh0dHAucG9zdCgid2hhdHNhcHAvaW5pdGlhbGl6ZS13aGF0c2FwcCIsIHsKICAgICAgICAgICAgY2xpZW50SWQsCiAgICAgICAgICAgIHBob25lTnVtYmVyCiAgICAgICAgfSk7CiAgICAgICAgcmV0dXJuIHJlcy5kYXRhOwogICAgfQoKICAgIGFzeW5jIHNlbmRNZXNzYWdlKHsgY2xpZW50SWQsIHRvLCBtZXNzYWdlLCB0eXBlID0gJ3RleHQnLCBtZWRpYURhdGEsIG1pbWV0eXBlLCBmaWxlbmFtZSB9KSB7CiAgICAgICAgaWYgKCFjbGllbnRJZCB8fCAhdG8gfHwgKCFtZXNzYWdlICYmICFtZWRpYURhdGEpKSB7CiAgICAgICAgICAgIHRocm93IG5ldyBFcnJvcigiY2xpZW50SWQsIHRvLCBhbmQgbWVzc2FnZS9tZWRpYURhdGEgYXJlIHJlcXVpcmVkIik7CiAgICAgICAgfQoKICAgICAgICBjb25zdCByZXMgPSBhd2FpdCB0aGlzLmh0dHAucG9zdCgid2hhdHNhcHAvc2VuZC1tZXNzYWdlIiwgewogICAgICAgICAgICBjbGllbnRJZCwKICAgICAgICAgICAgcGhvbmVOdW1iZXI6IHRvLAogICAgICAgICAgICBtZXNzYWdlLAogICAgICAgICAgICB0eXBlLAogICAgICAgICAgICBtZWRpYURhdGEsCiAgICAgICAgICAgIG1pbWV0eXBlLAogICAgICAgICAgICBmaWxlbmFtZQogICAgICAgIH0pOwoKICAgICAgICByZXR1cm4gcmVzLmRhdGE7CiAgICB9CgogICAgYXN5bmMgY2hlY2tTdGF0dXMoY2xpZW50SWQpIHsKICAgICAgICBjb25zdCByZXMgPSBhd2FpdCB0aGlzLmh0dHAucG9zdCgid2hhdHNhcHAvY2hlY2stc3RhdHVzIiwgeyBjbGllbnRJZCB9KTsKICAgICAgICByZXR1cm4gcmVzLmRhdGE7CiAgICB9CgogICAgYXN5bmMgZ2V0Q2hhdHMoY2xpZW50SWQpIHsKICAgICAgICBjb25zdCByZXMgPSBhd2FpdCB0aGlzLmh0dHAuZ2V0KGB3aGF0c2FwcC9nZXQtY2hhdHMvJHtjbGllbnRJZH1gKTsKICAgICAgICByZXR1cm4gcmVzLmRhdGE7CiAgICB9CgogICAgYXN5bmMgc2VuZFdoYXRzQXBwKHBob25lTnVtYmVyLCBtZXNzYWdlLCB0ZW1wbGF0ZSA9ICJ3aGF0c2FwcCIpIHsKICAgICAgICBsZXQgY2xlYW5QaG9uZU51bWJlciA9IHBob25lTnVtYmVyLnJlcGxhY2UoL1teXGQrXS9nLCAnJyk7CiAgICAgICAgY2xlYW5QaG9uZU51bWJlciA9IGNsZWFuUGhvbmVOdW1iZXIucmVwbGFjZSgvXHMvZywgJycpOwoKICAgICAgICAvLyBJZiBpdCdzIGEgbG9jYWwgbnVtYmVyIChzdGFydHMgd2l0aCAwKSwgd2Ugc2hvdWxkIGlkZWFsbHkga25vdyB0aGUgY291bnRyeS4gCiAgICAgICAgLy8gRm9yIG5vdywgd2UnbGwganVzdCBlbnN1cmUgaXQgaGFzIGEgJysnIGlmIGl0IGxvb2tzIGxpa2UgYW4gaW50ZXJuYXRpb25hbCBudW1iZXIgYnV0IGxhY2tzIGl0LgogICAgICAgIGlmICghY2xlYW5QaG9uZU51bWJlci5zdGFydHNXaXRoKCcrJykgJiYgY2xlYW5QaG9uZU51bWJlci5sZW5ndGggPj0gMTApIHsKICAgICAgICAgICAgLy8gV2UnbGwgc3RvcCBhdXRvLXByZWZpeGluZyB3aXRoICs5MSB0byBzdXBwb3J0IGdsb2JhbCB1c2Vycy4KICAgICAgICAgICAgLy8gSWYgdGhlIHVzZXIgd2FudHMgYSBzcGVjaWZpYyBjb3VudHJ5LCB0aGV5IHNob3VsZCBwcm92aWRlIHRoZSBmdWxsIGludGVybmF0aW9uYWwgZm9ybWF0LgogICAgICAgICAgICAvLyBIb3dldmVyLCBmb3IgYmFja3dhcmQgY29tcGF0aWJpbGl0eSwgd2UnbGwganVzdCBwcmVwZW5kICcrJyBpZiBpdCBzZWVtcyBsaWtlIGEgZnVsbCBudW1iZXIgd2l0aG91dCBpdC4KICAgICAgICAgICAgLy8gQnV0IGFjdHVhbGx5LCBpdCdzIHNhZmVyIHRvIGp1c3QgcmVxdWlyZSB0aGUgdXNlciB0byBwcm92aWRlIHRoZSAnKycgZm9yIGludGVybmF0aW9uYWwgbnVtYmVycy4KICAgICAgICB9CgogICAgICAgIHRyeSB7CiAgICAgICAgICAgIGNvbnN0IHJlc3BvbnNlID0gYXdhaXQgdGhpcy5odHRwLnBvc3QoIndoYXRzYXBwL3NlbmQiLCB7CiAgICAgICAgICAgICAgICBudW1iZXI6IGNsZWFuUGhvbmVOdW1iZXIsCiAgICAgICAgICAgICAgICBtZXNzYWdlOiBtZXNzYWdlLAogICAgICAgICAgICAgICAgdGVtcGxhdGU6IHRlbXBsYXRlCiAgICAgICAgICAgIH0pOwoKICAgICAgICAgICAgaWYgKHJlc3BvbnNlLnN0YXR1cyA9PT0gMjAwIHx8IHJlc3BvbnNlLmRhdGEuc3VjY2VzcykgewogICAgICAgICAgICAgICAgcmV0dXJuIHsKICAgICAgICAgICAgICAgICAgICBzdWNjZXNzOiB0cnVlLAogICAgICAgICAgICAgICAgICAgIG1lc3NhZ2U6ICdXaGF0c0FwcCBtZXNzYWdlIHNlbnQgc3VjY2Vzc2Z1bGx5IHZpYSBiYWNrZW5kJywKICAgICAgICAgICAgICAgICAgICBkYXRhOiByZXNwb25zZS5kYXRhCiAgICAgICAgICAgICAgICB9OwogICAgICAgICAgICB9CiAgICAgICAgfSBjYXRjaCAoZXJyb3IpIHsKICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBCYWNrZW5kIFdoYXRzQXBwIHJvdXRlIGZhaWxlZDogJHtlcnJvci5tZXNzYWdlfWApOwogICAgICAgIH0KICAgIH0KfQoKZXhwb3J0IGRlZmF1bHQgV2hhdHNBcHBTZXJ2aWNlOwo=', 'base64').toString('utf-8'));
+class WhatsAppService {
+    constructor(http, config) {
+        this.http = http;
+        this.baseURL = config?.baseURL || 'https://cloudapi.pingdart.com/api';
+        this.apiKey = config?.apiKey;
+    }
+
+    async initialize(clientId, phoneNumber) {
+        const res = await this.http.post("whatsapp/initialize-whatsapp", {
+            clientId,
+            phoneNumber
+        });
+        return res.data;
+    }
+
+    async sendMessage({ clientId, to, message, type = 'text', mediaData, mimetype, filename }) {
+        if (!clientId || !to || (!message && !mediaData)) {
+            throw new Error("clientId, to, and message/mediaData are required");
+        }
+
+        const res = await this.http.post("whatsapp/send-message", {
+            clientId,
+            phoneNumber: to,
+            message,
+            type,
+            mediaData,
+            mimetype,
+            filename
+        });
+
+        return res.data;
+    }
+
+    async checkStatus(clientId) {
+        const res = await this.http.post("whatsapp/check-status", { clientId });
+        return res.data;
+    }
+
+    async getChats(clientId) {
+        const res = await this.http.get(`whatsapp/get-chats/${clientId}`);
+        return res.data;
+    }
+
+    async sendWhatsApp(phoneNumber, message, template = "whatsapp") {
+        let cleanPhoneNumber = phoneNumber.replace(/[^\d+]/g, '');
+        cleanPhoneNumber = cleanPhoneNumber.replace(/\s/g, '');
+
+        // If it's a local number (starts with 0), we should ideally know the country. 
+        // For now, we'll just ensure it has a '+' if it looks like an international number but lacks it.
+        if (!cleanPhoneNumber.startsWith('+') && cleanPhoneNumber.length >= 10) {
+            // We'll stop auto-prefixing with +91 to support global users.
+            // If the user wants a specific country, they should provide the full international format.
+            // However, for backward compatibility, we'll just prepend '+' if it seems like a full number without it.
+            // But actually, it's safer to just require the user to provide the '+' for international numbers.
+        }
+
+        try {
+            const response = await this.http.post("whatsapp/send", {
+                number: cleanPhoneNumber,
+                message: message,
+                template: template
+            });
+
+            if (response.status === 200 || response.data.success) {
+                return {
+                    success: true,
+                    message: 'WhatsApp message sent successfully via backend',
+                    data: response.data
+                };
+            }
+        } catch (error) {
+            throw new Error(`Backend WhatsApp route failed: ${error.message}`);
+        }
+    }
+}
+
+export default WhatsAppService;

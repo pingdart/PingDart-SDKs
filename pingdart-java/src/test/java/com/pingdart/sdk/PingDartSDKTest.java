@@ -1,3 +1,23 @@
-// Encrypted by PingDart
-// DECRYPT_KEY: pd_private_key
-cGFja2FnZSBjb20ucGluZ2RhcnQuc2RrOwoKaW1wb3J0IG9yZy5qdW5pdC5UZXN0OwppbXBvcnQgc3RhdGljIG9yZy5qdW5pdC5Bc3NlcnQuKjsKCnB1YmxpYyBjbGFzcyBQaW5nRGFydFNES1Rlc3QgewoKICAgIEBUZXN0CiAgICBwdWJsaWMgdm9pZCB0ZXN0U0RLSW5pdGlhbGl6YXRpb24oKSB7CiAgICAgICAgU3RyaW5nIGFwaUtleSA9ICJ0ZXN0LWtleSI7CiAgICAgICAgU3RyaW5nIGRiSWQgPSAidGVzdC1kYiI7CiAgICAgICAgUGluZ0RhcnRTREsgc2RrID0gbmV3IFBpbmdEYXJ0U0RLKGFwaUtleSwgZGJJZCwgbnVsbCwgbnVsbCk7CgogICAgICAgIGFzc2VydE5vdE51bGwoIlNESyBzaG91bGQgYmUgaW5pdGlhbGl6ZWQiLCBzZGspOwogICAgICAgIGFzc2VydE5vdE51bGwoIkRhdGFiYXNlIHNlcnZpY2Ugc2hvdWxkIGJlIG1vdW50ZWQiLCBzZGsuZGF0YWJhc2UpOwogICAgICAgIGFzc2VydE5vdE51bGwoIldoYXRzQXBwIHNlcnZpY2Ugc2hvdWxkIGJlIG1vdW50ZWQiLCBzZGsud2hhdHNhcHApOwogICAgICAgIGFzc2VydE5vdE51bGwoIkNhbGxzIHNlcnZpY2Ugc2hvdWxkIGJlIG1vdW50ZWQiLCBzZGsuY2FsbHMpOwogICAgICAgIGFzc2VydE5vdE51bGwoIlN0b3JhZ2Ugc2VydmljZSBzaG91bGQgYmUgbW91bnRlZCIsIHNkay5zdG9yYWdlKTsKICAgICAgICBhc3NlcnROb3ROdWxsKCJFbWFpbCBzZXJ2aWNlIHNob3VsZCBiZSBtb3VudGVkIiwgc2RrLmVtYWlsKTsKICAgICAgICBhc3NlcnROb3ROdWxsKCJTTVMgc2VydmljZSBzaG91bGQgYmUgbW91bnRlZCIsIHNkay5zbXMpOwogICAgICAgIGFzc2VydE5vdE51bGwoIkFJIHNlcnZpY2Ugc2hvdWxkIGJlIG1vdW50ZWQiLCBzZGsuYWkpOwogICAgfQp9Cg==
+package com.pingdart.sdk;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class PingDartSDKTest {
+
+    @Test
+    public void testSDKInitialization() {
+        String apiKey = "test-key";
+        String dbId = "test-db";
+        PingDartSDK sdk = new PingDartSDK(apiKey, dbId, null, null);
+
+        assertNotNull("SDK should be initialized", sdk);
+        assertNotNull("Database service should be mounted", sdk.database);
+        assertNotNull("WhatsApp service should be mounted", sdk.whatsapp);
+        assertNotNull("Calls service should be mounted", sdk.calls);
+        assertNotNull("Storage service should be mounted", sdk.storage);
+        assertNotNull("Email service should be mounted", sdk.email);
+        assertNotNull("SMS service should be mounted", sdk.sms);
+        assertNotNull("AI service should be mounted", sdk.ai);
+    }
+}

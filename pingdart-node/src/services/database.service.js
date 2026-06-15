@@ -1,2 +1,158 @@
-// Encrypted by PingDart
-eval(Buffer.from('aW1wb3J0IHsgaW8gfSBmcm9tICJzb2NrZXQuaW8tY2xpZW50IjsKCmNsYXNzIERhdGFiYXNlU2VydmljZSB7CiAgICBjb25zdHJ1Y3RvcihodHRwLCBjb25maWcpIHsKICAgICAgICB0aGlzLmh0dHAgPSBodHRwOwogICAgICAgIHRoaXMuZGF0YWJhc2VJZCA9IGNvbmZpZy5kYXRhYmFzZUlkOwogICAgICAgIHRoaXMucmVhbHRpbWVCYXNlVVJMID0gY29uZmlnLnJlYWx0aW1lQmFzZVVSTDsKCiAgICAgICAgdGhpcy5wb2xsaW5nSW50ZXJ2YWwgPSBudWxsOwogICAgICAgIHRoaXMuc29ja2V0ID0gbnVsbDsKICAgICAgICB0aGlzLl9zb2NrZXRJbml0aWFsaXplZCA9IGZhbHNlOwoKICAgICAgICBpZiAoIXRoaXMuZGF0YWJhc2VJZCkgewogICAgICAgICAgICBjb25zb2xlLndhcm4oIlBpbmdEYXJ0IFNESzogZGF0YWJhc2VJZCBpcyBtaXNzaW5nISBSZWFsLXRpbWUgQ1JVRCBvcGVyYXRpb25zIG1heSBmYWlsLiIpOwogICAgICAgIH0KICAgIH0KCiAgICBhc3luYyBfaW5pdGlhbGl6ZVNvY2tldCgpIHsKICAgICAgICBpZiAoIXRoaXMuX3NvY2tldEluaXRpYWxpemVkICYmICF0aGlzLnNvY2tldCkgewogICAgICAgICAgICB0aGlzLnNvY2tldCA9IGlvKHRoaXMucmVhbHRpbWVCYXNlVVJMLCB7CiAgICAgICAgICAgICAgICByZWNvbm5lY3Rpb246IHRydWUsCiAgICAgICAgICAgICAgICByZWNvbm5lY3Rpb25BdHRlbXB0czogNSwKICAgICAgICAgICAgICAgIHJlY29ubmVjdGlvbkRlbGF5OiAxMDAwLAogICAgICAgICAgICB9KTsKICAgICAgICAgICAgdGhpcy5fc29ja2V0SW5pdGlhbGl6ZWQgPSB0cnVlOwogICAgICAgIH0KICAgICAgICByZXR1cm4gdGhpcy5zb2NrZXQ7CiAgICB9CgogICAgZGlzY29ubmVjdFNvY2tldCgpIHsKICAgICAgICBpZiAodGhpcy5zb2NrZXQpIHsKICAgICAgICAgICAgdGhpcy5zb2NrZXQuZGlzY29ubmVjdCgpOwogICAgICAgICAgICB0aGlzLnNvY2tldCA9IG51bGw7CiAgICAgICAgICAgIHRoaXMuX3NvY2tldEluaXRpYWxpemVkID0gZmFsc2U7CiAgICAgICAgfQogICAgfQoKICAgIGFzeW5jIF9wb3N0UmVxdWVzdChlbmRwb2ludCwgZGF0YSwgdGltZW91dCA9IDE1MDAwKSB7CiAgICAgICAgdHJ5IHsKICAgICAgICAgICAgY29uc3QgY29uZmlnID0geyB0aW1lb3V0IH07CiAgICAgICAgICAgIGNvbnN0IHJlc3BvbnNlID0gYXdhaXQgdGhpcy5odHRwLnBvc3QoYCR7ZW5kcG9pbnR9YCwgZGF0YSwgY29uZmlnKTsKCiAgICAgICAgICAgIGxldCByZXNwb25zZURhdGEgPSByZXNwb25zZS5kYXRhOwogICAgICAgICAgICBpZiAocmVzcG9uc2VEYXRhICYmIHR5cGVvZiByZXNwb25zZURhdGEgPT09ICdvYmplY3QnICYmICFyZXNwb25zZURhdGEuaGFzT3duUHJvcGVydHkoJ3N1Y2Nlc3MnKSkgewogICAgICAgICAgICAgICAgcmVzcG9uc2VEYXRhLnN1Y2Nlc3MgPSB0cnVlOwogICAgICAgICAgICB9CiAgICAgICAgICAgIHJldHVybiByZXNwb25zZURhdGE7CiAgICAgICAgfSBjYXRjaCAoZXJyb3IpIHsKICAgICAgICAgICAgaWYgKGVycm9yLmNvZGUgPT09ICdFQ09OTkFCT1JURUQnIHx8IGVycm9yLm1lc3NhZ2UuaW5jbHVkZXMoJ3RpbWVvdXQnKSkgewogICAgICAgICAgICAgICAgcmV0dXJuIHsKICAgICAgICAgICAgICAgICAgICBzdWNjZXNzOiBmYWxzZSwKICAgICAgICAgICAgICAgICAgICBzdGF0dXM6IDAsCiAgICAgICAgICAgICAgICAgICAgbWVzc2FnZTogYFJlcXVlc3QgdGltZW91dDogVGhlIHNlcnZlciBkaWQgbm90IHJlc3BvbmQgd2l0aGluICR7dGltZW91dH1tcy5gLAogICAgICAgICAgICAgICAgICAgIGVycm9yOiAnQ29ubmVjdGlvbiB0aW1lb3V0JywKICAgICAgICAgICAgICAgICAgICBkYXRhOiBbXQogICAgICAgICAgICAgICAgfTsKICAgICAgICAgICAgfQoKICAgICAgICAgICAgaWYgKGVycm9yLnJlc3BvbnNlKSB7CiAgICAgICAgICAgICAgICBjb25zdCByZXNwb25zZURhdGEgPSBlcnJvci5yZXNwb25zZS5kYXRhOwogICAgICAgICAgICAgICAgY29uc3QgZXJyb3JNZXNzYWdlID0gcmVzcG9uc2VEYXRhPy5tZXNzYWdlIHx8IHJlc3BvbnNlRGF0YT8uZXJyb3IgfHwgcmVzcG9uc2VEYXRhPy5lcnJvck1lc3NhZ2UgfHwgYFNlcnZlciBlcnJvciAoJHtlcnJvci5yZXNwb25zZS5zdGF0dXN9KWA7CiAgICAgICAgICAgICAgICByZXR1cm4gewogICAgICAgICAgICAgICAgICAgIHN1Y2Nlc3M6IGZhbHNlLAogICAgICAgICAgICAgICAgICAgIHN0YXR1czogZXJyb3IucmVzcG9uc2Uuc3RhdHVzLAogICAgICAgICAgICAgICAgICAgIG1lc3NhZ2U6IGVycm9yTWVzc2FnZSwKICAgICAgICAgICAgICAgICAgICBlcnJvcjogZXJyb3JNZXNzYWdlLAogICAgICAgICAgICAgICAgICAgIGRhdGE6IFtdLAogICAgICAgICAgICAgICAgICAgIHJlc3BvbnNlRGF0YTogcmVzcG9uc2VEYXRhCiAgICAgICAgICAgICAgICB9OwogICAgICAgICAgICB9CgogICAgICAgICAgICByZXR1cm4gewogICAgICAgICAgICAgICAgc3VjY2VzczogZmFsc2UsCiAgICAgICAgICAgICAgICBzdGF0dXM6IDAsCiAgICAgICAgICAgICAgICBtZXNzYWdlOiBlcnJvci5tZXNzYWdlIHx8ICdVbmtub3duIG5ldHdvcmsgZXJyb3Igb2NjdXJyZWQnLAogICAgICAgICAgICAgICAgZXJyb3I6IGVycm9yLm1lc3NhZ2UsCiAgICAgICAgICAgICAgICBkYXRhOiBbXQogICAgICAgICAgICB9OwogICAgICAgIH0KICAgIH0KCiAgICAvLyBDUlVEIG1ldGhvZHMKICAgIGNyZWF0ZSh0YWJsZVNjaGVtYSwgdGFibGVOYW1lLCBkYXRhLCBjb25kaXRpb25zLCBsb2dpbiA9IHRydWUpIHsKICAgICAgICByZXR1cm4gdGhpcy5fcG9zdFJlcXVlc3QoJ2R5bmFtaWNDcmVhdGUnLCB7IHRhYmxlU2NoZW1hLCB0YWJsZU5hbWUsIGRhdGEsIGNvbmRpdGlvbnMsIGRhdGFiYXNlaWQ6IHRoaXMuZGF0YWJhc2VJZCB9KTsKICAgIH0KCiAgICByZWFkKHRhYmxlU2NoZW1hLCB0YWJsZU5hbWUsIGNvbmRpdGlvbnMsIG9yZGVyQnksIHNlYXJjaCwgcGFnaW5hdGlvbiwgbWFyZ2VkYXRhLCByYW5nZSA9IFtdKSB7CiAgICAgICAgcmV0dXJuIHRoaXMuX3Bvc3RSZXF1ZXN0KCdkeW5hbWljUmVhZCcsIHsgdGFibGVTY2hlbWEsIHRhYmxlTmFtZSwgY29uZGl0aW9ucywgb3JkZXJCeSwgc2VhcmNoLCBwYWdpbmF0aW9uLCBtYXJnZWRhdGEsIHJhbmdlLCBkYXRhYmFzZWlkOiB0aGlzLmRhdGFiYXNlSWQgfSk7CiAgICB9CgogICAgdXBkYXRlKHRhYmxlU2NoZW1hLCB0YWJsZU5hbWUsIGRhdGEsIGNvbmRpdGlvbiwgbG9naW4gPSB0cnVlKSB7CiAgICAgICAgcmV0dXJuIHRoaXMuX3Bvc3RSZXF1ZXN0KCdkeW5hbWljVXBkYXRlJywgeyB0YWJsZVNjaGVtYSwgdGFibGVOYW1lLCBkYXRhLCBjb25kaXRpb24sIGRhdGFiYXNlaWQ6IHRoaXMuZGF0YWJhc2VJZCB9KTsKICAgIH0KCiAgICBkZWxldGUodGFibGVTY2hlbWEsIHRhYmxlTmFtZSwgY29uZGl0aW9uKSB7CiAgICAgICAgcmV0dXJuIHRoaXMuX3Bvc3RSZXF1ZXN0KCdkeW5hbWljRGVsZXRlJywgeyB0YWJsZVNjaGVtYSwgdGFibGVOYW1lLCBjb25kaXRpb24sIGRhdGFiYXNlaWQ6IHRoaXMuZGF0YWJhc2VJZCB9KTsKICAgIH0KCiAgICBjb3VudCh0YWJsZVNjaGVtYSwgdGFibGVOYW1lLCBjb25kaXRpb25zKSB7CiAgICAgICAgcmV0dXJuIHRoaXMuX3Bvc3RSZXF1ZXN0KCdkeW5hbWljQ291bnQnLCB7IHRhYmxlU2NoZW1hLCB0YWJsZU5hbWUsIGNvbmRpdGlvbnMsIGRhdGFiYXNlaWQ6IHRoaXMuZGF0YWJhc2VJZCB9KTsKICAgIH0KCiAgICBoYXNoUGFzc3dvcmQocGFzc3dvcmQpIHsKICAgICAgICByZXR1cm4gdGhpcy5fcG9zdFJlcXVlc3QoJ2hhc2hQYXNzd29yZCcsIHsgcGFzc3dvcmQgfSk7CiAgICB9CgogICAgLy8gUG9sbGluZyBhbmQgUmVhbHRpbWUgTWV0aG9kcwogICAgc3RhcnRMb25nUG9sbGluZyh0YWJsZVNjaGVtYSwgdGFibGVOYW1lLCBjb25kaXRpb25zLCBvcmRlckJ5LCBzZWFyY2gsIGNhbGxiYWNrLCBwYWdpbmF0aW9uLCBtYXJnZWRhdGEpIHsKICAgICAgICBpZiAodHlwZW9mIGNhbGxiYWNrICE9PSAnZnVuY3Rpb24nKSB7CiAgICAgICAgICAgIHRocm93IG5ldyBFcnJvcignQ2FsbGJhY2sgbXVzdCBiZSBhIGZ1bmN0aW9uLicpOwogICAgICAgIH0KCiAgICAgICAgY29uc3QgZmV0Y2hEYXRhID0gYXN5bmMgKCkgPT4gewogICAgICAgICAgICB0cnkgewogICAgICAgICAgICAgICAgY29uc3QgZGF0YSA9IGF3YWl0IHRoaXMucmVhZCh0YWJsZVNjaGVtYSwgdGFibGVOYW1lLCBjb25kaXRpb25zLCBvcmRlckJ5LCBzZWFyY2gsIHBhZ2luYXRpb24sIG1hcmdlZGF0YSk7CiAgICAgICAgICAgICAgICBjYWxsYmFjayhkYXRhKTsKICAgICAgICAgICAgfSBjYXRjaCAoZXJyb3IpIHsKICAgICAgICAgICAgICAgIGNvbnNvbGUuZXJyb3IoYFBvbGxpbmcgZXJyb3I6ICR7ZXJyb3IubWVzc2FnZX1gKTsKICAgICAgICAgICAgfQogICAgICAgIH07CgogICAgICAgIHRoaXMucG9sbGluZ0ludGVydmFsID0gc2V0SW50ZXJ2YWwoZmV0Y2hEYXRhLCAxMDAwKTsKICAgIH0KCiAgICBzdG9wTG9uZ1BvbGxpbmcoKSB7CiAgICAgICAgaWYgKHRoaXMucG9sbGluZ0ludGVydmFsKSB7CiAgICAgICAgICAgIGNsZWFySW50ZXJ2YWwodGhpcy5wb2xsaW5nSW50ZXJ2YWwpOwogICAgICAgICAgICB0aGlzLnBvbGxpbmdJbnRlcnZhbCA9IG51bGw7CiAgICAgICAgfQogICAgfQoKICAgIGFzeW5jIGxpc3RlbkZvclVwZGF0ZXModGFibGVTY2hlbWEsIHRhYmxlTmFtZSwgY2FsbGJhY2spIHsKICAgICAgICBhd2FpdCB0aGlzLl9pbml0aWFsaXplU29ja2V0KCk7CiAgICAgICAgaWYgKCF0aGlzLnNvY2tldCkgewogICAgICAgICAgICBjb25zb2xlLndhcm4oJ1NvY2tldCBub3QgYXZhaWxhYmxlLiBDYW5ub3QgbGlzdGVuIGZvciB1cGRhdGVzLicpOwogICAgICAgICAgICByZXR1cm47CiAgICAgICAgfQogICAgICAgIGNvbnN0IGV2ZW50TmFtZSA9IGAke3RhYmxlU2NoZW1hfV8ke3RhYmxlTmFtZX1fdXBkYXRlYDsKCiAgICAgICAgdGhpcy5zb2NrZXQub24oZXZlbnROYW1lLCAoZGF0YSkgPT4gewogICAgICAgICAgICBpZiAodHlwZW9mIGNhbGxiYWNrID09PSAnZnVuY3Rpb24nKSB7CiAgICAgICAgICAgICAgICBjYWxsYmFjayhkYXRhKTsKICAgICAgICAgICAgfQogICAgICAgIH0pOwogICAgfQoKICAgIGFzeW5jIHN0b3BMaXN0ZW5pbmdGb3JVcGRhdGVzKHRhYmxlU2NoZW1hLCB0YWJsZU5hbWUpIHsKICAgICAgICBhd2FpdCB0aGlzLl9pbml0aWFsaXplU29ja2V0KCk7CiAgICAgICAgaWYgKCF0aGlzLnNvY2tldCkgewogICAgICAgICAgICBjb25zb2xlLndhcm4oJ1NvY2tldCBub3QgYXZhaWxhYmxlLiBDYW5ub3Qgc3RvcCBsaXN0ZW5pbmcgZm9yIHVwZGF0ZXMuJyk7CiAgICAgICAgICAgIHJldHVybjsKICAgICAgICB9CiAgICAgICAgY29uc3QgZXZlbnROYW1lID0gYCR7dGFibGVTY2hlbWF9XyR7dGFibGVOYW1lfV91cGRhdGVgOwogICAgICAgIHRoaXMuc29ja2V0Lm9mZihldmVudE5hbWUpOwogICAgfQp9CgpleHBvcnQgZGVmYXVsdCBEYXRhYmFzZVNlcnZpY2U7Cg==', 'base64').toString('utf-8'));
+import { io } from "socket.io-client";
+
+class DatabaseService {
+    constructor(http, config) {
+        this.http = http;
+        this.databaseId = config.databaseId;
+        this.realtimeBaseURL = config.realtimeBaseURL;
+
+        this.pollingInterval = null;
+        this.socket = null;
+        this._socketInitialized = false;
+
+        if (!this.databaseId) {
+            console.warn("PingDart SDK: databaseId is missing! Real-time CRUD operations may fail.");
+        }
+    }
+
+    async _initializeSocket() {
+        if (!this._socketInitialized && !this.socket) {
+            this.socket = io(this.realtimeBaseURL, {
+                reconnection: true,
+                reconnectionAttempts: 5,
+                reconnectionDelay: 1000,
+            });
+            this._socketInitialized = true;
+        }
+        return this.socket;
+    }
+
+    disconnectSocket() {
+        if (this.socket) {
+            this.socket.disconnect();
+            this.socket = null;
+            this._socketInitialized = false;
+        }
+    }
+
+    async _postRequest(endpoint, data, timeout = 15000) {
+        try {
+            const config = { timeout };
+            const response = await this.http.post(`${endpoint}`, data, config);
+
+            let responseData = response.data;
+            if (responseData && typeof responseData === 'object' && !responseData.hasOwnProperty('success')) {
+                responseData.success = true;
+            }
+            return responseData;
+        } catch (error) {
+            if (error.code === 'ECONNABORTED' || error.message.includes('timeout')) {
+                return {
+                    success: false,
+                    status: 0,
+                    message: `Request timeout: The server did not respond within ${timeout}ms.`,
+                    error: 'Connection timeout',
+                    data: []
+                };
+            }
+
+            if (error.response) {
+                const responseData = error.response.data;
+                const errorMessage = responseData?.message || responseData?.error || responseData?.errorMessage || `Server error (${error.response.status})`;
+                return {
+                    success: false,
+                    status: error.response.status,
+                    message: errorMessage,
+                    error: errorMessage,
+                    data: [],
+                    responseData: responseData
+                };
+            }
+
+            return {
+                success: false,
+                status: 0,
+                message: error.message || 'Unknown network error occurred',
+                error: error.message,
+                data: []
+            };
+        }
+    }
+
+    // CRUD methods
+    create(tableSchema, tableName, data, conditions, login = true) {
+        return this._postRequest('dynamicCreate', { tableSchema, tableName, data, conditions, databaseid: this.databaseId });
+    }
+
+    read(tableSchema, tableName, conditions, orderBy, search, pagination, margedata, range = []) {
+        return this._postRequest('dynamicRead', { tableSchema, tableName, conditions, orderBy, search, pagination, margedata, range, databaseid: this.databaseId });
+    }
+
+    update(tableSchema, tableName, data, condition, login = true) {
+        return this._postRequest('dynamicUpdate', { tableSchema, tableName, data, condition, databaseid: this.databaseId });
+    }
+
+    delete(tableSchema, tableName, condition) {
+        return this._postRequest('dynamicDelete', { tableSchema, tableName, condition, databaseid: this.databaseId });
+    }
+
+    count(tableSchema, tableName, conditions) {
+        return this._postRequest('dynamicCount', { tableSchema, tableName, conditions, databaseid: this.databaseId });
+    }
+
+    hashPassword(password) {
+        return this._postRequest('hashPassword', { password });
+    }
+
+    // Polling and Realtime Methods
+    startLongPolling(tableSchema, tableName, conditions, orderBy, search, callback, pagination, margedata) {
+        if (typeof callback !== 'function') {
+            throw new Error('Callback must be a function.');
+        }
+
+        const fetchData = async () => {
+            try {
+                const data = await this.read(tableSchema, tableName, conditions, orderBy, search, pagination, margedata);
+                callback(data);
+            } catch (error) {
+                console.error(`Polling error: ${error.message}`);
+            }
+        };
+
+        this.pollingInterval = setInterval(fetchData, 1000);
+    }
+
+    stopLongPolling() {
+        if (this.pollingInterval) {
+            clearInterval(this.pollingInterval);
+            this.pollingInterval = null;
+        }
+    }
+
+    async listenForUpdates(tableSchema, tableName, callback) {
+        await this._initializeSocket();
+        if (!this.socket) {
+            console.warn('Socket not available. Cannot listen for updates.');
+            return;
+        }
+        const eventName = `${tableSchema}_${tableName}_update`;
+
+        this.socket.on(eventName, (data) => {
+            if (typeof callback === 'function') {
+                callback(data);
+            }
+        });
+    }
+
+    async stopListeningForUpdates(tableSchema, tableName) {
+        await this._initializeSocket();
+        if (!this.socket) {
+            console.warn('Socket not available. Cannot stop listening for updates.');
+            return;
+        }
+        const eventName = `${tableSchema}_${tableName}_update`;
+        this.socket.off(eventName);
+    }
+}
+
+export default DatabaseService;

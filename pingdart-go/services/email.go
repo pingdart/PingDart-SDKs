@@ -1,3 +1,44 @@
-// Encrypted by PingDart
-// DECRYPT_KEY: pd_private_key
-cGFja2FnZSBzZXJ2aWNlcwoKaW1wb3J0ICgKCSJieXRlcyIKCSJlbmNvZGluZy9qc29uIgoJIm5ldC9odHRwIgopCgp0eXBlIEVtYWlsU2VydmljZSBzdHJ1Y3QgewoJaHR0cCAgICAqaHR0cC5DbGllbnQKCWFwaUtleSAgc3RyaW5nCgliYXNlVVJMIHN0cmluZwp9CgpmdW5jIE5ld0VtYWlsU2VydmljZShjbGllbnQgKmh0dHAuQ2xpZW50LCBhcGlLZXksIGJhc2VVUkwgc3RyaW5nKSAqRW1haWxTZXJ2aWNlIHsKCXJldHVybiAmRW1haWxTZXJ2aWNlewoJCWh0dHA6ICAgIGNsaWVudCwKCQlhcGlLZXk6ICBhcGlLZXksCgkJYmFzZVVSTDogYmFzZVVSTCwKCX0KfQoKZnVuYyAocyAqRW1haWxTZXJ2aWNlKSBTZW5kRW1haWwoZW1haWwsIHN1YmplY3QsIHRleHQgc3RyaW5nLCBzbXRwQ29uZmlnIGludGVyZmFjZXt9KSAoaW50ZXJmYWNle30sIGVycm9yKSB7CglkYXRhIDo9IG1hcFtzdHJpbmddaW50ZXJmYWNle317CgkJImVtYWlsIjogICBlbWFpbCwKCQkic3ViamVjdCI6IHN1YmplY3QsCgkJInRleHQiOiAgICB0ZXh0LAoJfQoJaWYgc210cENvbmZpZyAhPSBuaWwgewoJCWRhdGFbInNtdHBDb25maWciXSA9IHNtdHBDb25maWcKCX0KCWpzb25EYXRhLCBfIDo9IGpzb24uTWFyc2hhbChkYXRhKQoJcmVxLCBfIDo9IGh0dHAuTmV3UmVxdWVzdCgiUE9TVCIsIHMuYmFzZVVSTCsiL2VtYWlsL3NlbmQtZW1haWwiLCBieXRlcy5OZXdCdWZmZXIoanNvbkRhdGEpKQoJcmVxLkhlYWRlci5TZXQoIngtYXBpLWtleSIsIHMuYXBpS2V5KQoJcmVxLkhlYWRlci5TZXQoIkNvbnRlbnQtVHlwZSIsICJhcHBsaWNhdGlvbi9qc29uIikKCXJlc3AsIGVyciA6PSBzLmh0dHAuRG8ocmVxKQoJaWYgZXJyICE9IG5pbCB7CgkJcmV0dXJuIG5pbCwgZXJyCgl9CglkZWZlciByZXNwLkJvZHkuQ2xvc2UoKQoJdmFyIHJlc3VsdCBpbnRlcmZhY2V7fQoJanNvbi5OZXdEZWNvZGVyKHJlc3AuQm9keSkuRGVjb2RlKCZyZXN1bHQpCglyZXR1cm4gcmVzdWx0LCBuaWwKfQo=
+package services
+
+import (
+	"bytes"
+	"encoding/json"
+	"net/http"
+)
+
+type EmailService struct {
+	http    *http.Client
+	apiKey  string
+	baseURL string
+}
+
+func NewEmailService(client *http.Client, apiKey, baseURL string) *EmailService {
+	return &EmailService{
+		http:    client,
+		apiKey:  apiKey,
+		baseURL: baseURL,
+	}
+}
+
+func (s *EmailService) SendEmail(email, subject, text string, smtpConfig interface{}) (interface{}, error) {
+	data := map[string]interface{}{
+		"email":   email,
+		"subject": subject,
+		"text":    text,
+	}
+	if smtpConfig != nil {
+		data["smtpConfig"] = smtpConfig
+	}
+	jsonData, _ := json.Marshal(data)
+	req, _ := http.NewRequest("POST", s.baseURL+"/email/send-email", bytes.NewBuffer(jsonData))
+	req.Header.Set("x-api-key", s.apiKey)
+	req.Header.Set("Content-Type", "application/json")
+	resp, err := s.http.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	var result interface{}
+	json.NewDecoder(resp.Body).Decode(&result)
+	return result, nil
+}

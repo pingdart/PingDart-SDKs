@@ -1,3 +1,36 @@
-// Encrypted by PingDart
-// DECRYPT_KEY: pd_private_key
-cGFja2FnZSBzZXJ2aWNlcwoKaW1wb3J0ICgKCSJieXRlcyIKCSJlbmNvZGluZy9qc29uIgoJIm5ldC9odHRwIgopCgp0eXBlIFN0b3JhZ2VTZXJ2aWNlIHN0cnVjdCB7CglodHRwICAgICpodHRwLkNsaWVudAoJYXBpS2V5ICBzdHJpbmcKCWJhc2VVUkwgc3RyaW5nCn0KCmZ1bmMgTmV3U3RvcmFnZVNlcnZpY2UoY2xpZW50ICpodHRwLkNsaWVudCwgYXBpS2V5LCBiYXNlVVJMIHN0cmluZykgKlN0b3JhZ2VTZXJ2aWNlIHsKCXJldHVybiAmU3RvcmFnZVNlcnZpY2V7CgkJaHR0cDogICAgY2xpZW50LAoJCWFwaUtleTogIGFwaUtleSwKCQliYXNlVVJMOiBiYXNlVVJMLAoJfQp9CgpmdW5jIChzICpTdG9yYWdlU2VydmljZSkgR2V0U3RhdHMoKSAoaW50ZXJmYWNle30sIGVycm9yKSB7CglyZXEsIF8gOj0gaHR0cC5OZXdSZXF1ZXN0KCJQT1NUIiwgcy5iYXNlVVJMKyIvZmlsZXMvc3RhdHMiLCBuaWwpCglyZXEuSGVhZGVyLlNldCgieC1hcGkta2V5Iiwgcy5hcGlLZXkpCglyZXNwLCBlcnIgOj0gcy5odHRwLkRvKHJlcSkKCWlmIGVyciAhPSBuaWwgewoJCXJldHVybiBuaWwsIGVycgoJfQoJZGVmZXIgcmVzcC5Cb2R5LkNsb3NlKCkKCXZhciByZXN1bHQgaW50ZXJmYWNle30KCWpzb24uTmV3RGVjb2RlcihyZXNwLkJvZHkpLkRlY29kZSgmcmVzdWx0KQoJcmV0dXJuIHJlc3VsdCwgbmlsCn0KCi8vIC4uLiBvdGhlciBzdG9yYWdlIG1ldGhvZHMgLi4uCg==
+package services
+
+import (
+	"bytes"
+	"encoding/json"
+	"net/http"
+)
+
+type StorageService struct {
+	http    *http.Client
+	apiKey  string
+	baseURL string
+}
+
+func NewStorageService(client *http.Client, apiKey, baseURL string) *StorageService {
+	return &StorageService{
+		http:    client,
+		apiKey:  apiKey,
+		baseURL: baseURL,
+	}
+}
+
+func (s *StorageService) GetStats() (interface{}, error) {
+	req, _ := http.NewRequest("POST", s.baseURL+"/files/stats", nil)
+	req.Header.Set("x-api-key", s.apiKey)
+	resp, err := s.http.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	var result interface{}
+	json.NewDecoder(resp.Body).Decode(&result)
+	return result, nil
+}
+
+// ... other storage methods ...

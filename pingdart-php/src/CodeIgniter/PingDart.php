@@ -1,3 +1,23 @@
 <?php
-// Encrypted by PingDart
-eval(base64_decode('bmFtZXNwYWNlIFBpbmdEYXJ0XFNES1xDb2RlSWduaXRlcjsKCnVzZSBQaW5nRGFydFxTREtcUGluZ0RhcnRTREs7CgpjbGFzcyBQaW5nRGFydAp7CiAgICAvKioKICAgICAqIEdldCB0aGUgUGluZ0RhcnQgU0RLIGluc3RhbmNlLgogICAgICogVXNlIHRoaXMgaW4geW91ciBDSTQgU2VydmljZXMuCiAgICAgKgogICAgICogQHJldHVybiBQaW5nRGFydFNESwogICAgICovCiAgICBwdWJsaWMgc3RhdGljIGZ1bmN0aW9uIGluc3RhbmNlKCkKICAgIHsKICAgICAgICByZXR1cm4gbmV3IFBpbmdEYXJ0U0RLKFsKICAgICAgICAgICAgJ2FwaUtleScgPT4gZW52KCdQSU5HREFSVF9BUElfS0VZJyksCiAgICAgICAgICAgICdkYXRhYmFzZUlkJyA9PiBlbnYoJ1BJTkdEQVJUX0RBVEFCQVNFX0lEJyksCiAgICAgICAgICAgICdiYXNlVXJsJyA9PiBlbnYoJ1BJTkdEQVJUX0JBU0VfVVJMJywgJ2h0dHBzOi8vY2xvdWRhcGkucGluZ2RhcnQuY29tL2FwaScpLAogICAgICAgIF0pOwogICAgfQp9'));
+
+namespace PingDart\SDK\CodeIgniter;
+
+use PingDart\SDK\PingDartSDK;
+
+class PingDart
+{
+    /**
+     * Get the PingDart SDK instance.
+     * Use this in your CI4 Services.
+     *
+     * @return PingDartSDK
+     */
+    public static function instance()
+    {
+        return new PingDartSDK([
+            'apiKey' => env('PINGDART_API_KEY'),
+            'databaseId' => env('PINGDART_DATABASE_ID'),
+            'baseUrl' => env('PINGDART_BASE_URL', 'https://cloudapi.pingdart.com/api'),
+        ]);
+    }
+}

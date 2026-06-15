@@ -1,2 +1,22 @@
-// Encrypted by PingDart
-eval(Buffer.from('Y2xhc3MgU21zU2VydmljZSB7CiAgICBjb25zdHJ1Y3RvcihodHRwLCBjb25maWcpIHsKICAgICAgICB0aGlzLmh0dHAgPSBodHRwOwogICAgfQoKICAgIGFzeW5jIHNlbmRTTVMoeyB0bywgdGVtcGxhdGVJZCwgdGV4dCwgcm91dGUgPSAicGluZ2RhcnQiLCB1bmljb2RlID0gInRydWUiIH0pIHsKICAgICAgICB0cnkgewogICAgICAgICAgICBjb25zdCByZXNwb25zZSA9IGF3YWl0IHRoaXMuaHR0cC5wb3N0KCIvZW1haWwvc2VuZC1zbXMiLCB7CiAgICAgICAgICAgICAgICB0bywKICAgICAgICAgICAgICAgIHRlbXBsYXRlSWQsCiAgICAgICAgICAgICAgICB0ZXh0LAogICAgICAgICAgICAgICAgcm91dGUsCiAgICAgICAgICAgICAgICB1bmljb2RlCiAgICAgICAgICAgIH0pOwogICAgICAgICAgICByZXR1cm4gcmVzcG9uc2UuZGF0YTsKICAgICAgICB9IGNhdGNoIChlcnJvcikgewogICAgICAgICAgICB0aHJvdyBuZXcgRXJyb3IoYFNNUyBzZW5kaW5nIGVycm9yOiAke2Vycm9yLm1lc3NhZ2V9YCk7CiAgICAgICAgfQogICAgfQp9CgpleHBvcnQgZGVmYXVsdCBTbXNTZXJ2aWNlOwo=', 'base64').toString('utf-8'));
+class SmsService {
+    constructor(http, config) {
+        this.http = http;
+    }
+
+    async sendSMS({ to, templateId, text, route = "pingdart", unicode = "true" }) {
+        try {
+            const response = await this.http.post("/email/send-sms", {
+                to,
+                templateId,
+                text,
+                route,
+                unicode
+            });
+            return response.data;
+        } catch (error) {
+            throw new Error(`SMS sending error: ${error.message}`);
+        }
+    }
+}
+
+export default SmsService;

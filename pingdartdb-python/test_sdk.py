@@ -1,3 +1,55 @@
-# Encrypted by PingDart
-import base64
-exec(base64.b64decode(b'aW1wb3J0IG9zCmltcG9ydCBiaW5hc2NpaQppbXBvcnQgaGFzaGxpYgppbXBvcnQganNvbgppbXBvcnQgZGF0ZXRpbWUKZnJvbSBjcnlwdG9ncmFwaHkuaGF6bWF0LnByaW1pdGl2ZXMuY2lwaGVycyBpbXBvcnQgQ2lwaGVyLCBhbGdvcml0aG1zLCBtb2Rlcwpmcm9tIGNyeXB0b2dyYXBoeS5oYXptYXQuYmFja2VuZHMgaW1wb3J0IGRlZmF1bHRfYmFja2VuZAoKZnJvbSBzcmMucGluZ2RhcnRkYi5jbGllbnQgaW1wb3J0IFBpbmdEYXJ0REIKCmRlZiBnZW5lcmF0ZV92YWxpZF9rZXkoKToKICAgIHNlY3JldF9rZXkgPSBiJ1BpbmdEYXJ0U3VwZXJTZWNyZXRLZXkyMDI2IUAjJCcKICAgIGtleSA9IGJpbmFzY2lpLmIyYV9iYXNlNjQoaGFzaGxpYi5zaGEyNTYoc2VjcmV0X2tleSkuZGlnZXN0KCksIG5ld2xpbmU9RmFsc2UpWzozMl0KICAgIGl2ID0gb3MudXJhbmRvbSgxNikKICAgIAogICAgcGF5bG9hZCA9IGpzb24uZHVtcHMoeyJ0aWVyIjogImZyZWUiLCAiY3JlYXRlZEF0IjogZGF0ZXRpbWUuZGF0ZXRpbWUubm93KCkuaXNvZm9ybWF0KCl9KS5lbmNvZGUoJ3V0Zi04JykKICAgIAogICAgIyBQS0NTNyBQYWRkaW5nCiAgICBwYWRfbGVuID0gMTYgLSAobGVuKHBheWxvYWQpICUgMTYpCiAgICBwYXlsb2FkICs9IGJ5dGVzKFtwYWRfbGVuXSAqIHBhZF9sZW4pCiAgICAKICAgIGNpcGhlciA9IENpcGhlcihhbGdvcml0aG1zLkFFUyhrZXkpLCBtb2Rlcy5DQkMoaXYpLCBiYWNrZW5kPWRlZmF1bHRfYmFja2VuZCgpKQogICAgZW5jcnlwdG9yID0gY2lwaGVyLmVuY3J5cHRvcigpCiAgICBlbmNyeXB0ZWQgPSBlbmNyeXB0b3IudXBkYXRlKHBheWxvYWQpICsgZW5jcnlwdG9yLmZpbmFsaXplKCkKICAgIAogICAgcmV0dXJuIGYicGRfe2JpbmFzY2lpLmhleGxpZnkoaXYpLmRlY29kZSgndXRmLTgnKX0ue2JpbmFzY2lpLmhleGxpZnkoZW5jcnlwdGVkKS5kZWNvZGUoJ3V0Zi04Jyl9IgoKdHJ5OgogICAgYXBpX2tleSA9IGdlbmVyYXRlX3ZhbGlkX2tleSgpCiAgICBwcmludCgiMS4gR2VuZXJhdGVkIExvY2FsIFB5dGhvbiBPZmZsaW5lIEFQSSBLZXkiKQoKICAgIGRiID0gUGluZ0RhcnREQihhcGlfa2V5LCB7CiAgICAgICAgJ2hvc3QnOiAnOTQuMTM2LjE5MC42MCcsCiAgICAgICAgJ3VzZXInOiAncGluZ2RhcnRfcmF2aScsCiAgICAgICAgJ3Bhc3N3b3JkJzogJ1JhdmluZHJhMTJAJywKICAgICAgICAnZGF0YWJhc2UnOiAncGluZ2RhcnRfdGVzdCcsCiAgICAgICAgJ3R5cGUnOiAnbXlzcWwnCiAgICB9KQoKICAgIGRiLmNvbm5lY3QoKQogICAgcHJpbnQoIjIuIENvbm5lY3Rpb24gc3VjY2Vzc2Z1bC4iKQoKICAgIHJlcyA9IGRiLnRhYmxlKCd0ZXN0X3VzZXJzJykucmVhZCh7CiAgICAgICAgJ2NvbmRpdGlvbnMnOiB7J3N0YXR1cyc6ICdhY3RpdmUnfQogICAgfSkKCiAgICBwcmludChmIjMuIEJhc2ljIFJlYWQgdGVzdCByZXR1cm5lZCB7cmVzWyd0b3RhbENvdW50J119IHJvd3MuIikKICAgIAogICAgcHJpbnQoIlxu4pyFIFB5dGhvbiBTREsgQ29ubmVjdGlvbiBUZXN0IHBhc3NlZCBzdWNjZXNzZnVsbHkhIikKICAgIApleGNlcHQgRXhjZXB0aW9uIGFzIGU6CiAgICBwcmludChmIuKdjCBQeXRob24gVGVzdCBmYWlsZWQ6IHtlfSIpCmZpbmFsbHk6CiAgICBpZiAnZGInIGluIGxvY2FscygpOgogICAgICAgIGRiLmNsb3NlKCkK').decode('utf-8'))
+import os
+import binascii
+import hashlib
+import json
+import datetime
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+from cryptography.hazmat.backends import default_backend
+
+from src.pingdartdb.client import PingDartDB
+
+def generate_valid_key():
+    secret_key = b'PingDartSuperSecretKey2026!@#$'
+    key = binascii.b2a_base64(hashlib.sha256(secret_key).digest(), newline=False)[:32]
+    iv = os.urandom(16)
+    
+    payload = json.dumps({"tier": "free", "createdAt": datetime.datetime.now().isoformat()}).encode('utf-8')
+    
+    # PKCS7 Padding
+    pad_len = 16 - (len(payload) % 16)
+    payload += bytes([pad_len] * pad_len)
+    
+    cipher = Cipher(algorithms.AES(key), modes.CBC(iv), backend=default_backend())
+    encryptor = cipher.encryptor()
+    encrypted = encryptor.update(payload) + encryptor.finalize()
+    
+    return f"pd_{binascii.hexlify(iv).decode('utf-8')}.{binascii.hexlify(encrypted).decode('utf-8')}"
+
+try:
+    api_key = generate_valid_key()
+    print("1. Generated Local Python Offline API Key")
+
+    db = PingDartDB(api_key, {
+        'host': '94.136.190.60',
+        'user': 'pingdart_ravi',
+        'password': 'Ravindra12@',
+        'database': 'pingdart_test',
+        'type': 'mysql'
+    })
+
+    db.connect()
+    print("2. Connection successful.")
+
+    res = db.table('test_users').read({
+        'conditions': {'status': 'active'}
+    })
+
+    print(f"3. Basic Read test returned {res['totalCount']} rows.")
+    
+    print("\n✅ Python SDK Connection Test passed successfully!")
+    
+except Exception as e:
+    print(f"❌ Python Test failed: {e}")
+finally:
+    if 'db' in locals():
+        db.close()

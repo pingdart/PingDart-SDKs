@@ -1,3 +1,36 @@
-# Encrypted by PingDart
-import base64
-exec(base64.b64decode(b'Y2xhc3MgQ2FsbHNTZXJ2aWNlOgogICAgZGVmIF9faW5pdF9fKHNlbGYsIGh0dHBfY2xpZW50KToKICAgICAgICBzZWxmLmh0dHAgPSBodHRwX2NsaWVudAoKICAgIGRlZiBsaXN0X2FwcHMoc2VsZik6CiAgICAgICAgIiIiCiAgICAgICAgTGlzdCBhbGwgY2FsbCBhcHBsaWNhdGlvbnMgZm9yIHRoZSBhdXRoZW50aWNhdGVkIHVzZXIuCiAgICAgICAgIiIiCiAgICAgICAgdHJ5OgogICAgICAgICAgICByZXNwb25zZSA9IHNlbGYuaHR0cC5nZXQoIi92MS9jYWxscy9hcHBzIikKICAgICAgICAgICAgcmVzcG9uc2UucmFpc2VfZm9yX3N0YXR1cygpCiAgICAgICAgICAgIHJldHVybiByZXNwb25zZS5qc29uKCkKICAgICAgICBleGNlcHQgRXhjZXB0aW9uIGFzIGU6CiAgICAgICAgICAgIHJhaXNlIEV4Y2VwdGlvbihmIkZhaWxlZCB0byBsaXN0IGNhbGwgYXBwczoge3N0cihlKX0iKQoKICAgIGRlZiBjcmVhdGVfYXBwKHNlbGYsIG5hbWUsIGFwcF90eXBlPSdXZWInKToKICAgICAgICAiIiIKICAgICAgICBDcmVhdGUgYSBuZXcgY2FsbCBhcHBsaWNhdGlvbi4KICAgICAgICAiIiIKICAgICAgICB0cnk6CiAgICAgICAgICAgIHJlc3BvbnNlID0gc2VsZi5odHRwLnBvc3QoIi92MS9jYWxscy9hcHBzIiwganNvbj17Im5hbWUiOiBuYW1lLCAidHlwZSI6IGFwcF90eXBlfSkKICAgICAgICAgICAgcmVzcG9uc2UucmFpc2VfZm9yX3N0YXR1cygpCiAgICAgICAgICAgIHJldHVybiByZXNwb25zZS5qc29uKCkKICAgICAgICBleGNlcHQgRXhjZXB0aW9uIGFzIGU6CiAgICAgICAgICAgIHJhaXNlIEV4Y2VwdGlvbihmIkZhaWxlZCB0byBjcmVhdGUgY2FsbCBhcHA6IHtzdHIoZSl9IikKCiAgICBkZWYgZGVsZXRlX2FwcChzZWxmLCBhcHBfaWQpOgogICAgICAgICIiIgogICAgICAgIERlbGV0ZSBhIGNhbGwgYXBwbGljYXRpb24uCiAgICAgICAgIiIiCiAgICAgICAgdHJ5OgogICAgICAgICAgICByZXNwb25zZSA9IHNlbGYuaHR0cC5kZWxldGUoZiIvdjEvY2FsbHMvYXBwcy97YXBwX2lkfSIpCiAgICAgICAgICAgIHJlc3BvbnNlLnJhaXNlX2Zvcl9zdGF0dXMoKQogICAgICAgICAgICByZXR1cm4gcmVzcG9uc2UuanNvbigpCiAgICAgICAgZXhjZXB0IEV4Y2VwdGlvbiBhcyBlOgogICAgICAgICAgICByYWlzZSBFeGNlcHRpb24oZiJGYWlsZWQgdG8gZGVsZXRlIGNhbGwgYXBwOiB7c3RyKGUpfSIpCg==').decode('utf-8'))
+class CallsService:
+    def __init__(self, http_client):
+        self.http = http_client
+
+    def list_apps(self):
+        """
+        List all call applications for the authenticated user.
+        """
+        try:
+            response = self.http.get("/v1/calls/apps")
+            response.raise_for_status()
+            return response.json()
+        except Exception as e:
+            raise Exception(f"Failed to list call apps: {str(e)}")
+
+    def create_app(self, name, app_type='Web'):
+        """
+        Create a new call application.
+        """
+        try:
+            response = self.http.post("/v1/calls/apps", json={"name": name, "type": app_type})
+            response.raise_for_status()
+            return response.json()
+        except Exception as e:
+            raise Exception(f"Failed to create call app: {str(e)}")
+
+    def delete_app(self, app_id):
+        """
+        Delete a call application.
+        """
+        try:
+            response = self.http.delete(f"/v1/calls/apps/{app_id}")
+            response.raise_for_status()
+            return response.json()
+        except Exception as e:
+            raise Exception(f"Failed to delete call app: {str(e)}")

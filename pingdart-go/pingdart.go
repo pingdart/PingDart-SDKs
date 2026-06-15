@@ -1,3 +1,36 @@
-// Encrypted by PingDart
-// DECRYPT_KEY: pd_private_key
-cGFja2FnZSBwaW5nZGFydAoKaW1wb3J0ICgKCSJuZXQvaHR0cCIKCSJwaW5nZGFydC1nby9zZXJ2aWNlcyIKCSJzdHJpbmdzIgopCgp0eXBlIFBpbmdEYXJ0U0RLIHN0cnVjdCB7CglEYXRhYmFzZSAqc2VydmljZXMuRGF0YWJhc2VTZXJ2aWNlCglDYWxscyAgICAqc2VydmljZXMuQ2FsbHNTZXJ2aWNlCglTdG9yYWdlICAqc2VydmljZXMuU3RvcmFnZVNlcnZpY2UKCUVtYWlsICAgICpzZXJ2aWNlcy5FbWFpbFNlcnZpY2UKCVNtcyAgICAgICpzZXJ2aWNlcy5TbXNTZXJ2aWNlCglBaSAgICAgICAqc2VydmljZXMuQWlTZXJ2aWNlCn0KCmZ1bmMgTmV3UGluZ0RhcnRTREsoYXBpS2V5LCBkYXRhYmFzZUlELCBiYXNlVVJMIHN0cmluZykgKlBpbmdEYXJ0U0RLIHsKCWlmIGJhc2VVUkwgPT0gIiIgewoJCWJhc2VVUkwgPSAiaHR0cHM6Ly9jbG91ZGFwaS5waW5nZGFydC5jb20vYXBpIgoJfQoJYmFzZVVSTCA9IHN0cmluZ3MuVHJpbVN1ZmZpeChiYXNlVVJMLCAiLyIpCgoJcmVhbHRpbWVCYXNlVVJMIDo9IHN0cmluZ3MuUmVwbGFjZShiYXNlVVJMLCAiL2FwaSIsICIiLCAxKSArICIvYXBpL3JlYWx0aW1lLyIKCgljbGllbnQgOj0gJmh0dHAuQ2xpZW50e30KCglyZXR1cm4gJlBpbmdEYXJ0U0RLewoJCURhdGFiYXNlOiBzZXJ2aWNlcy5OZXdEYXRhYmFzZVNlcnZpY2UoY2xpZW50LCBhcGlLZXksIHJlYWx0aW1lQmFzZVVSTCwgZGF0YWJhc2VJRCksCgkJQ2FsbHM6ICAgIHNlcnZpY2VzLk5ld0NhbGxzU2VydmljZShjbGllbnQsIGFwaUtleSwgYmFzZVVSTCksCgkJU3RvcmFnZTogIHNlcnZpY2VzLk5ld1N0b3JhZ2VTZXJ2aWNlKGNsaWVudCwgYXBpS2V5LCBiYXNlVVJMKSwKCQlFbWFpbDogICAgc2VydmljZXMuTmV3RW1haWxTZXJ2aWNlKGNsaWVudCwgYXBpS2V5LCBiYXNlVVJMKSwKCQlTbXM6ICAgICAgc2VydmljZXMuTmV3U21zU2VydmljZShjbGllbnQsIGFwaUtleSwgYmFzZVVSTCksCgkJQWk6ICAgICAgIHNlcnZpY2VzLk5ld0FpU2VydmljZShjbGllbnQsIGFwaUtleSwgYmFzZVVSTCksCgl9Cn0K
+package pingdart
+
+import (
+	"net/http"
+	"pingdart-go/services"
+	"strings"
+)
+
+type PingDartSDK struct {
+	Database *services.DatabaseService
+	Calls    *services.CallsService
+	Storage  *services.StorageService
+	Email    *services.EmailService
+	Sms      *services.SmsService
+	Ai       *services.AiService
+}
+
+func NewPingDartSDK(apiKey, databaseID, baseURL string) *PingDartSDK {
+	if baseURL == "" {
+		baseURL = "https://cloudapi.pingdart.com/api"
+	}
+	baseURL = strings.TrimSuffix(baseURL, "/")
+
+	realtimeBaseURL := strings.Replace(baseURL, "/api", "", 1) + "/api/realtime/"
+
+	client := &http.Client{}
+
+	return &PingDartSDK{
+		Database: services.NewDatabaseService(client, apiKey, realtimeBaseURL, databaseID),
+		Calls:    services.NewCallsService(client, apiKey, baseURL),
+		Storage:  services.NewStorageService(client, apiKey, baseURL),
+		Email:    services.NewEmailService(client, apiKey, baseURL),
+		Sms:      services.NewSmsService(client, apiKey, baseURL),
+		Ai:       services.NewAiService(client, apiKey, baseURL),
+	}
+}

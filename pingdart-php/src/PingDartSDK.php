@@ -1,3 +1,64 @@
 <?php
-// Encrypted by PingDart
-eval(base64_decode('bmFtZXNwYWNlIFBpbmdEYXJ0XFNESzsKCnVzZSBHdXp6bGVIdHRwXENsaWVudDsKdXNlIFBpbmdEYXJ0XFNES1xTZXJ2aWNlc1xEYXRhYmFzZVNlcnZpY2U7CnVzZSBQaW5nRGFydFxTREtcU2VydmljZXNcV2hhdHNBcHBTZXJ2aWNlOwp1c2UgUGluZ0RhcnRcU0RLXFNlcnZpY2VzXFNtc1NlcnZpY2U7CnVzZSBQaW5nRGFydFxTREtcU2VydmljZXNcRW1haWxTZXJ2aWNlOwp1c2UgUGluZ0RhcnRcU0RLXFNlcnZpY2VzXEFpU2VydmljZTsKdXNlIFBpbmdEYXJ0XFNES1xTZXJ2aWNlc1xDYWxsc1NlcnZpY2U7CnVzZSBQaW5nRGFydFxTREtcU2VydmljZXNcU3RvcmFnZVNlcnZpY2U7CgpjbGFzcyBQaW5nRGFydFNESyB7CiAgICBwdWJsaWMgJGRhdGFiYXNlOwogICAgcHVibGljICR3aGF0c2FwcDsKICAgIHB1YmxpYyAkc21zOwogICAgcHVibGljICRlbWFpbDsKICAgIHB1YmxpYyAkYWk7CiAgICBwdWJsaWMgJGNhbGxzOwogICAgcHVibGljICRzdG9yYWdlOwoKICAgIHByaXZhdGUgJGFwaUtleTsKICAgIHByaXZhdGUgJGRhdGFiYXNlSWQ7CiAgICBwcml2YXRlICRiYXNlVXJsOwogICAgcHJpdmF0ZSAkcmVhbHRpbWVCYXNlVXJsOwoKICAgIHB1YmxpYyBmdW5jdGlvbiBfX2NvbnN0cnVjdChhcnJheSAkY29uZmlnKSB7CiAgICAgICAgJHRoaXMtPmFwaUtleSA9ICRjb25maWdbJ2FwaUtleSddID8/IG51bGw7CiAgICAgICAgaWYgKCEkdGhpcy0+YXBpS2V5KSB7CiAgICAgICAgICAgIHRocm93IG5ldyBcRXhjZXB0aW9uKCJQaW5nRGFydCBTREs6IEFQSSBLZXkgaXMgcmVxdWlyZWQiKTsKICAgICAgICB9CgogICAgICAgICR0aGlzLT5kYXRhYmFzZUlkID0gJGNvbmZpZ1snZGF0YWJhc2VJZCddID8/IG51bGw7CiAgICAgICAgJHRoaXMtPmJhc2VVcmwgPSBydHJpbSgkY29uZmlnWydiYXNlVXJsJ10gPz8gJ2h0dHBzOi8vY2xvdWRhcGkucGluZ2RhcnQuY29tL2FwaScsICcvJyk7CiAgICAgICAgJHRoaXMtPnJlYWx0aW1lQmFzZVVybCA9ICRjb25maWdbJ3JlYWx0aW1lQmFzZVVybCddID8/IHN0cl9yZXBsYWNlKCcvYXBpJywgJycsICR0aGlzLT5iYXNlVXJsKSAuICcvYXBpL3JlYWx0aW1lLyc7CgogICAgICAgICRjbGllbnQgPSBuZXcgQ2xpZW50KFsKICAgICAgICAgICAgJ2Jhc2VfdXJpJyA9PiAkdGhpcy0+YmFzZVVybCAuICcvJywKICAgICAgICAgICAgJ2hlYWRlcnMnID0+IFsKICAgICAgICAgICAgICAgICd4LWFwaS1rZXknID0+ICR0aGlzLT5hcGlLZXksCiAgICAgICAgICAgICAgICAnQ29udGVudC1UeXBlJyA9PiAnYXBwbGljYXRpb24vanNvbicsCiAgICAgICAgICAgICAgICAnWC1TREstU291cmNlJyA9PiAnUGluZ0RhcnQtUEhQLVNESycKICAgICAgICAgICAgXQogICAgICAgIF0pOwoKICAgICAgICAkcmVhbHRpbWVDbGllbnQgPSBuZXcgQ2xpZW50KFsKICAgICAgICAgICAgJ2Jhc2VfdXJpJyA9PiAkdGhpcy0+cmVhbHRpbWVCYXNlVXJsLAogICAgICAgICAgICAnaGVhZGVycycgPT4gWwogICAgICAgICAgICAgICAgJ3gtYXBpLWtleScgPT4gJHRoaXMtPmFwaUtleSwKICAgICAgICAgICAgICAgICdDb250ZW50LVR5cGUnID0+ICdhcHBsaWNhdGlvbi9qc29uJywKICAgICAgICAgICAgICAgICdYLVNESy1Tb3VyY2UnID0+ICdQaW5nRGFydC1QSFAtU0RLJwogICAgICAgICAgICBdCiAgICAgICAgXSk7CgogICAgICAgICR0aGlzLT5kYXRhYmFzZSA9IG5ldyBEYXRhYmFzZVNlcnZpY2UoJHJlYWx0aW1lQ2xpZW50LCAkdGhpcy0+ZGF0YWJhc2VJZCk7CiAgICAgICAgJHRoaXMtPndoYXRzYXBwID0gbmV3IFdoYXRzQXBwU2VydmljZSgkY2xpZW50KTsKICAgICAgICAkdGhpcy0+c21zID0gbmV3IFNtc1NlcnZpY2UoJGNsaWVudCk7CiAgICAgICAgJHRoaXMtPmVtYWlsID0gbmV3IEVtYWlsU2VydmljZSgkY2xpZW50KTsKICAgICAgICAkdGhpcy0+YWkgPSBuZXcgQWlTZXJ2aWNlKCRjbGllbnQpOwogICAgICAgICR0aGlzLT5jYWxscyA9IG5ldyBDYWxsc1NlcnZpY2UoJGNsaWVudCk7CiAgICAgICAgJHRoaXMtPnN0b3JhZ2UgPSBuZXcgU3RvcmFnZVNlcnZpY2UoJGNsaWVudCk7CiAgICB9Cn0='));
+
+namespace PingDart\SDK;
+
+use GuzzleHttp\Client;
+use PingDart\SDK\Services\DatabaseService;
+use PingDart\SDK\Services\WhatsAppService;
+use PingDart\SDK\Services\SmsService;
+use PingDart\SDK\Services\EmailService;
+use PingDart\SDK\Services\AiService;
+use PingDart\SDK\Services\CallsService;
+use PingDart\SDK\Services\StorageService;
+
+class PingDartSDK {
+    public $database;
+    public $whatsapp;
+    public $sms;
+    public $email;
+    public $ai;
+    public $calls;
+    public $storage;
+
+    private $apiKey;
+    private $databaseId;
+    private $baseUrl;
+    private $realtimeBaseUrl;
+
+    public function __construct(array $config) {
+        $this->apiKey = $config['apiKey'] ?? null;
+        if (!$this->apiKey) {
+            throw new \Exception("PingDart SDK: API Key is required");
+        }
+
+        $this->databaseId = $config['databaseId'] ?? null;
+        $this->baseUrl = rtrim($config['baseUrl'] ?? 'https://cloudapi.pingdart.com/api', '/');
+        $this->realtimeBaseUrl = $config['realtimeBaseUrl'] ?? str_replace('/api', '', $this->baseUrl) . '/api/realtime/';
+
+        $client = new Client([
+            'base_uri' => $this->baseUrl . '/',
+            'headers' => [
+                'x-api-key' => $this->apiKey,
+                'Content-Type' => 'application/json',
+                'X-SDK-Source' => 'PingDart-PHP-SDK'
+            ]
+        ]);
+
+        $realtimeClient = new Client([
+            'base_uri' => $this->realtimeBaseUrl,
+            'headers' => [
+                'x-api-key' => $this->apiKey,
+                'Content-Type' => 'application/json',
+                'X-SDK-Source' => 'PingDart-PHP-SDK'
+            ]
+        ]);
+
+        $this->database = new DatabaseService($realtimeClient, $this->databaseId);
+        $this->whatsapp = new WhatsAppService($client);
+        $this->sms = new SmsService($client);
+        $this->email = new EmailService($client);
+        $this->ai = new AiService($client);
+        $this->calls = new CallsService($client);
+        $this->storage = new StorageService($client);
+    }
+}

@@ -1,3 +1,37 @@
-// Encrypted by PingDart
-// DECRYPT_KEY: pd_private_key
-cGFja2FnZSBjb20ucGluZ2RhcnQuc2RrLnNlcnZpY2VzOwoKaW1wb3J0IGNvbS5nb29nbGUuZ3Nvbi5Hc29uOwppbXBvcnQgY29tLmdvb2dsZS5nc29uLkpzb25PYmplY3Q7CmltcG9ydCBva2h0dHAzLio7CgppbXBvcnQgamF2YS5pby5JT0V4Y2VwdGlvbjsKCnB1YmxpYyBjbGFzcyBEYXRhYmFzZVNlcnZpY2UgewogICAgcHJpdmF0ZSBmaW5hbCBPa0h0dHBDbGllbnQgaHR0cDsKICAgIHByaXZhdGUgZmluYWwgU3RyaW5nIGRhdGFiYXNlSWQ7CiAgICBwcml2YXRlIGZpbmFsIEdzb24gZ3NvbiA9IG5ldyBHc29uKCk7CgogICAgcHVibGljIERhdGFiYXNlU2VydmljZShPa0h0dHBDbGllbnQgaHR0cCwgU3RyaW5nIGRhdGFiYXNlSWQpIHsKICAgICAgICB0aGlzLmh0dHAgPSBodHRwOwogICAgICAgIHRoaXMuZGF0YWJhc2VJZCA9IGRhdGFiYXNlSWQ7CiAgICB9CgogICAgcHJpdmF0ZSBTdHJpbmcgcG9zdFJlcXVlc3QoU3RyaW5nIGVuZHBvaW50LCBKc29uT2JqZWN0IGRhdGEpIHRocm93cyBJT0V4Y2VwdGlvbiB7CiAgICAgICAgZGF0YS5hZGRQcm9wZXJ0eSgiZGF0YWJhc2VpZCIsIGRhdGFiYXNlSWQpOwogICAgICAgIFJlcXVlc3RCb2R5IGJvZHkgPSBSZXF1ZXN0Qm9keS5jcmVhdGUoZ3Nvbi50b0pzb24oZGF0YSksIE1lZGlhVHlwZS5nZXQoImFwcGxpY2F0aW9uL2pzb247IGNoYXJzZXQ9dXRmLTgiKSk7CiAgICAgICAgUmVxdWVzdCByZXF1ZXN0ID0gbmV3IFJlcXVlc3QuQnVpbGRlcigpLnVybCgiLyIgKyBlbmRwb2ludCkucG9zdChib2R5KS5idWlsZCgpOwogICAgICAgIHRyeSAoUmVzcG9uc2UgcmVzcG9uc2UgPSBodHRwLm5ld0NhbGwocmVxdWVzdCkuZXhlY3V0ZSgpKSB7CiAgICAgICAgICAgIHJldHVybiByZXNwb25zZS5ib2R5KCkuc3RyaW5nKCk7CiAgICAgICAgfQogICAgfQoKICAgIHB1YmxpYyBTdHJpbmcgcmVhZChTdHJpbmcgc2NoZW1hLCBTdHJpbmcgdGFibGUsIEpzb25PYmplY3QgY29uZGl0aW9ucykgdGhyb3dzIElPRXhjZXB0aW9uIHsKICAgICAgICBKc29uT2JqZWN0IGRhdGEgPSBuZXcgSnNvbk9iamVjdCgpOwogICAgICAgIGRhdGEuYWRkUHJvcGVydHkoInRhYmxlU2NoZW1hIiwgc2NoZW1hKTsKICAgICAgICBkYXRhLmFkZFByb3BlcnR5KCJ0YWJsZU5hbWUiLCB0YWJsZSk7CiAgICAgICAgZGF0YS5hZGQoImNvbmRpdGlvbnMiLCBjb25kaXRpb25zKTsKICAgICAgICByZXR1cm4gcG9zdFJlcXVlc3QoImR5bmFtaWNSZWFkIiwgZGF0YSk7CiAgICB9CiAgICAKICAgIC8vIEFkZGl0aW9uYWwgQ1JVRCBtZXRob2RzIGZvbGxvdyBzaW1pbGFyIHBhdHRlcm4uLi4KfQo=
+package com.pingdart.sdk.services;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import okhttp3.*;
+
+import java.io.IOException;
+
+public class DatabaseService {
+    private final OkHttpClient http;
+    private final String databaseId;
+    private final Gson gson = new Gson();
+
+    public DatabaseService(OkHttpClient http, String databaseId) {
+        this.http = http;
+        this.databaseId = databaseId;
+    }
+
+    private String postRequest(String endpoint, JsonObject data) throws IOException {
+        data.addProperty("databaseid", databaseId);
+        RequestBody body = RequestBody.create(gson.toJson(data), MediaType.get("application/json; charset=utf-8"));
+        Request request = new Request.Builder().url("/" + endpoint).post(body).build();
+        try (Response response = http.newCall(request).execute()) {
+            return response.body().string();
+        }
+    }
+
+    public String read(String schema, String table, JsonObject conditions) throws IOException {
+        JsonObject data = new JsonObject();
+        data.addProperty("tableSchema", schema);
+        data.addProperty("tableName", table);
+        data.add("conditions", conditions);
+        return postRequest("dynamicRead", data);
+    }
+    
+    // Additional CRUD methods follow similar pattern...
+}

@@ -1,3 +1,43 @@
-// Encrypted by PingDart
-// DECRYPT_KEY: pd_private_key
-cGFja2FnZSBzZXJ2aWNlcwoKaW1wb3J0ICgKCSJieXRlcyIKCSJlbmNvZGluZy9qc29uIgoJIm5ldC9odHRwIgopCgp0eXBlIFNtc1NlcnZpY2Ugc3RydWN0IHsKCWh0dHAgICAgKmh0dHAuQ2xpZW50CglhcGlLZXkgIHN0cmluZwoJYmFzZVVSTCBzdHJpbmcKfQoKZnVuYyBOZXdTbXNTZXJ2aWNlKGNsaWVudCAqaHR0cC5DbGllbnQsIGFwaUtleSwgYmFzZVVSTCBzdHJpbmcpICpTbXNTZXJ2aWNlIHsKCXJldHVybiAmU21zU2VydmljZXsKCQlodHRwOiAgICBjbGllbnQsCgkJYXBpS2V5OiAgYXBpS2V5LAoJCWJhc2VVUkw6IGJhc2VVUkwsCgl9Cn0KCmZ1bmMgKHMgKlNtc1NlcnZpY2UpIFNlbmRTbXModG8sIHRleHQsIHRlbXBsYXRlSUQsIHJvdXRlLCB1bmljb2RlIHN0cmluZykgKGludGVyZmFjZXt9LCBlcnJvcikgewoJZGF0YSA6PSBtYXBbc3RyaW5nXWludGVyZmFjZXt9ewoJCSJ0byI6ICAgICAgICAgdG8sCgkJInRleHQiOiAgICAgICB0ZXh0LAoJCSJ0ZW1wbGF0ZUlkIjogdGVtcGxhdGVJRCwKCQkicm91dGUiOiAgICAgIHJvdXRlLAoJCSJ1bmljb2RlIjogICAgdW5pY29kZSwKCX0KCWpzb25EYXRhLCBfIDo9IGpzb24uTWFyc2hhbChkYXRhKQoJcmVxLCBfIDo9IGh0dHAuTmV3UmVxdWVzdCgiUE9TVCIsIHMuYmFzZVVSTCsiL2VtYWlsL3NlbmQtc21zIiwgYnl0ZXMuTmV3QnVmZmVyKGpzb25EYXRhKSkKCXJlcS5IZWFkZXIuU2V0KCJ4LWFwaS1rZXkiLCBzLmFwaUtleSkKCXJlcS5IZWFkZXIuU2V0KCJDb250ZW50LVR5cGUiLCAiYXBwbGljYXRpb24vanNvbiIpCglyZXNwLCBlcnIgOj0gcy5odHRwLkRvKHJlcSkKCWlmIGVyciAhPSBuaWwgewoJCXJldHVybiBuaWwsIGVycgoJfQoJZGVmZXIgcmVzcC5Cb2R5LkNsb3NlKCkKCXZhciByZXN1bHQgaW50ZXJmYWNle30KCWpzb24uTmV3RGVjb2RlcihyZXNwLkJvZHkpLkRlY29kZSgmcmVzdWx0KQoJcmV0dXJuIHJlc3VsdCwgbmlsCn0K
+package services
+
+import (
+	"bytes"
+	"encoding/json"
+	"net/http"
+)
+
+type SmsService struct {
+	http    *http.Client
+	apiKey  string
+	baseURL string
+}
+
+func NewSmsService(client *http.Client, apiKey, baseURL string) *SmsService {
+	return &SmsService{
+		http:    client,
+		apiKey:  apiKey,
+		baseURL: baseURL,
+	}
+}
+
+func (s *SmsService) SendSms(to, text, templateID, route, unicode string) (interface{}, error) {
+	data := map[string]interface{}{
+		"to":         to,
+		"text":       text,
+		"templateId": templateID,
+		"route":      route,
+		"unicode":    unicode,
+	}
+	jsonData, _ := json.Marshal(data)
+	req, _ := http.NewRequest("POST", s.baseURL+"/email/send-sms", bytes.NewBuffer(jsonData))
+	req.Header.Set("x-api-key", s.apiKey)
+	req.Header.Set("Content-Type", "application/json")
+	resp, err := s.http.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	var result interface{}
+	json.NewDecoder(resp.Body).Decode(&result)
+	return result, nil
+}

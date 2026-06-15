@@ -1,3 +1,63 @@
-<?php
-// Encrypted by PingDart
-eval(base64_decode('bmFtZXNwYWNlIFBpbmdEYXJ0XFNES1xTZXJ2aWNlczsKCnVzZSBHdXp6bGVIdHRwXENsaWVudDsKCmNsYXNzIEFpU2VydmljZSB7CiAgICAvKiogQHZhciBDbGllbnQgKi8KICAgIHByaXZhdGUgJGh0dHA7CgogICAgcHVibGljIGZ1bmN0aW9uIF9fY29uc3RydWN0KENsaWVudCAkaHR0cCkgewogICAgICAgICR0aGlzLT5odHRwID0gJGh0dHA7CiAgICB9CgogICAgcHVibGljIGZ1bmN0aW9uIGNhbGxBaUFwaShzdHJpbmcgJG1lc3NhZ2UsIGNhbGxhYmxlICRvblByb2dyZXNzID0gbnVsbCwgc3RyaW5nICRtb2RlbCA9ICdjaGlubnVhaToxLjEnLCBhcnJheSAkb3B0aW9ucyA9IFtdKSB7CiAgICAgICAgJHBheWxvYWQgPSBhcnJheV9tZXJnZShbCiAgICAgICAgICAgICdtZXNzYWdlJyA9PiAkbWVzc2FnZSwKICAgICAgICAgICAgJ3N0cmVhbScgPT4gdHJ1ZSwKICAgICAgICAgICAgJ21vZGVsJyA9PiAkbW9kZWwKICAgICAgICBdLCAkb3B0aW9ucyk7CgogICAgICAgIHRyeSB7CiAgICAgICAgICAgICRyZXNwb25zZSA9ICR0aGlzLT5odHRwLT5wb3N0KCdhaS9jaGludWFpLWNoYXQnLCBbCiAgICAgICAgICAgICAgICAnanNvbicgPT4gJHBheWxvYWQsCiAgICAgICAgICAgICAgICAnc3RyZWFtJyA9PiB0cnVlCiAgICAgICAgICAgIF0pOwoKICAgICAgICAgICAgJGJvZHkgPSAkcmVzcG9uc2UtPmdldEJvZHkoKTsKICAgICAgICAgICAgJGZ1bGxSZXN1bHQgPSAiIjsKCiAgICAgICAgICAgIHdoaWxlICghJGJvZHktPmVvZigpKSB7CiAgICAgICAgICAgICAgICAkbGluZSA9ICR0aGlzLT5yZWFkTGluZSgkYm9keSk7CiAgICAgICAgICAgICAgICBpZiAoc3RycG9zKCRsaW5lLCAnZGF0YTogJykgPT09IDApIHsKICAgICAgICAgICAgICAgICAgICAkanNvblN0ciA9IHN1YnN0cigkbGluZSwgNik7CiAgICAgICAgICAgICAgICAgICAgaWYgKGVtcHR5KHRyaW0oJGpzb25TdHIpKSkgY29udGludWU7CgogICAgICAgICAgICAgICAgICAgICRwYXJzZWQgPSBqc29uX2RlY29kZSgkanNvblN0ciwgdHJ1ZSk7CiAgICAgICAgICAgICAgICAgICAgaWYgKGlzc2V0KCRwYXJzZWRbJ2NodW5rJ10pKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICRmdWxsUmVzdWx0IC49ICRwYXJzZWRbJ2NodW5rJ107CiAgICAgICAgICAgICAgICAgICAgICAgIGlmICgkb25Qcm9ncmVzcykgewogICAgICAgICAgICAgICAgICAgICAgICAgICAgJG9uUHJvZ3Jlc3MoJHBhcnNlZFsnY2h1bmsnXSk7CiAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgaWYgKGlzc2V0KCRwYXJzZWRbJ2RvbmUnXSkgJiYgJHBhcnNlZFsnZG9uZSddKSB7CiAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOwogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQoKICAgICAgICAgICAgcmV0dXJuICRmdWxsUmVzdWx0OwogICAgICAgIH0gY2F0Y2ggKFxFeGNlcHRpb24gJGUpIHsKICAgICAgICAgICAgdGhyb3cgbmV3IFxFeGNlcHRpb24oIkFJIEFQSSBFcnJvcjogIiAuICRlLT5nZXRNZXNzYWdlKCkpOwogICAgICAgIH0KICAgIH0KCiAgICBwcml2YXRlIGZ1bmN0aW9uIHJlYWRMaW5lKCRzdHJlYW0pIHsKICAgICAgICAkYnVmZmVyID0gIiI7CiAgICAgICAgd2hpbGUgKCEkc3RyZWFtLT5lb2YoKSkgewogICAgICAgICAgICAkY2hhciA9ICRzdHJlYW0tPnJlYWQoMSk7CiAgICAgICAgICAgIGlmICgkY2hhciA9PT0gIlxuIikgYnJlYWs7CiAgICAgICAgICAgICRidWZmZXIgLj0gJGNoYXI7CiAgICAgICAgfQogICAgICAgIHJldHVybiB0cmltKCRidWZmZXIpOwogICAgfQp9'));
+namespace PingDart\SDK\Services;
+
+use GuzzleHttp\Client;
+
+class AiService {
+    /** @var Client */
+    private $http;
+
+    public function __construct(Client $http) {
+        $this->http = $http;
+    }
+
+    public function callAiApi(string $message, callable $onProgress = null, string $model = 'chinnuai:1.1', array $options = []) {
+        $payload = array_merge([
+            'message' => $message,
+            'stream' => true,
+            'model' => $model
+        ], $options);
+
+        try {
+            $response = $this->http->post('ai/chinuai-chat', [
+                'json' => $payload,
+                'stream' => true
+            ]);
+
+            $body = $response->getBody();
+            $fullResult = "";
+
+            while (!$body->eof()) {
+                $line = $this->readLine($body);
+                if (strpos($line, 'data: ') === 0) {
+                    $jsonStr = substr($line, 6);
+                    if (empty(trim($jsonStr))) continue;
+
+                    $parsed = json_decode($jsonStr, true);
+                    if (isset($parsed['chunk'])) {
+                        $fullResult .= $parsed['chunk'];
+                        if ($onProgress) {
+                            $onProgress($parsed['chunk']);
+                        }
+                    }
+                    if (isset($parsed['done']) && $parsed['done']) {
+                        break;
+                    }
+                }
+            }
+
+            return $fullResult;
+        } catch (\Exception $e) {
+            throw new \Exception("AI API Error: " . $e->getMessage());
+        }
+    }
+
+    private function readLine($stream) {
+        $buffer = "";
+        while (!$stream->eof()) {
+            $char = $stream->read(1);
+            if ($char === "\n") break;
+            $buffer .= $char;
+        }
+        return trim($buffer);
+    }
+}

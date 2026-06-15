@@ -1,3 +1,33 @@
-// Encrypted by PingDart
-// DECRYPT_KEY: pd_private_key
-cGFja2FnZSBjb20ucGluZ2RhcnQuc2RrLnNlcnZpY2VzOwoKaW1wb3J0IGNvbS5nb29nbGUuZ3Nvbi5Hc29uOwppbXBvcnQgY29tLmdvb2dsZS5nc29uLkpzb25PYmplY3Q7CmltcG9ydCBva2h0dHAzLio7CgppbXBvcnQgamF2YS5pby5JT0V4Y2VwdGlvbjsKCnB1YmxpYyBjbGFzcyBTbXNTZXJ2aWNlIHsKICAgIHByaXZhdGUgZmluYWwgT2tIdHRwQ2xpZW50IGh0dHA7CiAgICBwcml2YXRlIGZpbmFsIFN0cmluZyBiYXNlVXJsOwogICAgcHJpdmF0ZSBmaW5hbCBHc29uIGdzb24gPSBuZXcgR3NvbigpOwoKICAgIHB1YmxpYyBTbXNTZXJ2aWNlKE9rSHR0cENsaWVudCBodHRwLCBTdHJpbmcgYmFzZVVybCkgewogICAgICAgIHRoaXMuaHR0cCA9IGh0dHA7CiAgICAgICAgdGhpcy5iYXNlVXJsID0gYmFzZVVybDsKICAgIH0KCiAgICBwdWJsaWMgU3RyaW5nIHNlbmRTbXMoU3RyaW5nIHRvLCBTdHJpbmcgdGV4dCwgU3RyaW5nIHRlbXBsYXRlSWQsIFN0cmluZyByb3V0ZSwgU3RyaW5nIHVuaWNvZGUpIHRocm93cyBJT0V4Y2VwdGlvbiB7CiAgICAgICAgSnNvbk9iamVjdCBwYXlsb2FkID0gbmV3IEpzb25PYmplY3QoKTsKICAgICAgICBwYXlsb2FkLmFkZFByb3BlcnR5KCJ0byIsIHRvKTsKICAgICAgICBwYXlsb2FkLmFkZFByb3BlcnR5KCJ0ZXh0IiwgdGV4dCk7CiAgICAgICAgaWYgKHRlbXBsYXRlSWQgIT0gbnVsbCkgcGF5bG9hZC5hZGRQcm9wZXJ0eSgidGVtcGxhdGVJZCIsIHRlbXBsYXRlSWQpOwogICAgICAgIHBheWxvYWQuYWRkUHJvcGVydHkoInJvdXRlIiwgcm91dGUgIT0gbnVsbCA/IHJvdXRlIDogInBpbmdkYXJ0Iik7CiAgICAgICAgcGF5bG9hZC5hZGRQcm9wZXJ0eSgidW5pY29kZSIsIHVuaWNvZGUgIT0gbnVsbCA/IHVuaWNvZGUgOiAidHJ1ZSIpOwoKICAgICAgICBSZXF1ZXN0Qm9keSBib2R5ID0gUmVxdWVzdEJvZHkuY3JlYXRlKGdzb24udG9Kc29uKHBheWxvYWQpLCBNZWRpYVR5cGUuZ2V0KCJhcHBsaWNhdGlvbi9qc29uOyBjaGFyc2V0PXV0Zi04IikpOwogICAgICAgIFJlcXVlc3QgcmVxdWVzdCA9IG5ldyBSZXF1ZXN0LkJ1aWxkZXIoKS51cmwoYmFzZVVybCArICIvZW1haWwvc2VuZC1zbXMiKS5wb3N0KGJvZHkpLmJ1aWxkKCk7CiAgICAgICAgdHJ5IChSZXNwb25zZSByZXNwb25zZSA9IGh0dHAubmV3Q2FsbChyZXF1ZXN0KS5leGVjdXRlKCkpIHsKICAgICAgICAgICAgcmV0dXJuIHJlc3BvbnNlLmJvZHkoKS5zdHJpbmcoKTsKICAgICAgICB9CiAgICB9Cn0K
+package com.pingdart.sdk.services;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import okhttp3.*;
+
+import java.io.IOException;
+
+public class SmsService {
+    private final OkHttpClient http;
+    private final String baseUrl;
+    private final Gson gson = new Gson();
+
+    public SmsService(OkHttpClient http, String baseUrl) {
+        this.http = http;
+        this.baseUrl = baseUrl;
+    }
+
+    public String sendSms(String to, String text, String templateId, String route, String unicode) throws IOException {
+        JsonObject payload = new JsonObject();
+        payload.addProperty("to", to);
+        payload.addProperty("text", text);
+        if (templateId != null) payload.addProperty("templateId", templateId);
+        payload.addProperty("route", route != null ? route : "pingdart");
+        payload.addProperty("unicode", unicode != null ? unicode : "true");
+
+        RequestBody body = RequestBody.create(gson.toJson(payload), MediaType.get("application/json; charset=utf-8"));
+        Request request = new Request.Builder().url(baseUrl + "/email/send-sms").post(body).build();
+        try (Response response = http.newCall(request).execute()) {
+            return response.body().string();
+        }
+    }
+}

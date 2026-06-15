@@ -1,2 +1,28 @@
-// Encrypted by PingDart
-eval(Buffer.from('Y2xhc3MgU21zU2VydmljZSB7CiAgICBjb25zdHJ1Y3RvcihodHRwLCBjb25maWcpIHsKICAgICAgICB0aGlzLmh0dHAgPSBodHRwOwogICAgICAgIHRoaXMuYXBpS2V5ID0gY29uZmlnPy5hcGlLZXk7CiAgICB9CgogICAgYXN5bmMgc2VuZFNNUyh7IHRvLCB0ZW1wbGF0ZUlkLCB0ZXh0LCByb3V0ZSA9ICJwaW5nZGFydCIsIHVuaWNvZGUgPSAidHJ1ZSIgfSkgewogICAgICAgIHRyeSB7CiAgICAgICAgICAgIC8vIEJhc2ljIGNsZWFuaW5nIGZvciBTTVMgdGFyZ2V0IG51bWJlcgogICAgICAgICAgICBjb25zdCBjbGVhblRvID0gdG8ucmVwbGFjZSgvW15cZCtdL2csICcnKS5yZXBsYWNlKC9ccy9nLCAnJyk7CgogICAgICAgICAgICBjb25zdCByZXNwb25zZSA9IGF3YWl0IHRoaXMuaHR0cC5wb3N0KCJlbWFpbC9zZW5kLXNtcyIsIHsgLy8gS2VlcCBlbWFpbC8gcHJlZml4IGZvciBiYWNrZW5kIGNvbXBhdGliaWxpdHkKICAgICAgICAgICAgICAgIHRvOiBjbGVhblRvLAogICAgICAgICAgICAgICAgdGVtcGxhdGVJZCwKICAgICAgICAgICAgICAgIHRleHQsCiAgICAgICAgICAgICAgICByb3V0ZSwKICAgICAgICAgICAgICAgIHVuaWNvZGUsCiAgICAgICAgICAgICAgICBhcGlfa2V5OiB0aGlzLmFwaUtleQogICAgICAgICAgICB9KTsKICAgICAgICAgICAgcmV0dXJuIHJlc3BvbnNlLmRhdGE7CiAgICAgICAgfSBjYXRjaCAoZXJyb3IpIHsKICAgICAgICAgICAgY29uc3QgZXJyb3JNZXNzYWdlID0gZXJyb3IucmVzcG9uc2U/LmRhdGE/Lm1lc3NhZ2UgfHwgZXJyb3IubWVzc2FnZTsKICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKGBTTVMgc2VuZGluZyBlcnJvcjogJHtlcnJvck1lc3NhZ2V9YCk7CiAgICAgICAgfQogICAgfQp9CgpleHBvcnQgZGVmYXVsdCBTbXNTZXJ2aWNlOwo=', 'base64').toString('utf-8'));
+class SmsService {
+    constructor(http, config) {
+        this.http = http;
+        this.apiKey = config?.apiKey;
+    }
+
+    async sendSMS({ to, templateId, text, route = "pingdart", unicode = "true" }) {
+        try {
+            // Basic cleaning for SMS target number
+            const cleanTo = to.replace(/[^\d+]/g, '').replace(/\s/g, '');
+
+            const response = await this.http.post("email/send-sms", { // Keep email/ prefix for backend compatibility
+                to: cleanTo,
+                templateId,
+                text,
+                route,
+                unicode,
+                api_key: this.apiKey
+            });
+            return response.data;
+        } catch (error) {
+            const errorMessage = error.response?.data?.message || error.message;
+            throw new Error(`SMS sending error: ${errorMessage}`);
+        }
+    }
+}
+
+export default SmsService;

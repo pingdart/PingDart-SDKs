@@ -1,3 +1,136 @@
-// Encrypted by PingDart
-// DECRYPT_KEY: pd_private_key
-cGFja2FnZSBjb20ucGluZ2RhcnQ7CgppbXBvcnQgY29tLmZhc3RlcnhtbC5qYWNrc29uLmNvcmUudHlwZS5UeXBlUmVmZXJlbmNlOwppbXBvcnQgY29tLmZhc3RlcnhtbC5qYWNrc29uLmRhdGFiaW5kLk9iamVjdE1hcHBlcjsKCmltcG9ydCBqYXZheC5jcnlwdG8uQ2lwaGVyOwppbXBvcnQgamF2YXguY3J5cHRvLnNwZWMuSXZQYXJhbWV0ZXJTcGVjOwppbXBvcnQgamF2YXguY3J5cHRvLnNwZWMuU2VjcmV0S2V5U3BlYzsKaW1wb3J0IGphdmEubmV0LlVSSTsKaW1wb3J0IGphdmEubmV0Lmh0dHAuSHR0cENsaWVudDsKaW1wb3J0IGphdmEubmV0Lmh0dHAuSHR0cFJlcXVlc3Q7CmltcG9ydCBqYXZhLm5ldC5odHRwLkh0dHBSZXNwb25zZTsKaW1wb3J0IGphdmEubmlvLmNoYXJzZXQuU3RhbmRhcmRDaGFyc2V0czsKaW1wb3J0IGphdmEuc2VjdXJpdHkuTWVzc2FnZURpZ2VzdDsKaW1wb3J0IGphdmEuc3FsLkNvbm5lY3Rpb247CmltcG9ydCBqYXZhLnNxbC5Ecml2ZXJNYW5hZ2VyOwppbXBvcnQgamF2YS50aW1lLkR1cmF0aW9uOwppbXBvcnQgamF2YS51dGlsLkJhc2U2NDsKaW1wb3J0IGphdmEudXRpbC5NYXA7CgpwdWJsaWMgY2xhc3MgUGluZ0RhcnREQiB7CiAgICBwcml2YXRlIGZpbmFsIFN0cmluZyBhcGlLZXk7CiAgICBwcml2YXRlIGZpbmFsIE1hcDxTdHJpbmcsIFN0cmluZz4gZGJDb25maWc7CiAgICBwcml2YXRlIGZpbmFsIFN0cmluZyBkYlR5cGU7CiAgICBwcml2YXRlIE1hcDxTdHJpbmcsIE9iamVjdD4gbGljZW5zZTsKICAgIHByaXZhdGUgQ29ubmVjdGlvbiBjb25uZWN0aW9uOwoKICAgIHB1YmxpYyBQaW5nRGFydERCKFN0cmluZyBhcGlLZXksIE1hcDxTdHJpbmcsIFN0cmluZz4gZGJDb25maWcpIHRocm93cyBFeGNlcHRpb24gewogICAgICAgIHRoaXMuYXBpS2V5ID0gYXBpS2V5OwogICAgICAgIHRoaXMuZGJDb25maWcgPSBkYkNvbmZpZzsKICAgICAgICB0aGlzLmRiVHlwZSA9IGRiQ29uZmlnLmdldE9yRGVmYXVsdCgidHlwZSIsICJteXNxbCIpOwoKICAgICAgICBpZiAoIWRiVHlwZS5lcXVhbHMoIm15c3FsIikgJiYgIWRiVHlwZS5lcXVhbHMoInBvc3RncmVzcWwiKSkgewogICAgICAgICAgICB0aHJvdyBuZXcgRXhjZXB0aW9uKCJVbnN1cHBvcnRlZCBkYXRhYmFzZSB0eXBlOiAiICsgZGJUeXBlKTsKICAgICAgICB9CgogICAgICAgIHZhbGlkYXRlS2V5KGFwaUtleSk7CiAgICB9CgogICAgcHJpdmF0ZSB2b2lkIHZhbGlkYXRlS2V5KFN0cmluZyBhcGlLZXkpIHRocm93cyBFeGNlcHRpb24gewogICAgICAgIGlmIChhcGlLZXkgPT0gbnVsbCB8fCAhYXBpS2V5LnN0YXJ0c1dpdGgoInBkXyIpKSB7CiAgICAgICAgICAgIHRocm93IG5ldyBFeGNlcHRpb24oIlBpbmdEYXJ0IEF1dGhvcml6YXRpb24gRmFpbGVkOiBJbnZhbGlkIFBpbmdEYXJ0IExpY2Vuc2UgS2V5IGZvcm1hdCIpOwogICAgICAgIH0KCiAgICAgICAgU3RyaW5nW10gcGFydHMgPSBhcGlLZXkucmVwbGFjZSgicGRfIiwgIiIpLnNwbGl0KCJcXC4iKTsKICAgICAgICBpZiAocGFydHMubGVuZ3RoICE9IDIpIHsKICAgICAgICAgICAgdGhyb3cgbmV3IEV4Y2VwdGlvbigiUGluZ0RhcnQgQXV0aG9yaXphdGlvbiBGYWlsZWQ6IEludmFsaWQgUGluZ0RhcnQgTGljZW5zZSBLZXkgZm9ybWF0Iik7CiAgICAgICAgfQoKICAgICAgICBieXRlW10gaXYgPSBoZXhTdHJpbmdUb0J5dGVBcnJheShwYXJ0c1swXSk7CiAgICAgICAgYnl0ZVtdIGVuY3J5cHRlZFRleHQgPSBoZXhTdHJpbmdUb0J5dGVBcnJheShwYXJ0c1sxXSk7CgogICAgICAgIFN0cmluZyBzZWNyZXRLZXkgPSAiUGluZ0RhcnRTdXBlclNlY3JldEtleTIwMjYhQCMkIjsKICAgICAgICBNZXNzYWdlRGlnZXN0IGRpZ2VzdCA9IE1lc3NhZ2VEaWdlc3QuZ2V0SW5zdGFuY2UoIlNIQS0yNTYiKTsKICAgICAgICBieXRlW10gaGFzaCA9IGRpZ2VzdC5kaWdlc3Qoc2VjcmV0S2V5LmdldEJ5dGVzKFN0YW5kYXJkQ2hhcnNldHMuVVRGXzgpKTsKICAgICAgICBTdHJpbmcgZW5jb2RlZEhhc2ggPSBCYXNlNjQuZ2V0RW5jb2RlcigpLmVuY29kZVRvU3RyaW5nKGhhc2gpOwogICAgICAgIGJ5dGVbXSBrZXlCeXRlcyA9IGVuY29kZWRIYXNoLnN1YnN0cmluZygwLCAzMikuZ2V0Qnl0ZXMoU3RhbmRhcmRDaGFyc2V0cy5VVEZfOCk7CgogICAgICAgIENpcGhlciBjaXBoZXIgPSBDaXBoZXIuZ2V0SW5zdGFuY2UoIkFFUy9DQkMvUEtDUzVQYWRkaW5nIik7CiAgICAgICAgU2VjcmV0S2V5U3BlYyBrZXlTcGVjID0gbmV3IFNlY3JldEtleVNwZWMoa2V5Qnl0ZXMsICJBRVMiKTsKICAgICAgICBJdlBhcmFtZXRlclNwZWMgaXZTcGVjID0gbmV3IEl2UGFyYW1ldGVyU3BlYyhpdik7CiAgICAgICAgY2lwaGVyLmluaXQoQ2lwaGVyLkRFQ1JZUFRfTU9ERSwga2V5U3BlYywgaXZTcGVjKTsKCiAgICAgICAgYnl0ZVtdIGRlY3J5cHRlZEJ5dGVzID0gY2lwaGVyLmRvRmluYWwoZW5jcnlwdGVkVGV4dCk7CiAgICAgICAgU3RyaW5nIGRlY3J5cHRlZFN0cmluZyA9IG5ldyBTdHJpbmcoZGVjcnlwdGVkQnl0ZXMsIFN0YW5kYXJkQ2hhcnNldHMuVVRGXzgpOwoKICAgICAgICBPYmplY3RNYXBwZXIgbWFwcGVyID0gbmV3IE9iamVjdE1hcHBlcigpOwogICAgICAgIHRoaXMubGljZW5zZSA9IG1hcHBlci5yZWFkVmFsdWUoZGVjcnlwdGVkU3RyaW5nLCBuZXcgVHlwZVJlZmVyZW5jZTxNYXA8U3RyaW5nLCBPYmplY3Q+PigpIHt9KTsKICAgIH0KCiAgICBwdWJsaWMgdm9pZCBjb25uZWN0KCkgdGhyb3dzIEV4Y2VwdGlvbiB7CiAgICAgICAgU3RyaW5nIGhvc3QgPSBkYkNvbmZpZy5nZXQoImhvc3QiKTsKICAgICAgICBTdHJpbmcgZGIgPSBkYkNvbmZpZy5nZXQoImRhdGFiYXNlIik7CiAgICAgICAgU3RyaW5nIHVzZXIgPSBkYkNvbmZpZy5nZXQoInVzZXIiKTsKICAgICAgICBTdHJpbmcgcGFzcyA9IGRiQ29uZmlnLmdldCgicGFzc3dvcmQiKTsKCiAgICAgICAgU3RyaW5nIGpkYmNVcmw7CiAgICAgICAgaWYgKGRiVHlwZS5lcXVhbHMoIm15c3FsIikpIHsKICAgICAgICAgICAgQ2xhc3MuZm9yTmFtZSgiY29tLm15c3FsLmNqLmpkYmMuRHJpdmVyIik7CiAgICAgICAgICAgIGpkYmNVcmwgPSBTdHJpbmcuZm9ybWF0KCJqZGJjOm15c3FsOi8vJXMvJXM/dXNlVW5pY29kZT10cnVlJmNoYXJhY3RlckVuY29kaW5nPXV0ZjgiLCBob3N0LCBkYik7CiAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgQ2xhc3MuZm9yTmFtZSgib3JnLnBvc3RncmVzcWwuRHJpdmVyIik7CiAgICAgICAgICAgIGpkYmNVcmwgPSBTdHJpbmcuZm9ybWF0KCJqZGJjOnBvc3RncmVzcWw6Ly8lcy8lcyIsIGhvc3QsIGRiKTsKICAgICAgICB9CgogICAgICAgIHRoaXMuY29ubmVjdGlvbiA9IERyaXZlck1hbmFnZXIuZ2V0Q29ubmVjdGlvbihqZGJjVXJsLCB1c2VyLCBwYXNzKTsKCiAgICAgICAgaWYgKGxpY2Vuc2UgIT0gbnVsbCAmJiBsaWNlbnNlLmNvbnRhaW5zS2V5KCJ0aWVyIikgJiYgIWxpY2Vuc2UuZ2V0KCJ0aWVyIikuZXF1YWxzKCJmcmVlIikpIHsKICAgICAgICAgICAgdmFsaWRhdGVMaXZlU2VydmVyKCk7CiAgICAgICAgfQogICAgfQoKICAgIHByaXZhdGUgdm9pZCB2YWxpZGF0ZUxpdmVTZXJ2ZXIoKSB0aHJvd3MgRXhjZXB0aW9uIHsKICAgICAgICBTdHJpbmcgcGF5bG9hZCA9IFN0cmluZy5mb3JtYXQoIntcImFwaUtleVwiOlwiJXNcIn0iLCB0aGlzLmFwaUtleSk7CgogICAgICAgIEh0dHBDbGllbnQgY2xpZW50ID0gSHR0cENsaWVudC5uZXdCdWlsZGVyKCkuY29ubmVjdFRpbWVvdXQoRHVyYXRpb24ub2ZTZWNvbmRzKDEwKSkuYnVpbGQoKTsKICAgICAgICBIdHRwUmVxdWVzdCByZXF1ZXN0ID0gSHR0cFJlcXVlc3QubmV3QnVpbGRlcigpCiAgICAgICAgICAgICAgICAudXJpKFVSSS5jcmVhdGUoImh0dHBzOi8vY2xvdWRhcGkucGluZ2RhcnQuY29tL2FwaS9yZWFsdGltZS92YWxpZGF0ZS1zZGsiKSkKICAgICAgICAgICAgICAgIC5oZWFkZXIoIkNvbnRlbnQtVHlwZSIsICJhcHBsaWNhdGlvbi9qc29uIikKICAgICAgICAgICAgICAgIC5QT1NUKEh0dHBSZXF1ZXN0LkJvZHlQdWJsaXNoZXJzLm9mU3RyaW5nKHBheWxvYWQpKQogICAgICAgICAgICAgICAgLmJ1aWxkKCk7CgogICAgICAgIEh0dHBSZXNwb25zZTxTdHJpbmc+IHJlc3BvbnNlID0gY2xpZW50LnNlbmQocmVxdWVzdCwgSHR0cFJlc3BvbnNlLkJvZHlIYW5kbGVycy5vZlN0cmluZygpKTsKICAgICAgICAKICAgICAgICBPYmplY3RNYXBwZXIgbWFwcGVyID0gbmV3IE9iamVjdE1hcHBlcigpOwogICAgICAgIE1hcDxTdHJpbmcsIE9iamVjdD4gcmVzdWx0ID0gbWFwcGVyLnJlYWRWYWx1ZShyZXNwb25zZS5ib2R5KCksIG5ldyBUeXBlUmVmZXJlbmNlPE1hcDxTdHJpbmcsIE9iamVjdD4+KCkge30pOwogICAgICAgIAogICAgICAgIGlmICghcmVzdWx0LmNvbnRhaW5zS2V5KCJzdWNjZXNzIikgfHwgIShCb29sZWFuKSByZXN1bHQuZ2V0KCJzdWNjZXNzIikpIHsKICAgICAgICAgICAgdGhyb3cgbmV3IEV4Y2VwdGlvbigiUGluZ0RhcnQgTGl2ZSBBdXRob3JpemF0aW9uIEZhaWxlZCIpOwogICAgICAgIH0KICAgIH0KCiAgICBwdWJsaWMgUXVlcnlCdWlsZGVyIHRhYmxlKFN0cmluZyB0YWJsZU5hbWUpIHsKICAgICAgICByZXR1cm4gbmV3IFF1ZXJ5QnVpbGRlcih0YWJsZU5hbWUsIHRoaXMuY29ubmVjdGlvbiwgdGhpcy5kYlR5cGUpOwogICAgfQoKICAgIHB1YmxpYyBTY2hlbWFCdWlsZGVyIHNjaGVtYSgpIHsKICAgICAgICByZXR1cm4gbmV3IFNjaGVtYUJ1aWxkZXIodGhpcy5jb25uZWN0aW9uLCB0aGlzLmRiVHlwZSk7CiAgICB9CgogICAgcHVibGljIHZvaWQgY2xvc2UoKSB0aHJvd3MgRXhjZXB0aW9uIHsKICAgICAgICBpZiAodGhpcy5jb25uZWN0aW9uICE9IG51bGwgJiYgIXRoaXMuY29ubmVjdGlvbi5pc0Nsb3NlZCgpKSB7CiAgICAgICAgICAgIHRoaXMuY29ubmVjdGlvbi5jbG9zZSgpOwogICAgICAgIH0KICAgIH0KCiAgICBwcml2YXRlIGJ5dGVbXSBoZXhTdHJpbmdUb0J5dGVBcnJheShTdHJpbmcgcykgewogICAgICAgIGludCBsZW4gPSBzLmxlbmd0aCgpOwogICAgICAgIGJ5dGVbXSBkYXRhID0gbmV3IGJ5dGVbbGVuIC8gMl07CiAgICAgICAgZm9yIChpbnQgaSA9IDA7IGkgPCBsZW47IGkgKz0gMikgewogICAgICAgICAgICBkYXRhW2kgLyAyXSA9IChieXRlKSAoKENoYXJhY3Rlci5kaWdpdChzLmNoYXJBdChpKSwgMTYpIDw8IDQpCiAgICAgICAgICAgICAgICAgICAgKyBDaGFyYWN0ZXIuZGlnaXQocy5jaGFyQXQoaSsxKSwgMTYpKTsKICAgICAgICB9CiAgICAgICAgcmV0dXJuIGRhdGE7CiAgICB9Cn0K
+package com.pingdart;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import javax.crypto.Cipher;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.time.Duration;
+import java.util.Base64;
+import java.util.Map;
+
+public class PingDartDB {
+    private final String apiKey;
+    private final Map<String, String> dbConfig;
+    private final String dbType;
+    private Map<String, Object> license;
+    private Connection connection;
+
+    public PingDartDB(String apiKey, Map<String, String> dbConfig) throws Exception {
+        this.apiKey = apiKey;
+        this.dbConfig = dbConfig;
+        this.dbType = dbConfig.getOrDefault("type", "mysql");
+
+        if (!dbType.equals("mysql") && !dbType.equals("postgresql")) {
+            throw new Exception("Unsupported database type: " + dbType);
+        }
+
+        validateKey(apiKey);
+    }
+
+    private void validateKey(String apiKey) throws Exception {
+        if (apiKey == null || !apiKey.startsWith("pd_")) {
+            throw new Exception("PingDart Authorization Failed: Invalid PingDart License Key format");
+        }
+
+        String[] parts = apiKey.replace("pd_", "").split("\\.");
+        if (parts.length != 2) {
+            throw new Exception("PingDart Authorization Failed: Invalid PingDart License Key format");
+        }
+
+        byte[] iv = hexStringToByteArray(parts[0]);
+        byte[] encryptedText = hexStringToByteArray(parts[1]);
+
+        String secretKey = "PingDartSuperSecretKey2026!@#$";
+        MessageDigest digest = MessageDigest.getInstance("SHA-256");
+        byte[] hash = digest.digest(secretKey.getBytes(StandardCharsets.UTF_8));
+        String encodedHash = Base64.getEncoder().encodeToString(hash);
+        byte[] keyBytes = encodedHash.substring(0, 32).getBytes(StandardCharsets.UTF_8);
+
+        Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+        SecretKeySpec keySpec = new SecretKeySpec(keyBytes, "AES");
+        IvParameterSpec ivSpec = new IvParameterSpec(iv);
+        cipher.init(Cipher.DECRYPT_MODE, keySpec, ivSpec);
+
+        byte[] decryptedBytes = cipher.doFinal(encryptedText);
+        String decryptedString = new String(decryptedBytes, StandardCharsets.UTF_8);
+
+        ObjectMapper mapper = new ObjectMapper();
+        this.license = mapper.readValue(decryptedString, new TypeReference<Map<String, Object>>() {});
+    }
+
+    public void connect() throws Exception {
+        String host = dbConfig.get("host");
+        String db = dbConfig.get("database");
+        String user = dbConfig.get("user");
+        String pass = dbConfig.get("password");
+
+        String jdbcUrl;
+        if (dbType.equals("mysql")) {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            jdbcUrl = String.format("jdbc:mysql://%s/%s?useUnicode=true&characterEncoding=utf8", host, db);
+        } else {
+            Class.forName("org.postgresql.Driver");
+            jdbcUrl = String.format("jdbc:postgresql://%s/%s", host, db);
+        }
+
+        this.connection = DriverManager.getConnection(jdbcUrl, user, pass);
+
+        if (license != null && license.containsKey("tier") && !license.get("tier").equals("free")) {
+            validateLiveServer();
+        }
+    }
+
+    private void validateLiveServer() throws Exception {
+        String payload = String.format("{\"apiKey\":\"%s\"}", this.apiKey);
+
+        HttpClient client = HttpClient.newBuilder().connectTimeout(Duration.ofSeconds(10)).build();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://cloudapi.pingdart.com/api/realtime/validate-sdk"))
+                .header("Content-Type", "application/json")
+                .POST(HttpRequest.BodyPublishers.ofString(payload))
+                .build();
+
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        
+        ObjectMapper mapper = new ObjectMapper();
+        Map<String, Object> result = mapper.readValue(response.body(), new TypeReference<Map<String, Object>>() {});
+        
+        if (!result.containsKey("success") || !(Boolean) result.get("success")) {
+            throw new Exception("PingDart Live Authorization Failed");
+        }
+    }
+
+    public QueryBuilder table(String tableName) {
+        return new QueryBuilder(tableName, this.connection, this.dbType);
+    }
+
+    public SchemaBuilder schema() {
+        return new SchemaBuilder(this.connection, this.dbType);
+    }
+
+    public void close() throws Exception {
+        if (this.connection != null && !this.connection.isClosed()) {
+            this.connection.close();
+        }
+    }
+
+    private byte[] hexStringToByteArray(String s) {
+        int len = s.length();
+        byte[] data = new byte[len / 2];
+        for (int i = 0; i < len; i += 2) {
+            data[i / 2] = (byte) ((Character.digit(s.charAt(i), 16) << 4)
+                    + Character.digit(s.charAt(i+1), 16));
+        }
+        return data;
+    }
+}

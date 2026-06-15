@@ -1,2 +1,97 @@
-// Encrypted by PingDart
-eval(Buffer.from('aW1wb3J0IGF4aW9zIGZyb20gJ2F4aW9zJzsKCmNsYXNzIEFpU2VydmljZSB7CiAgICBjb25zdHJ1Y3RvcihodHRwLCBjb25maWcsIHJlYWx0aW1lSHR0cCkgewogICAgICAgIHRoaXMuaHR0cCA9IGh0dHA7CiAgICAgICAgLy8gVXNpbmcgdGhlIG1haW4gSFRUUCBjbGllbnQgdG8gZW5zdXJlIEFQSSBLZXkgaXMgYXR0YWNoZWQgaWYgcHJlc2VudAogICAgfQoKICAgIGFzeW5jIGNhbGxBaUFwaShtZXNzYWdlLCBvblByb2dyZXNzLCBvcHRpb25zID0ge30pIHsKICAgICAgICB0cnkgewogICAgICAgICAgICBjb25zdCBwYXlsb2FkID0gewogICAgICAgICAgICAgICAgbWVzc2FnZTogbWVzc2FnZSwKICAgICAgICAgICAgICAgIHN0cmVhbTogdHJ1ZSwKICAgICAgICAgICAgICAgIG1vZGVsOiBvcHRpb25zLm1vZGVsIHx8ICJjaGlubnVhaToxLjEiLAogICAgICAgICAgICAgICAgY2hpbnVhaTogb3B0aW9ucy5jaGludWFpIHx8ICJjaGlubnVhaToxLjEiLAogICAgICAgICAgICAgICAgdXNlcl9pZDogb3B0aW9ucy51c2VySWQgfHwgImRlZmF1bHQiLCAvLyBDYW4gYmUgb3ZlcnJpZGRlbgogICAgICAgICAgICAgICAgLi4ub3B0aW9ucwogICAgICAgICAgICB9OwoKICAgICAgICAgICAgLy8gSWYgcnVubmluZyBpbiBhIE5vZGUuanMgZW52aXJvbm1lbnQgb3Igc3RhbmRhcmQgYnJvd3NlcgogICAgICAgICAgICBpZiAodHlwZW9mIGZldGNoID09PSAnZnVuY3Rpb24nICYmICF0aGlzLmh0dHAuZGVmYXVsdHMuYWRhcHRlcikgeyAvLyBDaGVja2luZyBpZiB3ZSdyZSBub3Qgc3RyaWN0bHkgZm9yY2VkIGludG8gYXhpb3Mgbm9kZSBhZGFwdGVyCiAgICAgICAgICAgICAgICAvLyBGYWxsYmFjayB0byBmZXRjaCBpZiBhdmFpbGFibGUgYW5kIHByZWZlcnJlZCBmb3Igc3RyZWFtcyBpbiBzb21lIGVudmlyb25tZW50cwogICAgICAgICAgICAgICAgLy8gQnV0IHNpbmNlIHdlIHVzZSBBeGlvcyBmcm9tIFBpbmdEYXJ0U0RLLCB3ZSBzaG91bGQgdXNlIHRoZSBjb25maWd1cmVkIGF4aW9zIGluc3RhbmNlCiAgICAgICAgICAgICAgICAvLyBXZSdsbCBwcm9jZWVkIHRvIHRoZSBBeGlvcyByb3V0ZSBiZWxvdyBhcyBwcmltYXJ5IHNpbmNlIGl0IGhhcyB0aGUgeC1hcGkta2V5IHNldHVwCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIC8vIFVzaW5nIHRoZSBjb25maWd1cmVkIEF4aW9zIGNsaWVudCAodGhpcy5odHRwKSBlbnN1cmluZyBoZWFkZXJzIChgeC1hcGkta2V5YCkgYXJlIHBhc3NlZAogICAgICAgICAgICBjb25zdCByZXNwb25zZSA9IGF3YWl0IHRoaXMuaHR0cCh7CiAgICAgICAgICAgICAgICBtZXRob2Q6ICdwb3N0JywKICAgICAgICAgICAgICAgIHVybDogJy9hcGkvYWkvY2hpbnVhaS1jaGF0JywKICAgICAgICAgICAgICAgIGRhdGE6IHBheWxvYWQsCiAgICAgICAgICAgICAgICByZXNwb25zZVR5cGU6ICdzdHJlYW0nLCAvLyBJbXBvcnRhbnQgZm9yIG5vZGUuanMgYXhpb3Mgc3RyZWFtaW5nCiAgICAgICAgICAgICAgICAvLyBpZiBydW4gaW4gYnJvd3NlciwgYXhpb3MgcmVzcG9uc2VUeXBlOiAnc3RyZWFtJyBtaWdodCBub3Qgd29yayBkaXJlY3RseSwgYnV0IHNpbmNlIHRoaXMgaXMgTm9kZS5qcyBTREssIGl0J3MgZmluZS4KICAgICAgICAgICAgfSk7CgogICAgICAgICAgICByZXR1cm4gbmV3IFByb21pc2UoKHJlc29sdmUsIHJlamVjdCkgPT4gewogICAgICAgICAgICAgICAgbGV0IGZ1bGxSZXN1bHQgPSAiIjsKCiAgICAgICAgICAgICAgICAvLyBOb2RlLmpzIEF4aW9zIHN0cmVhbSBoYW5kbGluZwogICAgICAgICAgICAgICAgaWYgKHJlc3BvbnNlLmRhdGEgJiYgdHlwZW9mIHJlc3BvbnNlLmRhdGEub24gPT09ICdmdW5jdGlvbicpIHsKICAgICAgICAgICAgICAgICAgICByZXNwb25zZS5kYXRhLm9uKCdkYXRhJywgKGNodW5rKSA9PiB7CiAgICAgICAgICAgICAgICAgICAgICAgIHRyeSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAvLyBUaGUgYmFja2VuZCBzZW5kcyBTZXJ2ZXItU2VudCBFdmVudHMgKFNTRSkgZm9ybWF0OiAnZGF0YTogeyJjaHVuayI6ICIuLi4iLCAiZG9uZSI6IGZhbHNlfVxuXG4nCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjb25zdCBsaW5lcyA9IGNodW5rLnRvU3RyaW5nKCkuc3BsaXQoJ1xuJykuZmlsdGVyKGxpbmUgPT4gbGluZS50cmltKCkpOwoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZvciAoY29uc3QgbGluZSBvZiBsaW5lcykgewogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlmIChsaW5lLnN0YXJ0c1dpdGgoJ2RhdGE6ICcpKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbnN0IGpzb25TdHIgPSBsaW5lLnJlcGxhY2UoJ2RhdGE6ICcsICcnKS50cmltKCk7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlmICghanNvblN0cikgY29udGludWU7CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjb25zdCBwYXJzZWQgPSBKU09OLnBhcnNlKGpzb25TdHIpOwoKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYgKHBhcnNlZC5jaHVuaykgewogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZnVsbFJlc3VsdCArPSBwYXJzZWQuY2h1bms7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZiAob25Qcm9ncmVzcykgb25Qcm9ncmVzcyhwYXJzZWQuY2h1bmspOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZiAocGFyc2VkLmRvbmUpIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJlc29sdmUoZnVsbFJlc3VsdCk7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgICAgIH0gY2F0Y2ggKGUpIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIC8vIFNvbWV0aW1lcyBjaHVua3MgbWlnaHQgYmUgZnJhZ21lbnRlZCwgc3RhbmRhcmQgZXJyb3IgaGFuZGxpbmcgbWlnaHQgbWlzaW50ZXJwcmV0CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAvLyBGb3IgcmF3IHRleHQgc3RyZWFtcyBmYWxsYmFjazoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbnN0IHN0ckNodW5rID0gY2h1bmsudG9TdHJpbmcoKTsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlmICghc3RyQ2h1bmsuaW5jbHVkZXMoJ2RhdGE6IHsnKSkgewogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZ1bGxSZXN1bHQgKz0gc3RyQ2h1bms7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYgKG9uUHJvZ3Jlc3MpIG9uUHJvZ3Jlc3Moc3RyQ2h1bmspOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgfSk7CgogICAgICAgICAgICAgICAgICAgIHJlc3BvbnNlLmRhdGEub24oJ2VuZCcsICgpID0+IHJlc29sdmUoZnVsbFJlc3VsdCkpOwogICAgICAgICAgICAgICAgICAgIHJlc3BvbnNlLmRhdGEub24oJ2Vycm9yJywgcmVqZWN0KTsKICAgICAgICAgICAgICAgIH0gZWxzZSBpZiAocmVzcG9uc2UuZGF0YSkgewogICAgICAgICAgICAgICAgICAgIC8vIEZhbGxiYWNrIGlmIG5vdCBhIHRydWUgc3RyZWFtIChlLmcuIGJyb3dzZXIgcG9seWZpbGwgb3Igc3RyZWFtIGNvbmZpZyBmYWlsZWQpCiAgICAgICAgICAgICAgICAgICAgLy8gSWYgdGhlIGJhY2tlbmQgc2VudCBhIGZ1bGwgSlNPTiByZXNwb25zZSBpbnN0ZWFkCiAgICAgICAgICAgICAgICAgICAgaWYgKHJlc3BvbnNlLmRhdGEucmVwbHkpIHsKICAgICAgICAgICAgICAgICAgICAgICAgY29uc3QgcmVwbHlTdHIgPSB0eXBlb2YgcmVzcG9uc2UuZGF0YS5yZXBseSA9PT0gJ3N0cmluZycgPyByZXNwb25zZS5kYXRhLnJlcGx5IDogSlNPTi5zdHJpbmdpZnkocmVzcG9uc2UuZGF0YS5yZXBseSk7CiAgICAgICAgICAgICAgICAgICAgICAgIGlmIChvblByb2dyZXNzKSBvblByb2dyZXNzKHJlcGx5U3RyKTsKICAgICAgICAgICAgICAgICAgICAgICAgcmVzb2x2ZShyZXBseVN0cik7CiAgICAgICAgICAgICAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgICAgICAgICAgICAgcmVzb2x2ZShyZXNwb25zZS5kYXRhKTsKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgICAgIHJlc29sdmUoZnVsbFJlc3VsdCk7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0pOwoKICAgICAgICB9IGNhdGNoIChlcnJvcikgewogICAgICAgICAgICB0aHJvdyBuZXcgRXJyb3IoYEFJIEFQSSBFcnJvcjogJHtlcnJvci5tZXNzYWdlfWApOwogICAgICAgIH0KICAgIH0KfQoKZXhwb3J0IGRlZmF1bHQgQWlTZXJ2aWNlOwo=', 'base64').toString('utf-8'));
+import axios from 'axios';
+
+class AiService {
+    constructor(http, config, realtimeHttp) {
+        this.http = http;
+        // Using the main HTTP client to ensure API Key is attached if present
+    }
+
+    async callAiApi(message, onProgress, options = {}) {
+        try {
+            const payload = {
+                message: message,
+                stream: true,
+                model: options.model || "chinnuai:1.1",
+                chinuai: options.chinuai || "chinnuai:1.1",
+                user_id: options.userId || "default", // Can be overridden
+                ...options
+            };
+
+            // If running in a Node.js environment or standard browser
+            if (typeof fetch === 'function' && !this.http.defaults.adapter) { // Checking if we're not strictly forced into axios node adapter
+                // Fallback to fetch if available and preferred for streams in some environments
+                // But since we use Axios from PingDartSDK, we should use the configured axios instance
+                // We'll proceed to the Axios route below as primary since it has the x-api-key setup
+            }
+
+            // Using the configured Axios client (this.http) ensuring headers (`x-api-key`) are passed
+            const response = await this.http({
+                method: 'post',
+                url: '/api/ai/chinuai-chat',
+                data: payload,
+                responseType: 'stream', // Important for node.js axios streaming
+                // if run in browser, axios responseType: 'stream' might not work directly, but since this is Node.js SDK, it's fine.
+            });
+
+            return new Promise((resolve, reject) => {
+                let fullResult = "";
+
+                // Node.js Axios stream handling
+                if (response.data && typeof response.data.on === 'function') {
+                    response.data.on('data', (chunk) => {
+                        try {
+                            // The backend sends Server-Sent Events (SSE) format: 'data: {"chunk": "...", "done": false}\n\n'
+                            const lines = chunk.toString().split('\n').filter(line => line.trim());
+
+                            for (const line of lines) {
+                                if (line.startsWith('data: ')) {
+                                    const jsonStr = line.replace('data: ', '').trim();
+                                    if (!jsonStr) continue;
+
+                                    const parsed = JSON.parse(jsonStr);
+
+                                    if (parsed.chunk) {
+                                        fullResult += parsed.chunk;
+                                        if (onProgress) onProgress(parsed.chunk);
+                                    }
+
+                                    if (parsed.done) {
+                                        resolve(fullResult);
+                                    }
+                                }
+                            }
+                        } catch (e) {
+                            // Sometimes chunks might be fragmented, standard error handling might misinterpret
+                            // For raw text streams fallback:
+                            const strChunk = chunk.toString();
+                            if (!strChunk.includes('data: {')) {
+                                fullResult += strChunk;
+                                if (onProgress) onProgress(strChunk);
+                            }
+                        }
+                    });
+
+                    response.data.on('end', () => resolve(fullResult));
+                    response.data.on('error', reject);
+                } else if (response.data) {
+                    // Fallback if not a true stream (e.g. browser polyfill or stream config failed)
+                    // If the backend sent a full JSON response instead
+                    if (response.data.reply) {
+                        const replyStr = typeof response.data.reply === 'string' ? response.data.reply : JSON.stringify(response.data.reply);
+                        if (onProgress) onProgress(replyStr);
+                        resolve(replyStr);
+                    } else {
+                        resolve(response.data);
+                    }
+                } else {
+                    resolve(fullResult);
+                }
+            });
+
+        } catch (error) {
+            throw new Error(`AI API Error: ${error.message}`);
+        }
+    }
+}
+
+export default AiService;

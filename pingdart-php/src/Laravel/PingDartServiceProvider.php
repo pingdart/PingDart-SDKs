@@ -1,3 +1,46 @@
 <?php
-// Encrypted by PingDart
-eval(base64_decode('bmFtZXNwYWNlIFBpbmdEYXJ0XFNES1xMYXJhdmVsOwoKdXNlIElsbHVtaW5hdGVcU3VwcG9ydFxTZXJ2aWNlUHJvdmlkZXI7CnVzZSBQaW5nRGFydFxTREtcUGluZ0RhcnRTREs7CgpjbGFzcyBQaW5nRGFydFNlcnZpY2VQcm92aWRlciBleHRlbmRzIFNlcnZpY2VQcm92aWRlcgp7CiAgICAvKioKICAgICAqIFJlZ2lzdGVyIHNlcnZpY2VzLgogICAgICoKICAgICAqIEByZXR1cm4gdm9pZAogICAgICovCiAgICBwdWJsaWMgZnVuY3Rpb24gcmVnaXN0ZXIoKQogICAgewogICAgICAgICR0aGlzLT5tZXJnZUNvbmZpZ0Zyb20oX19ESVJfXyAuICcvLi4vLi4vY29uZmlnL3BpbmdkYXJ0LnBocCcsICdwaW5nZGFydCcpOwoKICAgICAgICAkdGhpcy0+YXBwLT5zaW5nbGV0b24oUGluZ0RhcnRTREs6OmNsYXNzLCBmdW5jdGlvbiAoJGFwcCkgewogICAgICAgICAgICAkY29uZmlnID0gY29uZmlnKCdwaW5nZGFydCcpOwogICAgICAgICAgICAKICAgICAgICAgICAgcmV0dXJuIG5ldyBQaW5nRGFydFNESyhbCiAgICAgICAgICAgICAgICAnYXBpS2V5JyA9PiAkY29uZmlnWydhcGlfa2V5J10sCiAgICAgICAgICAgICAgICAnZGF0YWJhc2VJZCcgPT4gJGNvbmZpZ1snZGF0YWJhc2VfaWQnXSwKICAgICAgICAgICAgICAgICdiYXNlVXJsJyA9PiAkY29uZmlnWydiYXNlX3VybCddLAogICAgICAgICAgICAgICAgJ3JlYWx0aW1lQmFzZVVybCcgPT4gJGNvbmZpZ1sncmVhbHRpbWVfYmFzZV91cmwnXSA/PyBudWxsLAogICAgICAgICAgICBdKTsKICAgICAgICB9KTsKCiAgICAgICAgJHRoaXMtPmFwcC0+YWxpYXMoUGluZ0RhcnRTREs6OmNsYXNzLCAncGluZ2RhcnQnKTsKICAgIH0KCiAgICAvKioKICAgICAqIEJvb3RzdHJhcCBzZXJ2aWNlcy4KICAgICAqCiAgICAgKiBAcmV0dXJuIHZvaWQKICAgICAqLwogICAgcHVibGljIGZ1bmN0aW9uIGJvb3QoKQogICAgewogICAgICAgIGlmICgkdGhpcy0+YXBwLT5ydW5uaW5nSW5Db25zb2xlKCkpIHsKICAgICAgICAgICAgJHRoaXMtPnB1Ymxpc2hlcyhbCiAgICAgICAgICAgICAgICBfX0RJUl9fIC4gJy8uLi8uLi9jb25maWcvcGluZ2RhcnQucGhwJyA9PiBjb25maWdfcGF0aCgncGluZ2RhcnQucGhwJyksCiAgICAgICAgICAgIF0sICdwaW5nZGFydC1jb25maWcnKTsKICAgICAgICB9CiAgICB9Cn0='));
+
+namespace PingDart\SDK\Laravel;
+
+use Illuminate\Support\ServiceProvider;
+use PingDart\SDK\PingDartSDK;
+
+class PingDartServiceProvider extends ServiceProvider
+{
+    /**
+     * Register services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this->mergeConfigFrom(__DIR__ . '/../../config/pingdart.php', 'pingdart');
+
+        $this->app->singleton(PingDartSDK::class, function ($app) {
+            $config = config('pingdart');
+            
+            return new PingDartSDK([
+                'apiKey' => $config['api_key'],
+                'databaseId' => $config['database_id'],
+                'baseUrl' => $config['base_url'],
+                'realtimeBaseUrl' => $config['realtime_base_url'] ?? null,
+            ]);
+        });
+
+        $this->app->alias(PingDartSDK::class, 'pingdart');
+    }
+
+    /**
+     * Bootstrap services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__ . '/../../config/pingdart.php' => config_path('pingdart.php'),
+            ], 'pingdart-config');
+        }
+    }
+}

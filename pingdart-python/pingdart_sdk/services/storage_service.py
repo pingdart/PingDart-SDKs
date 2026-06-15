@@ -1,3 +1,84 @@
-# Encrypted by PingDart
-import base64
-exec(base64.b64decode(b'Y2xhc3MgU3RvcmFnZVNlcnZpY2U6CiAgICBkZWYgX19pbml0X18oc2VsZiwgaHR0cF9jbGllbnQpOgogICAgICAgIHNlbGYuaHR0cCA9IGh0dHBfY2xpZW50CgogICAgZGVmIGdldF9zdGF0cyhzZWxmKToKICAgICAgICAiIiIKICAgICAgICBHZXQgc3RvcmFnZSBzdGF0aXN0aWNzLgogICAgICAgICIiIgogICAgICAgIHRyeToKICAgICAgICAgICAgcmVzcG9uc2UgPSBzZWxmLmh0dHAucG9zdCgiL2ZpbGVzL3N0YXRzIikKICAgICAgICAgICAgcmVzcG9uc2UucmFpc2VfZm9yX3N0YXR1cygpCiAgICAgICAgICAgIHJldHVybiByZXNwb25zZS5qc29uKCkKICAgICAgICBleGNlcHQgRXhjZXB0aW9uIGFzIGU6CiAgICAgICAgICAgIHJhaXNlIEV4Y2VwdGlvbihmIkZhaWxlZCB0byBnZXQgc3RvcmFnZSBzdGF0czoge3N0cihlKX0iKQoKICAgIGRlZiBsaXN0X2J1Y2tldHMoc2VsZik6CiAgICAgICAgIiIiCiAgICAgICAgTGlzdCBhbGwgYnVja2V0cy4KICAgICAgICAiIiIKICAgICAgICB0cnk6CiAgICAgICAgICAgIHJlc3BvbnNlID0gc2VsZi5odHRwLnBvc3QoIi9maWxlcy9nZXQtYnVja2V0cyIpCiAgICAgICAgICAgIHJlc3BvbnNlLnJhaXNlX2Zvcl9zdGF0dXMoKQogICAgICAgICAgICByZXR1cm4gcmVzcG9uc2UuanNvbigpCiAgICAgICAgZXhjZXB0IEV4Y2VwdGlvbiBhcyBlOgogICAgICAgICAgICByYWlzZSBFeGNlcHRpb24oZiJGYWlsZWQgdG8gbGlzdCBidWNrZXRzOiB7c3RyKGUpfSIpCgogICAgZGVmIGNyZWF0ZV9idWNrZXQoc2VsZiwgbmFtZSk6CiAgICAgICAgIiIiCiAgICAgICAgQ3JlYXRlIGEgbmV3IGJ1Y2tldC4KICAgICAgICAiIiIKICAgICAgICB0cnk6CiAgICAgICAgICAgIHJlc3BvbnNlID0gc2VsZi5odHRwLnBvc3QoIi9maWxlcy9jcmVhdGUtYnVja2V0IiwganNvbj17Im5hbWUiOiBuYW1lfSkKICAgICAgICAgICAgcmVzcG9uc2UucmFpc2VfZm9yX3N0YXR1cygpCiAgICAgICAgICAgIHJldHVybiByZXNwb25zZS5qc29uKCkKICAgICAgICBleGNlcHQgRXhjZXB0aW9uIGFzIGU6CiAgICAgICAgICAgIHJhaXNlIEV4Y2VwdGlvbihmIkZhaWxlZCB0byBjcmVhdGUgYnVja2V0OiB7c3RyKGUpfSIpCgogICAgZGVmIGRlbGV0ZV9idWNrZXQoc2VsZiwgYnVja2V0X2lkKToKICAgICAgICAiIiIKICAgICAgICBEZWxldGUgYSBidWNrZXQuCiAgICAgICAgIiIiCiAgICAgICAgdHJ5OgogICAgICAgICAgICByZXNwb25zZSA9IHNlbGYuaHR0cC5wb3N0KCIvZmlsZXMvZGVsZXRlLWJ1Y2tldCIsIGpzb249eyJpZCI6IGJ1Y2tldF9pZH0pCiAgICAgICAgICAgIHJlc3BvbnNlLnJhaXNlX2Zvcl9zdGF0dXMoKQogICAgICAgICAgICByZXR1cm4gcmVzcG9uc2UuanNvbigpCiAgICAgICAgZXhjZXB0IEV4Y2VwdGlvbiBhcyBlOgogICAgICAgICAgICByYWlzZSBFeGNlcHRpb24oZiJGYWlsZWQgdG8gZGVsZXRlIGJ1Y2tldDoge3N0cihlKX0iKQoKICAgIGRlZiB1cGxvYWRfZmlsZShzZWxmLCBmaWxlX3BhdGgsIGJ1Y2tldF9uYW1lPU5vbmUsIGRlc3RpbmF0aW9uPU5vbmUpOgogICAgICAgICIiIgogICAgICAgIFVwbG9hZCBhIGZpbGUgdXNpbmcgbXVsdGlwYXJ0L2Zvcm0tZGF0YS4KICAgICAgICAiIiIKICAgICAgICB0cnk6CiAgICAgICAgICAgIHdpdGggb3BlbihmaWxlX3BhdGgsICdyYicpIGFzIGY6CiAgICAgICAgICAgICAgICBmaWxlcyA9IHsnZmlsZSc6IGZ9CiAgICAgICAgICAgICAgICBkYXRhID0ge30KICAgICAgICAgICAgICAgIGlmIGJ1Y2tldF9uYW1lOgogICAgICAgICAgICAgICAgICAgIGRhdGFbJ2J1Y2tldF9uYW1lJ10gPSBidWNrZXRfbmFtZQogICAgICAgICAgICAgICAgaWYgZGVzdGluYXRpb246CiAgICAgICAgICAgICAgICAgICAgZGF0YVsnZGVzdGluYXRpb24nXSA9IGRlc3RpbmF0aW9uCiAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICMgV2UgbmVlZCB0byBieXBhc3Mgb3VyIHN0YW5kYXJkIGpzb24gcmVxdWVzdCBmb3IgbXVsdGlwYXJ0CiAgICAgICAgICAgICAgICAjIHNlbGYuaHR0cC5oZWFkZXJzIHdpbGwgaGF2ZSB4LWFwaS1rZXkgd2hpY2ggaXMgZ29vZAogICAgICAgICAgICAgICAgcmVzcG9uc2UgPSBzZWxmLmh0dHAucmVxdWVzdCgKICAgICAgICAgICAgICAgICAgICAnUE9TVCcsIAogICAgICAgICAgICAgICAgICAgICIvZmlsZXMvdXBsb2FkIiwgCiAgICAgICAgICAgICAgICAgICAgZmlsZXM9ZmlsZXMsIAogICAgICAgICAgICAgICAgICAgIGRhdGE9ZGF0YQogICAgICAgICAgICAgICAgKQogICAgICAgICAgICAgICAgcmVzcG9uc2UucmFpc2VfZm9yX3N0YXR1cygpCiAgICAgICAgICAgICAgICByZXR1cm4gcmVzcG9uc2UuanNvbigpCiAgICAgICAgZXhjZXB0IEV4Y2VwdGlvbiBhcyBlOgogICAgICAgICAgICByYWlzZSBFeGNlcHRpb24oZiJGYWlsZWQgdG8gdXBsb2FkIGZpbGU6IHtzdHIoZSl9IikKCiAgICBkZWYgZGVsZXRlX2ZpbGUoc2VsZiwgZmlsZV9wYXRoKToKICAgICAgICAiIiIKICAgICAgICBEZWxldGUgYSBmaWxlLgogICAgICAgICIiIgogICAgICAgIHRyeToKICAgICAgICAgICAgcmVzcG9uc2UgPSBzZWxmLmh0dHAucG9zdCgiL2ZpbGVzL2RlbGV0ZUZpbGUiLCBqc29uPXsiZmlsZVBhdGgiOiBmaWxlX3BhdGh9KQogICAgICAgICAgICByZXNwb25zZS5yYWlzZV9mb3Jfc3RhdHVzKCkKICAgICAgICAgICAgcmV0dXJuIHJlc3BvbnNlLmpzb24oKQogICAgICAgIGV4Y2VwdCBFeGNlcHRpb24gYXMgZToKICAgICAgICAgICAgcmFpc2UgRXhjZXB0aW9uKGYiRmFpbGVkIHRvIGRlbGV0ZSBmaWxlOiB7c3RyKGUpfSIpCg==').decode('utf-8'))
+class StorageService:
+    def __init__(self, http_client):
+        self.http = http_client
+
+    def get_stats(self):
+        """
+        Get storage statistics.
+        """
+        try:
+            response = self.http.post("/files/stats")
+            response.raise_for_status()
+            return response.json()
+        except Exception as e:
+            raise Exception(f"Failed to get storage stats: {str(e)}")
+
+    def list_buckets(self):
+        """
+        List all buckets.
+        """
+        try:
+            response = self.http.post("/files/get-buckets")
+            response.raise_for_status()
+            return response.json()
+        except Exception as e:
+            raise Exception(f"Failed to list buckets: {str(e)}")
+
+    def create_bucket(self, name):
+        """
+        Create a new bucket.
+        """
+        try:
+            response = self.http.post("/files/create-bucket", json={"name": name})
+            response.raise_for_status()
+            return response.json()
+        except Exception as e:
+            raise Exception(f"Failed to create bucket: {str(e)}")
+
+    def delete_bucket(self, bucket_id):
+        """
+        Delete a bucket.
+        """
+        try:
+            response = self.http.post("/files/delete-bucket", json={"id": bucket_id})
+            response.raise_for_status()
+            return response.json()
+        except Exception as e:
+            raise Exception(f"Failed to delete bucket: {str(e)}")
+
+    def upload_file(self, file_path, bucket_name=None, destination=None):
+        """
+        Upload a file using multipart/form-data.
+        """
+        try:
+            with open(file_path, 'rb') as f:
+                files = {'file': f}
+                data = {}
+                if bucket_name:
+                    data['bucket_name'] = bucket_name
+                if destination:
+                    data['destination'] = destination
+                
+                # We need to bypass our standard json request for multipart
+                # self.http.headers will have x-api-key which is good
+                response = self.http.request(
+                    'POST', 
+                    "/files/upload", 
+                    files=files, 
+                    data=data
+                )
+                response.raise_for_status()
+                return response.json()
+        except Exception as e:
+            raise Exception(f"Failed to upload file: {str(e)}")
+
+    def delete_file(self, file_path):
+        """
+        Delete a file.
+        """
+        try:
+            response = self.http.post("/files/deleteFile", json={"filePath": file_path})
+            response.raise_for_status()
+            return response.json()
+        except Exception as e:
+            raise Exception(f"Failed to delete file: {str(e)}")

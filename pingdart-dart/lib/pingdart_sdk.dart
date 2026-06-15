@@ -1,3 +1,65 @@
-// Encrypted by PingDart
-// DECRYPT_KEY: pd_private_key
-aW1wb3J0ICdwYWNrYWdlOmh0dHAvaHR0cC5kYXJ0JyBhcyBodHRwOwppbXBvcnQgJ3NyYy9zZXJ2aWNlcy9kYXRhYmFzZV9zZXJ2aWNlLmRhcnQnOwppbXBvcnQgJ3NyYy9zZXJ2aWNlcy9jYWxsc19zZXJ2aWNlLmRhcnQnOwppbXBvcnQgJ3NyYy9zZXJ2aWNlcy9haV9zZXJ2aWNlLmRhcnQnOwppbXBvcnQgJ3NyYy9zZXJ2aWNlcy9lbWFpbF9zZXJ2aWNlLmRhcnQnOwppbXBvcnQgJ3NyYy9zZXJ2aWNlcy9zbXNfc2VydmljZS5kYXJ0JzsKaW1wb3J0ICdzcmMvc2VydmljZXMvc3RvcmFnZV9zZXJ2aWNlLmRhcnQnOwoKY2xhc3MgUGluZ0RhcnRTREsgewogIGxhdGUgZmluYWwgRGF0YWJhc2VTZXJ2aWNlIGRhdGFiYXNlOwogIGxhdGUgZmluYWwgQ2FsbHNTZXJ2aWNlIGNhbGxzOwogIGxhdGUgZmluYWwgQWlTZXJ2aWNlIGFpOwogIGxhdGUgZmluYWwgRW1haWxTZXJ2aWNlIGVtYWlsOwogIGxhdGUgZmluYWwgU21zU2VydmljZSBzbXM7CiAgbGF0ZSBmaW5hbCBTdG9yYWdlU2VydmljZSBzdG9yYWdlOwoKICBQaW5nRGFydFNESyh7CiAgICByZXF1aXJlZCBTdHJpbmcgYXBpS2V5LAogICAgU3RyaW5nPyBkYXRhYmFzZUlkLAogICAgU3RyaW5nIGJhc2VVcmwgPSAnaHR0cHM6Ly9jbG91ZGFwaS5waW5nZGFydC5jb20vYXBpJywKICAgIFN0cmluZz8gcmVhbHRpbWVCYXNlVXJsLAogIH0pIHsKICAgIGZpbmFsIGNsaWVudCA9IGh0dHAuQ2xpZW50KCk7CiAgICAKICAgIGZpbmFsIHJVcmwgPSByZWFsdGltZUJhc2VVcmwgPz8gYmFzZVVybC5yZXBsYWNlQWxsKCcvYXBpJywgJycpICsgJy9hcGkvcmVhbHRpbWUvJzsKICAgIGZpbmFsIGNsZWFuQmFzZVVybCA9IGJhc2VVcmwuZW5kc1dpdGgoJy8nKSA/IGJhc2VVcmwgOiAnJGJhc2VVcmwvJzsKCiAgICBkYXRhYmFzZSA9IERhdGFiYXNlU2VydmljZSgKICAgICAgY2xpZW50OiBjbGllbnQsCiAgICAgIGFwaUtleTogYXBpS2V5LAogICAgICBiYXNlVXJsOiByVXJsLAogICAgICBkYXRhYmFzZUlkOiBkYXRhYmFzZUlkID8/ICcnLAogICAgKTsKCiAgICBjYWxscyA9IENhbGxzU2VydmljZSgKICAgICAgY2xpZW50OiBjbGllbnQsCiAgICAgIGFwaUtleTogYXBpS2V5LAogICAgICBiYXNlVXJsOiBjbGVhbkJhc2VVcmwsCiAgICApOwoKICAgIGFpID0gQWlTZXJ2aWNlKAogICAgICBjbGllbnQ6IGNsaWVudCwKICAgICAgYXBpS2V5OiBhcGlLZXksCiAgICAgIGJhc2VVcmw6IGNsZWFuQmFzZVVybCwKICAgICk7CgogICAgZW1haWwgPSBFbWFpbFNlcnZpY2UoCiAgICAgIGNsaWVudDogY2xpZW50LAogICAgICBhcGlLZXk6IGFwaUtleSwKICAgICAgYmFzZVVybDogY2xlYW5CYXNlVXJsLAogICAgKTsKCiAgICBzbXMgPSBTbXNTZXJ2aWNlKAogICAgICBjbGllbnQ6IGNsaWVudCwKICAgICAgYXBpS2V5OiBhcGlLZXksCiAgICAgIGJhc2VVcmw6IGNsZWFuQmFzZVVybCwKICAgICk7CgogICAgc3RvcmFnZSA9IFN0b3JhZ2VTZXJ2aWNlKAogICAgICBjbGllbnQ6IGNsaWVudCwKICAgICAgYXBpS2V5OiBhcGlLZXksCiAgICAgIGJhc2VVcmw6IGNsZWFuQmFzZVVybCwKICAgICk7CiAgfQp9Cg==
+import 'package:http/http.dart' as http;
+import 'src/services/database_service.dart';
+import 'src/services/calls_service.dart';
+import 'src/services/ai_service.dart';
+import 'src/services/email_service.dart';
+import 'src/services/sms_service.dart';
+import 'src/services/storage_service.dart';
+
+class PingDartSDK {
+  late final DatabaseService database;
+  late final CallsService calls;
+  late final AiService ai;
+  late final EmailService email;
+  late final SmsService sms;
+  late final StorageService storage;
+
+  PingDartSDK({
+    required String apiKey,
+    String? databaseId,
+    String baseUrl = 'https://cloudapi.pingdart.com/api',
+    String? realtimeBaseUrl,
+  }) {
+    final client = http.Client();
+    
+    final rUrl = realtimeBaseUrl ?? baseUrl.replaceAll('/api', '') + '/api/realtime/';
+    final cleanBaseUrl = baseUrl.endsWith('/') ? baseUrl : '$baseUrl/';
+
+    database = DatabaseService(
+      client: client,
+      apiKey: apiKey,
+      baseUrl: rUrl,
+      databaseId: databaseId ?? '',
+    );
+
+    calls = CallsService(
+      client: client,
+      apiKey: apiKey,
+      baseUrl: cleanBaseUrl,
+    );
+
+    ai = AiService(
+      client: client,
+      apiKey: apiKey,
+      baseUrl: cleanBaseUrl,
+    );
+
+    email = EmailService(
+      client: client,
+      apiKey: apiKey,
+      baseUrl: cleanBaseUrl,
+    );
+
+    sms = SmsService(
+      client: client,
+      apiKey: apiKey,
+      baseUrl: cleanBaseUrl,
+    );
+
+    storage = StorageService(
+      client: client,
+      apiKey: apiKey,
+      baseUrl: cleanBaseUrl,
+    );
+  }
+}

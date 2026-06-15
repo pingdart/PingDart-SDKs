@@ -1,3 +1,29 @@
 <?php
-// Encrypted by PingDart
-eval(base64_decode('bmFtZXNwYWNlIFBpbmdEYXJ0XFNES1xMYXJhdmVsXEZhY2FkZXM7Cgp1c2UgSWxsdW1pbmF0ZVxTdXBwb3J0XEZhY2FkZXNcRmFjYWRlOwoKLyoqCiAqIEBzZWUgXFBpbmdEYXJ0XFNES1xQaW5nRGFydFNESwogKiAKICogQG1ldGhvZCBzdGF0aWMgXFBpbmdEYXJ0XFNES1xTZXJ2aWNlc1xEYXRhYmFzZVNlcnZpY2UgZGF0YWJhc2UoKQogKiBAbWV0aG9kIHN0YXRpYyBcUGluZ0RhcnRcU0RLXFNlcnZpY2VzXFdoYXRzQXBwU2VydmljZSB3aGF0c2FwcCgpCiAqIEBtZXRob2Qgc3RhdGljIFxQaW5nRGFydFxTREtcU2VydmljZXNcU21zU2VydmljZSBzbXMoKQogKiBAbWV0aG9kIHN0YXRpYyBcUGluZ0RhcnRcU0RLXFNlcnZpY2VzXEVtYWlsU2VydmljZSBlbWFpbCgpCiAqIEBtZXRob2Qgc3RhdGljIFxQaW5nRGFydFxTREtcU2VydmljZXNcQWlTZXJ2aWNlIGFpKCkKICogQG1ldGhvZCBzdGF0aWMgXFBpbmdEYXJ0XFNES1xTZXJ2aWNlc1xDYWxsc1NlcnZpY2UgY2FsbHMoKQogKiBAbWV0aG9kIHN0YXRpYyBcUGluZ0RhcnRcU0RLXFNlcnZpY2VzXFN0b3JhZ2VTZXJ2aWNlIHN0b3JhZ2UoKQogKi8KY2xhc3MgUGluZ0RhcnQgZXh0ZW5kcyBGYWNhZGUKewogICAgLyoqCiAgICAgKiBHZXQgdGhlIHJlZ2lzdGVyZWQgbmFtZSBvZiB0aGUgY29tcG9uZW50LgogICAgICoKICAgICAqIEByZXR1cm4gc3RyaW5nCiAgICAgKi8KICAgIHByb3RlY3RlZCBzdGF0aWMgZnVuY3Rpb24gZ2V0RmFjYWRlQWNjZXNzb3IoKQogICAgewogICAgICAgIHJldHVybiAncGluZ2RhcnQnOwogICAgfQp9'));
+
+namespace PingDart\SDK\Laravel\Facades;
+
+use Illuminate\Support\Facades\Facade;
+
+/**
+ * @see \PingDart\SDK\PingDartSDK
+ * 
+ * @method static \PingDart\SDK\Services\DatabaseService database()
+ * @method static \PingDart\SDK\Services\WhatsAppService whatsapp()
+ * @method static \PingDart\SDK\Services\SmsService sms()
+ * @method static \PingDart\SDK\Services\EmailService email()
+ * @method static \PingDart\SDK\Services\AiService ai()
+ * @method static \PingDart\SDK\Services\CallsService calls()
+ * @method static \PingDart\SDK\Services\StorageService storage()
+ */
+class PingDart extends Facade
+{
+    /**
+     * Get the registered name of the component.
+     *
+     * @return string
+     */
+    protected static function getFacadeAccessor()
+    {
+        return 'pingdart';
+    }
+}
