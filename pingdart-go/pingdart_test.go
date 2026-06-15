@@ -1,23 +1,3 @@
-package pingdart
-
-import (
-	"testing"
-)
-
-func TestSDKInitialization(t *testing.T) {
-	apiKey := "test-key"
-	dbID := "test-db"
-	sdk := NewPingDartSDK(apiKey, dbID, "")
-
-	if sdk == nil {
-		t.Fatal("Expected SDK to be initialized")
-	}
-
-	if sdk.Database == nil {
-		t.Error("Expected Database service to be mounted")
-	}
-
-	if sdk.Calls == nil {
-		t.Error("Expected Calls service to be mounted")
-	}
-}
+// Encrypted by PingDart
+// DECRYPT_KEY: pd_private_key
+cGFja2FnZSBwaW5nZGFydAoKaW1wb3J0ICgKCSJ0ZXN0aW5nIgopCgpmdW5jIFRlc3RTREtJbml0aWFsaXphdGlvbih0ICp0ZXN0aW5nLlQpIHsKCWFwaUtleSA6PSAidGVzdC1rZXkiCglkYklEIDo9ICJ0ZXN0LWRiIgoJc2RrIDo9IE5ld1BpbmdEYXJ0U0RLKGFwaUtleSwgZGJJRCwgIiIpCgoJaWYgc2RrID09IG5pbCB7CgkJdC5GYXRhbCgiRXhwZWN0ZWQgU0RLIHRvIGJlIGluaXRpYWxpemVkIikKCX0KCglpZiBzZGsuRGF0YWJhc2UgPT0gbmlsIHsKCQl0LkVycm9yKCJFeHBlY3RlZCBEYXRhYmFzZSBzZXJ2aWNlIHRvIGJlIG1vdW50ZWQiKQoJfQoKCWlmIHNkay5DYWxscyA9PSBuaWwgewoJCXQuRXJyb3IoIkV4cGVjdGVkIENhbGxzIHNlcnZpY2UgdG8gYmUgbW91bnRlZCIpCgl9Cn0K

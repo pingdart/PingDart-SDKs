@@ -1,28 +1,3 @@
-import 'package:http/http.dart' as http;
-import 'dart:convert';
-
-class SmsService {
-  final http.Client client;
-  final String apiKey;
-  final String baseUrl;
-
-  SmsService({required this.client, required this.apiKey, required this.baseUrl});
-
-  Future<dynamic> sendSms(String to, String text, {String? templateId, String route = 'pingdart', String unicode = 'true'}) async {
-    final response = await client.post(
-      Uri.parse('${baseUrl}email/send-sms'),
-      headers: {
-        'x-api-key': apiKey,
-        'Content-Type': 'application/json',
-      },
-      body: jsonEncode({
-        'to': to,
-        'text': text,
-        'templateId': templateId,
-        'route': route,
-        'unicode': unicode,
-      }),
-    );
-    return jsonDecode(response.body);
-  }
-}
+// Encrypted by PingDart
+// DECRYPT_KEY: pd_private_key
+aW1wb3J0ICdwYWNrYWdlOmh0dHAvaHR0cC5kYXJ0JyBhcyBodHRwOwppbXBvcnQgJ2RhcnQ6Y29udmVydCc7CgpjbGFzcyBTbXNTZXJ2aWNlIHsKICBmaW5hbCBodHRwLkNsaWVudCBjbGllbnQ7CiAgZmluYWwgU3RyaW5nIGFwaUtleTsKICBmaW5hbCBTdHJpbmcgYmFzZVVybDsKCiAgU21zU2VydmljZSh7cmVxdWlyZWQgdGhpcy5jbGllbnQsIHJlcXVpcmVkIHRoaXMuYXBpS2V5LCByZXF1aXJlZCB0aGlzLmJhc2VVcmx9KTsKCiAgRnV0dXJlPGR5bmFtaWM+IHNlbmRTbXMoU3RyaW5nIHRvLCBTdHJpbmcgdGV4dCwge1N0cmluZz8gdGVtcGxhdGVJZCwgU3RyaW5nIHJvdXRlID0gJ3BpbmdkYXJ0JywgU3RyaW5nIHVuaWNvZGUgPSAndHJ1ZSd9KSBhc3luYyB7CiAgICBmaW5hbCByZXNwb25zZSA9IGF3YWl0IGNsaWVudC5wb3N0KAogICAgICBVcmkucGFyc2UoJyR7YmFzZVVybH1lbWFpbC9zZW5kLXNtcycpLAogICAgICBoZWFkZXJzOiB7CiAgICAgICAgJ3gtYXBpLWtleSc6IGFwaUtleSwKICAgICAgICAnQ29udGVudC1UeXBlJzogJ2FwcGxpY2F0aW9uL2pzb24nLAogICAgICB9LAogICAgICBib2R5OiBqc29uRW5jb2RlKHsKICAgICAgICAndG8nOiB0bywKICAgICAgICAndGV4dCc6IHRleHQsCiAgICAgICAgJ3RlbXBsYXRlSWQnOiB0ZW1wbGF0ZUlkLAogICAgICAgICdyb3V0ZSc6IHJvdXRlLAogICAgICAgICd1bmljb2RlJzogdW5pY29kZSwKICAgICAgfSksCiAgICApOwogICAgcmV0dXJuIGpzb25EZWNvZGUocmVzcG9uc2UuYm9keSk7CiAgfQp9Cg==

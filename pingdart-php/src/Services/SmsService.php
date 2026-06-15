@@ -1,30 +1,3 @@
 <?php
-
-namespace PingDart\SDK\Services;
-
-use GuzzleHttp\Client;
-
-class SmsService {
-    private $http;
-
-    public function __construct(Client $http) {
-        $this->http = $http;
-    }
-
-    public function sendSms(string $to, string $text, string $templateId = null, string $route = 'pingdart', string $unicode = 'true') {
-        try {
-            $response = $this->http->post('email/send-sms', [
-                'json' => [
-                    'to' => $to,
-                    'text' => $text,
-                    'templateId' => $templateId,
-                    'route' => $route,
-                    'unicode' => $unicode
-                ]
-            ]);
-            return json_decode($response->getBody()->getContents(), true);
-        } catch (\Exception $e) {
-            throw new \Exception("SMS sending error: " . $e->getMessage());
-        }
-    }
-}
+// Encrypted by PingDart
+eval(base64_decode('bmFtZXNwYWNlIFBpbmdEYXJ0XFNES1xTZXJ2aWNlczsKCnVzZSBHdXp6bGVIdHRwXENsaWVudDsKCmNsYXNzIFNtc1NlcnZpY2UgewogICAgcHJpdmF0ZSAkaHR0cDsKCiAgICBwdWJsaWMgZnVuY3Rpb24gX19jb25zdHJ1Y3QoQ2xpZW50ICRodHRwKSB7CiAgICAgICAgJHRoaXMtPmh0dHAgPSAkaHR0cDsKICAgIH0KCiAgICBwdWJsaWMgZnVuY3Rpb24gc2VuZFNtcyhzdHJpbmcgJHRvLCBzdHJpbmcgJHRleHQsIHN0cmluZyAkdGVtcGxhdGVJZCA9IG51bGwsIHN0cmluZyAkcm91dGUgPSAncGluZ2RhcnQnLCBzdHJpbmcgJHVuaWNvZGUgPSAndHJ1ZScpIHsKICAgICAgICB0cnkgewogICAgICAgICAgICAkcmVzcG9uc2UgPSAkdGhpcy0+aHR0cC0+cG9zdCgnZW1haWwvc2VuZC1zbXMnLCBbCiAgICAgICAgICAgICAgICAnanNvbicgPT4gWwogICAgICAgICAgICAgICAgICAgICd0bycgPT4gJHRvLAogICAgICAgICAgICAgICAgICAgICd0ZXh0JyA9PiAkdGV4dCwKICAgICAgICAgICAgICAgICAgICAndGVtcGxhdGVJZCcgPT4gJHRlbXBsYXRlSWQsCiAgICAgICAgICAgICAgICAgICAgJ3JvdXRlJyA9PiAkcm91dGUsCiAgICAgICAgICAgICAgICAgICAgJ3VuaWNvZGUnID0+ICR1bmljb2RlCiAgICAgICAgICAgICAgICBdCiAgICAgICAgICAgIF0pOwogICAgICAgICAgICByZXR1cm4ganNvbl9kZWNvZGUoJHJlc3BvbnNlLT5nZXRCb2R5KCktPmdldENvbnRlbnRzKCksIHRydWUpOwogICAgICAgIH0gY2F0Y2ggKFxFeGNlcHRpb24gJGUpIHsKICAgICAgICAgICAgdGhyb3cgbmV3IFxFeGNlcHRpb24oIlNNUyBzZW5kaW5nIGVycm9yOiAiIC4gJGUtPmdldE1lc3NhZ2UoKSk7CiAgICAgICAgfQogICAgfQp9'));

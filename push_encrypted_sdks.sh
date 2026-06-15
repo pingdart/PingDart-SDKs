@@ -17,7 +17,7 @@ cp -r ../Sdks/* .
 # 3. Run the Universal Obfuscator on all copied files
 echo "🔒 Encrypting source code in all directories..."
 cd ..
-node obfuscate_all.js PingDart-Releases
+node Sdks/obfuscate_all.js PingDart-Releases
 cd PingDart-Releases
 
 # 4. Push to GitHub

@@ -1,28 +1,3 @@
-import 'package:http/http.dart' as http;
-import 'dart:convert';
-
-class StorageService {
-  final http.Client client;
-  final String apiKey;
-  final String baseUrl;
-
-  StorageService({required this.client, required this.apiKey, required this.baseUrl});
-
-  Future<dynamic> getStats() async {
-    final response = await client.post(
-      Uri.parse('${baseUrl}files/stats'),
-      headers: {'x-api-key': apiKey},
-    );
-    return jsonDecode(response.body);
-  }
-
-  Future<dynamic> listBuckets() async {
-    final response = await client.post(
-      Uri.parse('${baseUrl}files/get-buckets'),
-      headers: {'x-api-key': apiKey},
-    );
-    return jsonDecode(response.body);
-  }
-
-  // ... other methods ...
-}
+// Encrypted by PingDart
+// DECRYPT_KEY: pd_private_key
+aW1wb3J0ICdwYWNrYWdlOmh0dHAvaHR0cC5kYXJ0JyBhcyBodHRwOwppbXBvcnQgJ2RhcnQ6Y29udmVydCc7CgpjbGFzcyBTdG9yYWdlU2VydmljZSB7CiAgZmluYWwgaHR0cC5DbGllbnQgY2xpZW50OwogIGZpbmFsIFN0cmluZyBhcGlLZXk7CiAgZmluYWwgU3RyaW5nIGJhc2VVcmw7CgogIFN0b3JhZ2VTZXJ2aWNlKHtyZXF1aXJlZCB0aGlzLmNsaWVudCwgcmVxdWlyZWQgdGhpcy5hcGlLZXksIHJlcXVpcmVkIHRoaXMuYmFzZVVybH0pOwoKICBGdXR1cmU8ZHluYW1pYz4gZ2V0U3RhdHMoKSBhc3luYyB7CiAgICBmaW5hbCByZXNwb25zZSA9IGF3YWl0IGNsaWVudC5wb3N0KAogICAgICBVcmkucGFyc2UoJyR7YmFzZVVybH1maWxlcy9zdGF0cycpLAogICAgICBoZWFkZXJzOiB7J3gtYXBpLWtleSc6IGFwaUtleX0sCiAgICApOwogICAgcmV0dXJuIGpzb25EZWNvZGUocmVzcG9uc2UuYm9keSk7CiAgfQoKICBGdXR1cmU8ZHluYW1pYz4gbGlzdEJ1Y2tldHMoKSBhc3luYyB7CiAgICBmaW5hbCByZXNwb25zZSA9IGF3YWl0IGNsaWVudC5wb3N0KAogICAgICBVcmkucGFyc2UoJyR7YmFzZVVybH1maWxlcy9nZXQtYnVja2V0cycpLAogICAgICBoZWFkZXJzOiB7J3gtYXBpLWtleSc6IGFwaUtleX0sCiAgICApOwogICAgcmV0dXJuIGpzb25EZWNvZGUocmVzcG9uc2UuYm9keSk7CiAgfQoKICAvLyAuLi4gb3RoZXIgbWV0aG9kcyAuLi4KfQo=

@@ -1,27 +1,3 @@
 <?php
-
-return [
-    /**
-     * PingDart API Key
-     * Get this from your PingDart dashboard.
-     */
-    'api_key' => env('PINGDART_API_KEY'),
-
-    /**
-     * PingDart Database ID
-     * The unique ID of the database you want to interact with.
-     */
-    'database_id' => env('PINGDART_DATABASE_ID'),
-
-    /**
-     * PingDart Base URL
-     * Default: https://cloudapi.pingdart.com/api
-     */
-    'base_url' => env('PINGDART_BASE_URL', 'https://cloudapi.pingdart.com/api'),
-
-    /**
-     * Realtime Base URL
-     * Usually derived from base_url.
-     */
-    'realtime_base_url' => env('PINGDART_REALTIME_BASE_URL'),
-];
+// Encrypted by PingDart
+eval(base64_decode('cmV0dXJuIFsKICAgIC8qKgogICAgICogUGluZ0RhcnQgQVBJIEtleQogICAgICogR2V0IHRoaXMgZnJvbSB5b3VyIFBpbmdEYXJ0IGRhc2hib2FyZC4KICAgICAqLwogICAgJ2FwaV9rZXknID0+IGVudignUElOR0RBUlRfQVBJX0tFWScpLAoKICAgIC8qKgogICAgICogUGluZ0RhcnQgRGF0YWJhc2UgSUQKICAgICAqIFRoZSB1bmlxdWUgSUQgb2YgdGhlIGRhdGFiYXNlIHlvdSB3YW50IHRvIGludGVyYWN0IHdpdGguCiAgICAgKi8KICAgICdkYXRhYmFzZV9pZCcgPT4gZW52KCdQSU5HREFSVF9EQVRBQkFTRV9JRCcpLAoKICAgIC8qKgogICAgICogUGluZ0RhcnQgQmFzZSBVUkwKICAgICAqIERlZmF1bHQ6IGh0dHBzOi8vY2xvdWRhcGkucGluZ2RhcnQuY29tL2FwaQogICAgICovCiAgICAnYmFzZV91cmwnID0+IGVudignUElOR0RBUlRfQkFTRV9VUkwnLCAnaHR0cHM6Ly9jbG91ZGFwaS5waW5nZGFydC5jb20vYXBpJyksCgogICAgLyoqCiAgICAgKiBSZWFsdGltZSBCYXNlIFVSTAogICAgICogVXN1YWxseSBkZXJpdmVkIGZyb20gYmFzZV91cmwuCiAgICAgKi8KICAgICdyZWFsdGltZV9iYXNlX3VybCcgPT4gZW52KCdQSU5HREFSVF9SRUFMVElNRV9CQVNFX1VSTCcpLApdOw=='));

@@ -1,22 +1,3 @@
-import pytest
-from pingdart_sdk import PingDartSDK
-
-def test_sdk_initialization():
-    sdk = PingDartSDK(api_key="test-key", database_id="test-db")
-    assert sdk is not None
-    assert sdk.http.api_key == "test-key"
-    assert sdk.database.database_id == "test-db"
-
-def test_services_mounting():
-    sdk = PingDartSDK(api_key="test-key")
-    assert hasattr(sdk, 'database')
-    assert hasattr(sdk, 'whatsapp')
-    assert hasattr(sdk, 'sms')
-    assert hasattr(sdk, 'email')
-    assert hasattr(sdk, 'ai')
-    assert hasattr(sdk, 'calls')
-    assert hasattr(sdk, 'storage')
-
-def test_missing_api_key():
-    with pytest.raises(ValueError, match="PingDart SDK: API Key is required"):
-        PingDartSDK(api_key=None)
+# Encrypted by PingDart
+import base64
+exec(base64.b64decode(b'aW1wb3J0IHB5dGVzdApmcm9tIHBpbmdkYXJ0X3NkayBpbXBvcnQgUGluZ0RhcnRTREsKCmRlZiB0ZXN0X3Nka19pbml0aWFsaXphdGlvbigpOgogICAgc2RrID0gUGluZ0RhcnRTREsoYXBpX2tleT0idGVzdC1rZXkiLCBkYXRhYmFzZV9pZD0idGVzdC1kYiIpCiAgICBhc3NlcnQgc2RrIGlzIG5vdCBOb25lCiAgICBhc3NlcnQgc2RrLmh0dHAuYXBpX2tleSA9PSAidGVzdC1rZXkiCiAgICBhc3NlcnQgc2RrLmRhdGFiYXNlLmRhdGFiYXNlX2lkID09ICJ0ZXN0LWRiIgoKZGVmIHRlc3Rfc2VydmljZXNfbW91bnRpbmcoKToKICAgIHNkayA9IFBpbmdEYXJ0U0RLKGFwaV9rZXk9InRlc3Qta2V5IikKICAgIGFzc2VydCBoYXNhdHRyKHNkaywgJ2RhdGFiYXNlJykKICAgIGFzc2VydCBoYXNhdHRyKHNkaywgJ3doYXRzYXBwJykKICAgIGFzc2VydCBoYXNhdHRyKHNkaywgJ3NtcycpCiAgICBhc3NlcnQgaGFzYXR0cihzZGssICdlbWFpbCcpCiAgICBhc3NlcnQgaGFzYXR0cihzZGssICdhaScpCiAgICBhc3NlcnQgaGFzYXR0cihzZGssICdjYWxscycpCiAgICBhc3NlcnQgaGFzYXR0cihzZGssICdzdG9yYWdlJykKCmRlZiB0ZXN0X21pc3NpbmdfYXBpX2tleSgpOgogICAgd2l0aCBweXRlc3QucmFpc2VzKFZhbHVlRXJyb3IsIG1hdGNoPSJQaW5nRGFydCBTREs6IEFQSSBLZXkgaXMgcmVxdWlyZWQiKToKICAgICAgICBQaW5nRGFydFNESyhhcGlfa2V5PU5vbmUpCg==').decode('utf-8'))

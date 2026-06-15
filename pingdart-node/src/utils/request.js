@@ -1,13 +1,2 @@
-import axios from "axios";
-
-export const createClient = ({ apiKey, baseURL }) => {
-    return axios.create({
-        baseURL,
-        headers: {
-            "x-api-key": apiKey,
-            "Content-Type": "application/json",
-            "Cache-Control": "no-store",
-            "X-SDK-Source": "PingDart-Node-SDK"
-        }
-    });
-};
+// Encrypted by PingDart
+eval(Buffer.from('aW1wb3J0IGF4aW9zIGZyb20gImF4aW9zIjsKCmV4cG9ydCBjb25zdCBjcmVhdGVDbGllbnQgPSAoeyBhcGlLZXksIGJhc2VVUkwgfSkgPT4gewogICAgcmV0dXJuIGF4aW9zLmNyZWF0ZSh7CiAgICAgICAgYmFzZVVSTCwKICAgICAgICBoZWFkZXJzOiB7CiAgICAgICAgICAgICJ4LWFwaS1rZXkiOiBhcGlLZXksCiAgICAgICAgICAgICJDb250ZW50LVR5cGUiOiAiYXBwbGljYXRpb24vanNvbiIsCiAgICAgICAgICAgICJDYWNoZS1Db250cm9sIjogIm5vLXN0b3JlIiwKICAgICAgICAgICAgIlgtU0RLLVNvdXJjZSI6ICJQaW5nRGFydC1Ob2RlLVNESyIKICAgICAgICB9CiAgICB9KTsKfTsK', 'base64').toString('utf-8'));

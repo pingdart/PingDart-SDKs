@@ -1,27 +1,3 @@
 <?php
-
-use PHPUnit\Framework\TestCase;
-use PingDart\SDK\PingDartSDK;
-
-class SDKTest extends TestCase {
-    public function testInitialization() {
-        $sdk = new PingDartSDK([
-            'apiKey' => 'test-key',
-            'databaseId' => 'test-db'
-        ]);
-        $this->assertNotNull($sdk);
-        $this->assertNotNull($sdk->database);
-        $this->assertNotNull($sdk->whatsapp);
-        $this->assertNotNull($sdk->sms);
-        $this->assertNotNull($sdk->email);
-        $this->assertNotNull($sdk->ai);
-        $this->assertNotNull($sdk->calls);
-        $this->assertNotNull($sdk->storage);
-    }
-
-    public function testMissingApiKey() {
-        $this->expectException(\Exception::class);
-        $this->expectExceptionMessage("PingDart SDK: API Key is required");
-        new PingDartSDK([]);
-    }
-}
+// Encrypted by PingDart
+eval(base64_decode('dXNlIFBIUFVuaXRcRnJhbWV3b3JrXFRlc3RDYXNlOwp1c2UgUGluZ0RhcnRcU0RLXFBpbmdEYXJ0U0RLOwoKY2xhc3MgU0RLVGVzdCBleHRlbmRzIFRlc3RDYXNlIHsKICAgIHB1YmxpYyBmdW5jdGlvbiB0ZXN0SW5pdGlhbGl6YXRpb24oKSB7CiAgICAgICAgJHNkayA9IG5ldyBQaW5nRGFydFNESyhbCiAgICAgICAgICAgICdhcGlLZXknID0+ICd0ZXN0LWtleScsCiAgICAgICAgICAgICdkYXRhYmFzZUlkJyA9PiAndGVzdC1kYicKICAgICAgICBdKTsKICAgICAgICAkdGhpcy0+YXNzZXJ0Tm90TnVsbCgkc2RrKTsKICAgICAgICAkdGhpcy0+YXNzZXJ0Tm90TnVsbCgkc2RrLT5kYXRhYmFzZSk7CiAgICAgICAgJHRoaXMtPmFzc2VydE5vdE51bGwoJHNkay0+d2hhdHNhcHApOwogICAgICAgICR0aGlzLT5hc3NlcnROb3ROdWxsKCRzZGstPnNtcyk7CiAgICAgICAgJHRoaXMtPmFzc2VydE5vdE51bGwoJHNkay0+ZW1haWwpOwogICAgICAgICR0aGlzLT5hc3NlcnROb3ROdWxsKCRzZGstPmFpKTsKICAgICAgICAkdGhpcy0+YXNzZXJ0Tm90TnVsbCgkc2RrLT5jYWxscyk7CiAgICAgICAgJHRoaXMtPmFzc2VydE5vdE51bGwoJHNkay0+c3RvcmFnZSk7CiAgICB9CgogICAgcHVibGljIGZ1bmN0aW9uIHRlc3RNaXNzaW5nQXBpS2V5KCkgewogICAgICAgICR0aGlzLT5leHBlY3RFeGNlcHRpb24oXEV4Y2VwdGlvbjo6Y2xhc3MpOwogICAgICAgICR0aGlzLT5leHBlY3RFeGNlcHRpb25NZXNzYWdlKCJQaW5nRGFydCBTREs6IEFQSSBLZXkgaXMgcmVxdWlyZWQiKTsKICAgICAgICBuZXcgUGluZ0RhcnRTREsoW10pOwogICAgfQp9'));

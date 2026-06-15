@@ -1,27 +1,2 @@
-import PingDartSDK from '../src/index.js';
-
-async function runTests() {
-    console.log("Testing PingDartSDK Initialization...");
-    try {
-        const client = new PingDartSDK({
-            apiKey: 'test_api_key_123',
-            databaseId: 'test_db_456'
-        });
-
-        console.log("Client instantiated successfully!");
-        console.log("- Base URL:", client.baseURL);
-        console.log("- Realtime URL:", client.realtimeBaseURL);
-        console.log("- Database Service:", !!client.database);
-        console.log("- WhatsApp Service:", !!client.whatsapp);
-        console.log("- SMS Service:", !!client.sms && typeof client.sms.sendSMS === 'function');
-        console.log("- Email Service:", !!client.email);
-        console.log("- AI Service:", !!client.ai);
-
-        console.log("\nAll services registered correctly.");
-    } catch (error) {
-        console.error("Initialization Failed:", error);
-        process.exit(1);
-    }
-}
-
-runTests();
+// Encrypted by PingDart
+eval(Buffer.from('aW1wb3J0IFBpbmdEYXJ0U0RLIGZyb20gJy4uL3NyYy9pbmRleC5qcyc7Cgphc3luYyBmdW5jdGlvbiBydW5UZXN0cygpIHsKICAgIGNvbnNvbGUubG9nKCJUZXN0aW5nIFBpbmdEYXJ0U0RLIEluaXRpYWxpemF0aW9uLi4uIik7CiAgICB0cnkgewogICAgICAgIGNvbnN0IGNsaWVudCA9IG5ldyBQaW5nRGFydFNESyh7CiAgICAgICAgICAgIGFwaUtleTogJ3Rlc3RfYXBpX2tleV8xMjMnLAogICAgICAgICAgICBkYXRhYmFzZUlkOiAndGVzdF9kYl80NTYnCiAgICAgICAgfSk7CgogICAgICAgIGNvbnNvbGUubG9nKCJDbGllbnQgaW5zdGFudGlhdGVkIHN1Y2Nlc3NmdWxseSEiKTsKICAgICAgICBjb25zb2xlLmxvZygiLSBCYXNlIFVSTDoiLCBjbGllbnQuYmFzZVVSTCk7CiAgICAgICAgY29uc29sZS5sb2coIi0gUmVhbHRpbWUgVVJMOiIsIGNsaWVudC5yZWFsdGltZUJhc2VVUkwpOwogICAgICAgIGNvbnNvbGUubG9nKCItIERhdGFiYXNlIFNlcnZpY2U6IiwgISFjbGllbnQuZGF0YWJhc2UpOwogICAgICAgIGNvbnNvbGUubG9nKCItIFdoYXRzQXBwIFNlcnZpY2U6IiwgISFjbGllbnQud2hhdHNhcHApOwogICAgICAgIGNvbnNvbGUubG9nKCItIFNNUyBTZXJ2aWNlOiIsICEhY2xpZW50LnNtcyAmJiB0eXBlb2YgY2xpZW50LnNtcy5zZW5kU01TID09PSAnZnVuY3Rpb24nKTsKICAgICAgICBjb25zb2xlLmxvZygiLSBFbWFpbCBTZXJ2aWNlOiIsICEhY2xpZW50LmVtYWlsKTsKICAgICAgICBjb25zb2xlLmxvZygiLSBBSSBTZXJ2aWNlOiIsICEhY2xpZW50LmFpKTsKCiAgICAgICAgY29uc29sZS5sb2coIlxuQWxsIHNlcnZpY2VzIHJlZ2lzdGVyZWQgY29ycmVjdGx5LiIpOwogICAgfSBjYXRjaCAoZXJyb3IpIHsKICAgICAgICBjb25zb2xlLmVycm9yKCJJbml0aWFsaXphdGlvbiBGYWlsZWQ6IiwgZXJyb3IpOwogICAgICAgIHByb2Nlc3MuZXhpdCgxKTsKICAgIH0KfQoKcnVuVGVzdHMoKTsK', 'base64').toString('utf-8'));

@@ -1,17 +1,3 @@
-class SmsService:
-    def __init__(self, http_client):
-        self.http = http_client
-
-    def send_sms(self, to, text, template_id=None, route="pingdart", unicode="true"):
-        try:
-            response = self.http.post("/email/send-sms", json={
-                "to": to,
-                "text": text,
-                "templateId": template_id,
-                "route": route,
-                "unicode": unicode
-            })
-            response.raise_for_status()
-            return response.json()
-        except Exception as e:
-            raise Exception(f"SMS sending error: {str(e)}")
+# Encrypted by PingDart
+import base64
+exec(base64.b64decode(b'Y2xhc3MgU21zU2VydmljZToKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBodHRwX2NsaWVudCk6CiAgICAgICAgc2VsZi5odHRwID0gaHR0cF9jbGllbnQKCiAgICBkZWYgc2VuZF9zbXMoc2VsZiwgdG8sIHRleHQsIHRlbXBsYXRlX2lkPU5vbmUsIHJvdXRlPSJwaW5nZGFydCIsIHVuaWNvZGU9InRydWUiKToKICAgICAgICB0cnk6CiAgICAgICAgICAgIHJlc3BvbnNlID0gc2VsZi5odHRwLnBvc3QoIi9lbWFpbC9zZW5kLXNtcyIsIGpzb249ewogICAgICAgICAgICAgICAgInRvIjogdG8sCiAgICAgICAgICAgICAgICAidGV4dCI6IHRleHQsCiAgICAgICAgICAgICAgICAidGVtcGxhdGVJZCI6IHRlbXBsYXRlX2lkLAogICAgICAgICAgICAgICAgInJvdXRlIjogcm91dGUsCiAgICAgICAgICAgICAgICAidW5pY29kZSI6IHVuaWNvZGUKICAgICAgICAgICAgfSkKICAgICAgICAgICAgcmVzcG9uc2UucmFpc2VfZm9yX3N0YXR1cygpCiAgICAgICAgICAgIHJldHVybiByZXNwb25zZS5qc29uKCkKICAgICAgICBleGNlcHQgRXhjZXB0aW9uIGFzIGU6CiAgICAgICAgICAgIHJhaXNlIEV4Y2VwdGlvbihmIlNNUyBzZW5kaW5nIGVycm9yOiB7c3RyKGUpfSIpCg==').decode('utf-8'))

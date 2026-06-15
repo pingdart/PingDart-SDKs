@@ -1,30 +1,3 @@
-import setuptools
-
-with open("README.md", "r", encoding="utf-8") as fh:
-    long_description = fh.read()
-
-required = [
-    "pymysql>=1.0.0",
-    "cryptography>=3.4.0",
-    "requests>=2.25.0"
-]
-
-setuptools.setup(
-    name="pingdartdb",
-    version="1.0.1",
-    author="PingDart",
-    author_email="support@pingdart.com",
-    description="PingDart Direct Database SDK for Python",
-    long_description=long_description,
-    long_description_content_type="text/markdown",
-    url="https://github.com/pingdart/pingdart",
-    package_dir={"": "src"},
-    packages=setuptools.find_packages(where="src"),
-    classifiers=[
-        "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
-        "Operating System :: OS Independent",
-    ],
-    python_requires=">=3.7",
-    install_requires=required,
-)
+# Encrypted by PingDart
+import base64
+exec(base64.b64decode(b'aW1wb3J0IHNldHVwdG9vbHMKCndpdGggb3BlbigiUkVBRE1FLm1kIiwgInIiLCBlbmNvZGluZz0idXRmLTgiKSBhcyBmaDoKICAgIGxvbmdfZGVzY3JpcHRpb24gPSBmaC5yZWFkKCkKCnJlcXVpcmVkID0gWwogICAgInB5bXlzcWw+PTEuMC4wIiwKICAgICJjcnlwdG9ncmFwaHk+PTMuNC4wIiwKICAgICJyZXF1ZXN0cz49Mi4yNS4wIgpdCgpzZXR1cHRvb2xzLnNldHVwKAogICAgbmFtZT0icGluZ2RhcnRkYiIsCiAgICB2ZXJzaW9uPSIxLjAuMSIsCiAgICBhdXRob3I9IlBpbmdEYXJ0IiwKICAgIGF1dGhvcl9lbWFpbD0ic3VwcG9ydEBwaW5nZGFydC5jb20iLAogICAgZGVzY3JpcHRpb249IlBpbmdEYXJ0IERpcmVjdCBEYXRhYmFzZSBTREsgZm9yIFB5dGhvbiIsCiAgICBsb25nX2Rlc2NyaXB0aW9uPWxvbmdfZGVzY3JpcHRpb24sCiAgICBsb25nX2Rlc2NyaXB0aW9uX2NvbnRlbnRfdHlwZT0idGV4dC9tYXJrZG93biIsCiAgICB1cmw9Imh0dHBzOi8vZ2l0aHViLmNvbS9waW5nZGFydC9waW5nZGFydCIsCiAgICBwYWNrYWdlX2Rpcj17IiI6ICJzcmMifSwKICAgIHBhY2thZ2VzPXNldHVwdG9vbHMuZmluZF9wYWNrYWdlcyh3aGVyZT0ic3JjIiksCiAgICBjbGFzc2lmaWVycz1bCiAgICAgICAgIlByb2dyYW1taW5nIExhbmd1YWdlIDo6IFB5dGhvbiA6OiAzIiwKICAgICAgICAiTGljZW5zZSA6OiBPU0kgQXBwcm92ZWQgOjogTUlUIExpY2Vuc2UiLAogICAgICAgICJPcGVyYXRpbmcgU3lzdGVtIDo6IE9TIEluZGVwZW5kZW50IiwKICAgIF0sCiAgICBweXRob25fcmVxdWlyZXM9Ij49My43IiwKICAgIGluc3RhbGxfcmVxdWlyZXM9cmVxdWlyZWQsCikK').decode('utf-8'))

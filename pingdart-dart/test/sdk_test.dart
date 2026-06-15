@@ -1,24 +1,3 @@
-import 'package:test/test.dart';
-import 'package:pingdart_sdk/pingdart_sdk.dart';
-
-void main() {
-  group('PingDartSDK', () {
-    final apiKey = 'test-key';
-    final dbId = 'test-db';
-
-    test('should initialize successfully', () {
-      final sdk = PingDartSDK(apiKey: apiKey, databaseId: dbId);
-      expect(sdk, isNotNull);
-    });
-
-    test('should have all services mounted', () {
-      final sdk = PingDartSDK(apiKey: apiKey, databaseId: dbId);
-      expect(sdk.database, isNotNull);
-      expect(sdk.calls, isNotNull);
-      expect(sdk.ai, isNotNull);
-      expect(sdk.email, isNotNull);
-      expect(sdk.sms, isNotNull);
-      expect(sdk.storage, isNotNull);
-    });
-  });
-}
+// Encrypted by PingDart
+// DECRYPT_KEY: pd_private_key
+aW1wb3J0ICdwYWNrYWdlOnRlc3QvdGVzdC5kYXJ0JzsKaW1wb3J0ICdwYWNrYWdlOnBpbmdkYXJ0X3Nkay9waW5nZGFydF9zZGsuZGFydCc7Cgp2b2lkIG1haW4oKSB7CiAgZ3JvdXAoJ1BpbmdEYXJ0U0RLJywgKCkgewogICAgZmluYWwgYXBpS2V5ID0gJ3Rlc3Qta2V5JzsKICAgIGZpbmFsIGRiSWQgPSAndGVzdC1kYic7CgogICAgdGVzdCgnc2hvdWxkIGluaXRpYWxpemUgc3VjY2Vzc2Z1bGx5JywgKCkgewogICAgICBmaW5hbCBzZGsgPSBQaW5nRGFydFNESyhhcGlLZXk6IGFwaUtleSwgZGF0YWJhc2VJZDogZGJJZCk7CiAgICAgIGV4cGVjdChzZGssIGlzTm90TnVsbCk7CiAgICB9KTsKCiAgICB0ZXN0KCdzaG91bGQgaGF2ZSBhbGwgc2VydmljZXMgbW91bnRlZCcsICgpIHsKICAgICAgZmluYWwgc2RrID0gUGluZ0RhcnRTREsoYXBpS2V5OiBhcGlLZXksIGRhdGFiYXNlSWQ6IGRiSWQpOwogICAgICBleHBlY3Qoc2RrLmRhdGFiYXNlLCBpc05vdE51bGwpOwogICAgICBleHBlY3Qoc2RrLmNhbGxzLCBpc05vdE51bGwpOwogICAgICBleHBlY3Qoc2RrLmFpLCBpc05vdE51bGwpOwogICAgICBleHBlY3Qoc2RrLmVtYWlsLCBpc05vdE51bGwpOwogICAgICBleHBlY3Qoc2RrLnNtcywgaXNOb3ROdWxsKTsKICAgICAgZXhwZWN0KHNkay5zdG9yYWdlLCBpc05vdE51bGwpOwogICAgfSk7CiAgfSk7Cn0K

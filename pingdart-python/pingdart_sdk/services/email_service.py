@@ -1,33 +1,3 @@
-class EmailService:
-    def __init__(self, http_client):
-        self.http = http_client
-
-    def send_email(self, email, subject, text, smtp_config=None):
-        payload = {
-            "email": email,
-            "subject": subject,
-            "text": text
-        }
-        if smtp_config:
-            payload["smtpConfig"] = smtp_config
-            
-        try:
-            response = self.http.post("/email/send-email", json=payload)
-            response.raise_for_status()
-            return response.json()
-        except Exception as e:
-            raise Exception(f"Email sending error: {str(e)}")
-
-    def bulk_send(self, data, smtp_config=None):
-        payload = {
-            "data": data
-        }
-        if smtp_config:
-            payload["smtpConfig"] = smtp_config
-            
-        try:
-            response = self.http.post("/email/bulk-send", json=payload)
-            response.raise_for_status()
-            return response.json()
-        except Exception as e:
-            raise Exception(f"Bulk email sending error: {str(e)}")
+# Encrypted by PingDart
+import base64
+exec(base64.b64decode(b'Y2xhc3MgRW1haWxTZXJ2aWNlOgogICAgZGVmIF9faW5pdF9fKHNlbGYsIGh0dHBfY2xpZW50KToKICAgICAgICBzZWxmLmh0dHAgPSBodHRwX2NsaWVudAoKICAgIGRlZiBzZW5kX2VtYWlsKHNlbGYsIGVtYWlsLCBzdWJqZWN0LCB0ZXh0LCBzbXRwX2NvbmZpZz1Ob25lKToKICAgICAgICBwYXlsb2FkID0gewogICAgICAgICAgICAiZW1haWwiOiBlbWFpbCwKICAgICAgICAgICAgInN1YmplY3QiOiBzdWJqZWN0LAogICAgICAgICAgICAidGV4dCI6IHRleHQKICAgICAgICB9CiAgICAgICAgaWYgc210cF9jb25maWc6CiAgICAgICAgICAgIHBheWxvYWRbInNtdHBDb25maWciXSA9IHNtdHBfY29uZmlnCiAgICAgICAgICAgIAogICAgICAgIHRyeToKICAgICAgICAgICAgcmVzcG9uc2UgPSBzZWxmLmh0dHAucG9zdCgiL2VtYWlsL3NlbmQtZW1haWwiLCBqc29uPXBheWxvYWQpCiAgICAgICAgICAgIHJlc3BvbnNlLnJhaXNlX2Zvcl9zdGF0dXMoKQogICAgICAgICAgICByZXR1cm4gcmVzcG9uc2UuanNvbigpCiAgICAgICAgZXhjZXB0IEV4Y2VwdGlvbiBhcyBlOgogICAgICAgICAgICByYWlzZSBFeGNlcHRpb24oZiJFbWFpbCBzZW5kaW5nIGVycm9yOiB7c3RyKGUpfSIpCgogICAgZGVmIGJ1bGtfc2VuZChzZWxmLCBkYXRhLCBzbXRwX2NvbmZpZz1Ob25lKToKICAgICAgICBwYXlsb2FkID0gewogICAgICAgICAgICAiZGF0YSI6IGRhdGEKICAgICAgICB9CiAgICAgICAgaWYgc210cF9jb25maWc6CiAgICAgICAgICAgIHBheWxvYWRbInNtdHBDb25maWciXSA9IHNtdHBfY29uZmlnCiAgICAgICAgICAgIAogICAgICAgIHRyeToKICAgICAgICAgICAgcmVzcG9uc2UgPSBzZWxmLmh0dHAucG9zdCgiL2VtYWlsL2J1bGstc2VuZCIsIGpzb249cGF5bG9hZCkKICAgICAgICAgICAgcmVzcG9uc2UucmFpc2VfZm9yX3N0YXR1cygpCiAgICAgICAgICAgIHJldHVybiByZXNwb25zZS5qc29uKCkKICAgICAgICBleGNlcHQgRXhjZXB0aW9uIGFzIGU6CiAgICAgICAgICAgIHJhaXNlIEV4Y2VwdGlvbihmIkJ1bGsgZW1haWwgc2VuZGluZyBlcnJvcjoge3N0cihlKX0iKQo=').decode('utf-8'))
