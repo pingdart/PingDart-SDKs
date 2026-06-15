@@ -1,0 +1,35 @@
+{
+  "name": "pingdartdb-node",
+  "version": "1.0.2",
+  "description": "Official PingDart Node.js SDK for local database integration",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "node build.js",
+    "build:preview": "node build.js --preview",
+    "test": "node stress_test.js"
+  },
+  "keywords": [
+    "pingdart",
+    "database",
+    "sdk",
+    "mysql",
+    "postgres",
+    "query-builder"
+  ],
+  "author": "PingDart",
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "commonjs",
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "mysql2": "^3.22.5",
+    "pg": "^8.21.0",
+    "sequelize": "^6.37.8"
+  },
+  "devDependencies": {
+    "javascript-obfuscator": "^5.4.3"
+  }
+}

@@ -1,0 +1,31 @@
+{
+    "name": "pingdart/sdk",
+    "description": "Official PHP SDK for the PingDart platform",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "PingDart",
+            "email": "support@pingdart.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PingDart\\SDK\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PingDart\\SDK\\Laravel\\PingDartServiceProvider"
+            ],
+            "aliases": {
+                "PingDart": "PingDart\\SDK\\Laravel\\Facades\\PingDart"
+            }
+        }
+    }
+}

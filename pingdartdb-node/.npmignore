@@ -1,0 +1,8 @@
+# Exclude source code — only dist/ is published
+src/
+build.js
+stress_test.js
+test.js
+node_modules/
+.env
+*.log

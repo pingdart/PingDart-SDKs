@@ -1,0 +1,40 @@
+{
+    "name": "pingdart-js",
+    "version": "1.1.0",
+    "description": "Official JavaScript SDK for PingDart platform",
+    "type": "module",
+    "main": "src/index.js",
+    "exports": {
+        ".": "./src/index.js"
+    },
+    "scripts": {
+        "test": "node test/test.js",
+        "release": "npm version patch && npm publish",
+        "release:minor": "npm version minor && npm publish",
+        "release:major": "npm version major && npm publish"
+    },
+    "homepage": "https://pingdart.com",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pingdart/pingdart-js.git"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "config": {
+        "apiUrl": "https://cloudapi.pingdart.com/api"
+    },
+    "keywords": [
+        "sdk",
+        "api",
+        "whatsapp",
+        "sms",
+        "pingdart"
+    ],
+    "author": "PingDart",
+    "license": "MIT",
+    "dependencies": {
+        "axios": "^1.6.0",
+        "socket.io-client": "^4.8.3"
+    }
+}

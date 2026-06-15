@@ -1,0 +1,14 @@
+name: pingdartdb_dart
+description: PingDart Direct Database SDK for Dart
+version: 1.0.0
+homepage: https://pingdart.com
+
+environment:
+  sdk: '>=2.17.0 <4.0.0'
+
+dependencies:
+  mysql1: ^0.20.0
+  postgres: ^2.6.1
+  encrypt: ^5.0.1
+  http: ^1.1.0
+  crypto: ^3.0.3
